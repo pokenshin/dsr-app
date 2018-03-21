@@ -12,7 +12,7 @@
     border-bottom: 1px solid black;
     padding: 0 0 0 0;
     text-align: center;
-    font-size: 10px;
+    font-size: 8px;
     line-height: 10px;
 }
 
@@ -35,37 +35,61 @@
 }
 
 @media(min-width:576px) {
-    .tile-atributo-nivel {
-        font-size: 0.5em;
+    .tile-atributo-nome {
+        font-size: 8px;
+        line-height: 12px;
     }
-    .tile-atributo-pts {
-        font-size: 0.3em;
+    .tile-atributo-valor {
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .tile-atributo-mag {
+        font-size: 8px;
+        line-height: 12px;
     }
 }
 
 @media(min-width:768px) {
-    .tile-atributo-nivel {
-        font-size: 0.7em;
+    .tile-atributo-nome {
+        font-size: 10px;
+        line-height: 15px;
     }
-    .tile-atributo-pts {
-        font-size: 0.5em;
+    .tile-atributo-valor {
+        font-size: 35px;
+        line-height: 55px;
+    }
+    .tile-atributo-mag {
+        font-size: 10px;
+        line-height: 15px;
     }
 }
 
 @media(min-width:992px) {
-    .tile-atributo-nivel {
-        font-size: 0.9em;
+    .tile-atributo-nome {
+        font-size: 15px;
+        line-height: 20px;
     }
-    .tile-atributo-pts {
-        font-size: 0.7em;
+    .tile-atributo-valor {
+        font-size: 45px;
+        line-height: 85px;
+    }
+    .tile-atributo-mag {
+        font-size: 20px;
+        line-height: 20px;
     }
 }
 
 @media(min-width:1200px) {
-    .tile-atributo-nivel {
-        font-size: 1em;
+    .tile-atributo-nome {
+        font-size: 20px;
+        line-height: 30px;
     }
-    .tile-atributo-pts {
-        font-size: 0.8em;
+    .tile-atributo-valor {
+        font-size: 60px;
+        line-height: 110px;
+    }
+    .tile-atributo-mag {
+        font-size: 25px;
+        line-height: 25px;
     }
 }
