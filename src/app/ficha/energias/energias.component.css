@@ -1,0 +1,19 @@
+.card-container {
+    margin: 10px 0px 10px 0px;
+}
+
+.progress-bar {
+    height: 30px;
+    z-index: 0;
+}
+
+.label-energia-valor {
+    position: relative;
+    color: white;
+    top: 25px;
+    z-index: 1;
+}
+
+.label-energia-nome {
+    position: relative;
+}
