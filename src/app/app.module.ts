@@ -7,6 +7,8 @@ import { FichaModule } from './ficha/ficha.module';
 import { DebugModule } from './debug/debug.module';
 import { ViewFichaComponent } from './ficha/view-ficha/view-ficha.component';
 import { ViewDebugComponent } from './debug/view-debug/view-debug.component';
+import { GeraInteiroService } from './shared/services/geradores/gera-inteiro.service';
+import { SharedModule } from './shared/shared.module';
 
 const appRoutes: Routes = [
   { path: 'ficha', component: ViewFichaComponent, data: { title: 'Ficha!'} },
@@ -23,6 +25,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }),
+    SharedModule.forRoot(),
     FichaModule,
     DebugModule
   ],

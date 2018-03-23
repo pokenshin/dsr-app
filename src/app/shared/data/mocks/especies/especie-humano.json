@@ -1,0 +1,151 @@
+{
+    "id": 1,
+    "reinoTaxo": "Animalia",
+    "filoTaxo": "Chordata",
+    "classeTaxo": "Mammalia",
+    "ordemTaxo": "Primates",
+    "familiaTaxo": "Hominidae",
+    "generoTaxo": "Homo",
+    "nomeCientifico": "sapiens",
+    "nomePopular": "Humano",
+    "origemEspecie": {
+        "id": 1,
+        "nome": "Uria",
+        "plano": {
+            "id": 1,
+            "nome": "Primeiro Plano",
+            "realidade": {
+                "id": 1,
+                "nome": "Viroginesgard"
+            }
+        }
+    },
+    "subClassificaoes": ["Homem", "Mulher"],
+    "magnitudeMin": 1,
+    "magnitudeMax": 2,
+    "reiMin": 0,
+    "reiMax": 1,
+    "kiMin": 0,
+    "kiMax": 10,
+    "nivelMin": 1,
+    "nivelMax": 99,
+    "tempoMax": 120,
+    "essencia": {
+        "id": 1,
+        "nome": "Primeira Esfera"
+    },
+    "energias": [{
+            "id": 1,
+            "sigla": "HP",
+            "nome": "Pontos de Vida",
+            "quantidade": "1"
+        },
+        {
+            "id": 2,
+            "sigla": "CP",
+            "nome": "Pontos de Cognição",
+            "quantidade": "1"
+        },
+        {
+            "id": 3,
+            "sigla": "SP",
+            "nome": "Pontos de Espírito",
+            "quantidade": "100"
+        }
+    ]
+    "forcaMin": {
+        "classe": "P",
+        "nivel": 4,
+        "pontos": 4,
+        "porcentagem": {
+            "valor": 12,
+            "magnitude": 2
+        },
+        "potencia": {
+            "valor": 12,
+            "magnitude": 2
+        },
+        "golpe": {
+            "valor": 12,
+            "magnitude": 2
+        },
+        "dureza": {
+            "valor": 12,
+            "magnitude": 2
+        },
+        "vigor": {
+            "valor": 12,
+            "magnitude": 2
+        },
+        "sustentacao": {
+            "valor": 12,
+            "magnitude": 2
+        },
+        "bonusCP": 5
+    },
+    "materiaMin": {
+
+    }
+    materiaMin: Materia;
+    destrezaMin: Destreza;
+    intelectoMin: Intelecto;
+    criatividadeMin: Criatividade;
+    existenciaMin: Existencia;
+    ideiaMin: Ideia;
+    //Atributos Máximos
+    forcaMax: Forca;
+    materiaMax: Materia;
+    destrezaMax: Destreza;
+    intelectoMax: Intelecto;
+    criatividadeMax: Criatividade;
+    existenciaMax: Existencia;
+    ideiaMax: Ideia;
+    // Pericias e Habilidades
+    periciasEspecie: Pericia[];
+    habilidadesEspecie: Habilidade[];
+    // Poder / Virtudes / Dons / Vantagens / Desvantagens
+    origemPoder: string;
+    virtudesEspecie: Modificador[];
+    defeitosEspecie: Modificador[];
+    //Força de vontade / Ira / Poder Máximo
+    forcaVontadeMin: number;
+    forcaVontadeMax: number;
+    iraMin: number;
+    iraMax: number;
+    poderMaximoMin: number;
+    poderMaximoMax: number;
+    //Fator de progressão de EXP
+    fatorProgressao: number;
+    //Cansaço Fé Karma
+    cansacoMax: number;
+    feMin: number;
+    feMax: number;
+    karmaMin: number;
+    karmaMax: number;
+    //Itens
+    maxItensEquipados: number;
+    maxArmasEquipadas: number;
+    acaoMin: number;
+    acaoMax: number;
+    turnoMin: number;
+    turnoMax: number;
+    alturaMin: ValorMag;
+    alturaMax: ValorMag;
+    maturidadeMin: ValorMag;
+    maturidadeMax: ValorMag;
+    //Dominância da raça sobre outras
+    porcentagemDominancia: number;
+    destriaMin: number;
+    destriaMax: number;
+    trabalhoMin: number;
+    trabalhoMax: number;
+    densidade: ValorMag;
+    larguraMin: ValorMag;
+    larguraMax: ValorMag;
+    especial: number;
+    natureza: Natureza;
+    respostaMin: Resposta;
+    respostaMax: Resposta;
+    fugacidade: Habilidade[];
+    deslocamentosMedios: Deslocamento[];
+}

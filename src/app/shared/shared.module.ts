@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GeraInteiroService } from './services/geradores/gera-inteiro.service';
 
 @NgModule({
   imports: [
@@ -7,4 +8,11 @@ import { CommonModule } from '@angular/common';
   ],
   declarations: []
 })
-export class SharedModule { }
+export class SharedModule { 
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: SharedModule,
+      providers: [ GeraInteiroService ]
+    };
+  }
+}

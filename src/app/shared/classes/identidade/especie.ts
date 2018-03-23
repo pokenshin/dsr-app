@@ -22,7 +22,7 @@ export class Especie {
     filoTaxo: string;
     classeTaxo: string;
     ordemTaxo: string;
-    famiiaTaxo: string;
+    familiaTaxo: string;
     generoTaxo: string;
     nomeCientifico: string;
     nomePopular: string;
