@@ -14,6 +14,16 @@ import { Ideia } from "./atributos/ideia";
 import { Evolucao } from "./identidade/evolucao";
 import { Energia } from "./energias/energia";
 import { Deslocamento } from "./identidade/deslocamento";
+import { Pericia } from "./ciencias/pericia";
+import { Habilidade } from "./ciencias/habilidade";
+import { Resposta } from "./identidade/resposta";
+import { Modificador } from "./modificadores/modificador";
+import { Elemento } from "./ciencias/elementais/elemento";
+import { Resistencia } from "./identidade/resistencia";
+import { Item } from "./itens/item";
+import { Equipamento } from "./itens/equipamento";
+import { Destino } from "./identidade/destino";
+import { Carisma } from "./identidade/carisma";
 
 export class Ser {
     //Identidade
@@ -76,4 +86,47 @@ export class Ser {
     massa: ValorMag;
     tenacidade: ValorMag;
     essencia: ValorMag;
+    //Pericias
+    pericias: Pericia[];
+    //Fugacidade
+    fugacidade: Habilidade[];
+    //Habilidades
+    habilidades: Habilidade[];
+    //Resposta
+    resposta: Resposta;
+    forcaVontade: ValorMag;
+    ira: ValorMag;
+    poderMaximo: ValorMag;
+    //Dons e Defeitos
+    dons: Modificador[];
+    defeitos: Modificador[];
+    //Resistências
+    resistencias: Resistencia[];
+    //Estimulos
+    estimulos: string[];
+    //Elementais
+    elementais: Elemento[];
+    //Experiência
+    pontosGraduacao: number;
+    pontosEvolucao: number;
+    experienciaAtual: number;
+    //Equipamento
+    itensEquipados: Equipamento[];
+    posses: Item[];
+    //Cansaço / Natureza / Fé / Karma / Alma
+    cansacoAtual: number;
+    cansacoMax: number;
+    genese: number;
+    geracao: number;
+    fe: number;
+    karma: number;
+    destino: Destino;
+    carisma: Carisma;
+    alma: string[];
+    //Elo Divino
+    eloDivino: string;
+    trajetoria: string;
+    idumentaria: string;
+    //Modificadores Ativos
+    modificadoresAtivos: Modificador[];
 }
