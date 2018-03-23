@@ -1,4 +1,4 @@
-import { ValorMag } from ".";
+import { ValorMag } from "./valormag";
 import { Origem } from "./lugares/origem";
 import { Especie } from "./identidade/especie";
 import { Classe } from "./ciencias/classe";
