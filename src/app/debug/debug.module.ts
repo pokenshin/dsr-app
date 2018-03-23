@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MenuComponent } from './menu/menu.component';
+import { ViewDebugComponent } from './view-debug/view-debug.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [MenuComponent]
+  declarations: [ViewDebugComponent]
 })
-export class CoreModule { }
+export class DebugModule { }

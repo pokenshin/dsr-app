@@ -15,10 +15,12 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+import { ViewFichaComponent } from './view-ficha/view-ficha.component';
 
 @NgModule({
-  imports: [CommonModule, MatInputModule, MatGridListModule, BrowserAnimationsModule, MatExpansionModule, MatProgressBarModule, MatCardModule, MatButtonModule],
-  declarations: [IdentidadeComponent, AtributosComponent, EnergiasComponent, SubatributosComponent, CombateComponent, DeslocamentoComponent],
+  imports: [CommonModule, MatInputModule, MatGridListModule, BrowserAnimationsModule, MatExpansionModule, MatProgressBarModule, MatCardModule, MatButtonModule, MatTableModule],
+  declarations: [IdentidadeComponent, AtributosComponent, EnergiasComponent, SubatributosComponent, CombateComponent, DeslocamentoComponent, ViewFichaComponent],
   exports: [IdentidadeComponent, AtributosComponent, EnergiasComponent, SubatributosComponent, CombateComponent, DeslocamentoComponent]
 })
 export class FichaModule { }

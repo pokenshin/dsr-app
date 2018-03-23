@@ -1,29 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
-    <h1>
-        Welcome to {{ title }}!
-    </h1>
-    <app-ficha-identidade></app-ficha-identidade>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10">
-                <app-ficha-atributos></app-ficha-atributos>
-            </div>
-            <div class="col-lg-2">
-                <app-ficha-energias></app-ficha-energias>
-            </div>
-        </div>
-    </div>
-    <div class="container" id="ficha-energias">
-
-    </div>
-    <div class="container" id="ficha-subatributos">
-        <app-ficha-subatributos></app-ficha-subatributos>
-    </div>
-    <div class="container" id="ficha-deslocamento">
-        <app-ficha-deslocamento></app-ficha-deslocamento>
-    </div>
-    <div class="container" id="ficha-combate">
-        <app-ficha-combate></app-ficha-combate>
-    </div>
-</div>
+<h1>{{title}}</h1>
+<nav>
+    <a routerLink="/ficha" routerLinkActive="active">Ficha</a>
+    <a routerLink="/debug" routerLinkActive="active">Debug</a>
+</nav>
+<router-outlet></router-outlet>

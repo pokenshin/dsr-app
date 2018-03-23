@@ -7,6 +7,8 @@
     height: 100%;
 }
 
+.container-energias {}
+
 .tile-atributo-nome {
     height: 20%;
     border-bottom: 1px solid black;
