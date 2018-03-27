@@ -20,8 +20,8 @@ describe('GeraValorMagService', () => {
   }));
 
   it('gera um ValorMag aleatorio', () => {
-    service = new GeraValorMagService();
-    var result = service.get(this.seed);
+    this.service = new GeraValorMagService();
+    var result = this.service.get(this.seed);
     expect(result.magnitude).toBeGreaterThan(0);
     expect(result.valor).toBeGreaterThan(0);
   })

@@ -17,7 +17,8 @@ export class GeraInteiroService implements Gerador, GeradorNumero  {
     for (let i = 0; i < quantidade; i++){
       resultado.push(this.getEntre(seed, min, max));
     }
-    return resultado;  }
+    return resultado;  
+  }
   
 
   get(seed: number): number{
