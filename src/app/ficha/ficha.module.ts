@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { ViewFichaComponent } from './view-ficha/view-ficha.component';
 import { IdentidadeComponent } from './identidade/identidade.component';
 import { AtributosComponent } from './atributos/atributos.component';
 import { EnergiasComponent } from './energias/energias.component';
@@ -16,11 +17,11 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
-import { ViewFichaComponent } from './view-ficha/view-ficha.component';
 
 @NgModule({
-  imports: [CommonModule, MatInputModule, MatGridListModule, BrowserAnimationsModule, MatExpansionModule, MatProgressBarModule, MatCardModule, MatButtonModule, MatTableModule],
+  imports: [CommonModule, MatInputModule, MatGridListModule, BrowserAnimationsModule, MatExpansionModule, MatProgressBarModule, MatCardModule, MatButtonModule, MatTableModule, ViewFichaComponent],
   declarations: [IdentidadeComponent, AtributosComponent, EnergiasComponent, SubatributosComponent, CombateComponent, DeslocamentoComponent, ViewFichaComponent],
-  exports: [IdentidadeComponent, AtributosComponent, EnergiasComponent, SubatributosComponent, CombateComponent, DeslocamentoComponent]
+  exports: [IdentidadeComponent, AtributosComponent, EnergiasComponent, SubatributosComponent, CombateComponent, DeslocamentoComponent, ViewFichaComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class FichaModule { }

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewFichaComponent } from './view-ficha.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('ViewFichaComponent', () => {
   let component: ViewFichaComponent;
@@ -8,6 +9,7 @@ describe('ViewFichaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
       declarations: [ ViewFichaComponent ]
     })
     .compileComponents();

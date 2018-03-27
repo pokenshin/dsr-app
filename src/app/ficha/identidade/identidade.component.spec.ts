@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { IdentidadeComponent } from './identidade.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('IdentidadeComponent', () => {
   let component: IdentidadeComponent;
@@ -8,6 +9,7 @@ describe('IdentidadeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
       declarations: [ IdentidadeComponent ]
     })
     .compileComponents();

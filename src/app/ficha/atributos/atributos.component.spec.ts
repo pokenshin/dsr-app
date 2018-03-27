@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AtributosComponent } from './atributos.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('AtributosComponent', () => {
   let component: AtributosComponent;
@@ -8,6 +10,7 @@ describe('AtributosComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
       declarations: [ AtributosComponent ]
     })
     .compileComponents();

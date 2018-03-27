@@ -4,6 +4,7 @@ import { GeraInteiroService } from '../../shared/services/geradores/gera-inteiro
 
 @Component({
   selector: 'app-view-debug',
+  providers: [GeraInteiroService],
   templateUrl: './view-debug.component.html',
   styleUrls: ['./view-debug.component.css']
 })
@@ -16,7 +17,7 @@ export class ViewDebugComponent implements OnInit {
   }
 
   geraNumero(): void{
-    this.numero = this.geraInteiroService.get(Math.random(), 1, 10);
+    this.numero = this.geraInteiroService.getEntre(Math.random(), 1, 100);
   }
 
 }
