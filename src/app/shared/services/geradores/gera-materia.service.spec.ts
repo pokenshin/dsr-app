@@ -18,7 +18,7 @@ describe('GeraMateriaService', () => {
     expect(this.service).toBeTruthy();
   }));
 
-  it('deve gerar uma Materia válida', () =>{
+  it('gera uma Materia válida', () =>{
     var result = this.service.get(this.seed);
     console.log(result);
     expect(result).toBeDefined();
