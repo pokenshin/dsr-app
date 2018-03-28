@@ -20,7 +20,6 @@ describe('GeraIntelectoService', () => {
 
   it('gera um Intelecto válida', () =>{
     var result = this.service.get(this.seed);
-    console.log(result);
     expect(result).toBeDefined();
   })
 });

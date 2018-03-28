@@ -20,7 +20,6 @@ describe('GeraMateriaService', () => {
 
   it('gera uma Materia válida', () =>{
     var result = this.service.get(this.seed);
-    console.log(result);
     expect(result).toBeDefined();
   })
 });

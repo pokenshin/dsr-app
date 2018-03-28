@@ -31,7 +31,6 @@ export class GeraStringService implements Gerador {
     //console.log ("Min: " + min + " / Max: " + max);
 
     while (resultado.length < tamanhoResultado){
-      console.log(resultado.length);
       if (resultado.length == 0){
         if (geraBool.getComChance(seed, 0.5)){
           resultado += this.consoantes.charAt(Math.floor(Math.random() * this.consoantes.length)).toUpperCase();

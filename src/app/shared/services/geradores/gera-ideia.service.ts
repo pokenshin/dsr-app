@@ -33,6 +33,7 @@ export class GeraIdeiaService implements Gerador {
     result.ki = this.rng.getEntre(Math.random(), 1, 9999);
     result.misterio = this.rvmg.getEntre(Math.random(), min, max);
     result.nexo = this.rvmg.getEntre(Math.random(), min, max);
+    result.base = this.rng.getEntre(Math.random(), 1, 9999);
         
     return result;
   }

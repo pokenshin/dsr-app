@@ -29,6 +29,5 @@ describe('GeraStringService', () => {
     var resultado = this.service.getTamanhoEspecifico(this.seed, 3, 12);
     expect(resultado.length).toBeGreaterThan(2);
     expect(resultado.length).toBeLessThan(13);
-    console.log("String aleatória: " + resultado);
   })
 });

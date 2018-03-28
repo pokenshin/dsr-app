@@ -21,7 +21,6 @@ describe('GeraForcaService', () => {
 
   it ('gera uma Forca válida', () =>{
     var result = this.service.get(this.seed);
-    console.log(result);
     expect(result).toBeDefined();
   })
 });

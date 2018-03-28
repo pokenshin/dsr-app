@@ -20,7 +20,6 @@ describe('GeraCriatividadeService', () => {
 
   it ('gera uma Criatividade válida', () =>{
     var result = this.service.get(this.seed);
-    console.log(result);
     expect(result).toBeDefined();
   })
 });

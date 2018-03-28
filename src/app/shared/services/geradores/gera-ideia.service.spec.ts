@@ -18,9 +18,8 @@ describe('GeraIdeiaService', () => {
     expect(this.service).toBeTruthy();
   }));
 
-  it ('gera uma Forca válida', () =>{
+  it ('gera uma Idéia válida', () =>{
     var result = this.service.get(this.seed);
-    console.log(result);
     expect(result).toBeDefined();
   })
 });
