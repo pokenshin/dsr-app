@@ -8,6 +8,7 @@ export class Ideia extends Atributo {
     holismo: ValorMag;
     nexo: ValorMag;
     bonusMP: ValorMag;
+    bonusCP: number;
 
     constructor(){
         super();
@@ -17,5 +18,6 @@ export class Ideia extends Atributo {
         this.holismo = new ValorMag();
         this.nexo = new ValorMag();
         this.bonusMP = new ValorMag();
+        this.bonusCP = 0;
     }
 }
