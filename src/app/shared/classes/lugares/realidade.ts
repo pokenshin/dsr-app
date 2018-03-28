@@ -1,4 +1,6 @@
 export class Realidade {
-    id: number;
-    nome: string;
+    constructor(
+        public id: number = 0,
+        public nome: string = ''    
+    ){}
 }

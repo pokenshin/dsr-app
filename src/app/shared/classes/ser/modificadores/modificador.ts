@@ -1,3 +1,3 @@
 export abstract class Modificador {
-    origem: string;
+    fonteModificacao: string;
 }

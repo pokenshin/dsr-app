@@ -1,7 +1,10 @@
 import { Realidade } from "./realidade";
 
 export class Plano {
-    id: number;
-    nome: string;
-    realidade: Realidade;
+    constructor(
+        public id: number = 0,
+        public nome: string = '',
+        public realidade: Realidade = new Realidade()
+    ){}
+
 }
