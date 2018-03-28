@@ -19,9 +19,9 @@ import { Atributos } from "./atributos";
 export class Ser {
     constructor(
         //identidade
-        public identidade?: Identidade,
+        public identidade: Identidade = new Identidade(),
         //Atributos
-        public atributo?: Atributos,
+        public atributos: Atributos = new Atributos(),
         //Evolução dos Atributos
         public evolucaoForca?: Evolucao,
         public evolucaoMateria?: Evolucao,
