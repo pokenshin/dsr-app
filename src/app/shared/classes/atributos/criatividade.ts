@@ -8,6 +8,7 @@ export class Criatividade extends Atributo {
     realidade: ValorMag;
     irrealidade: ValorMag;
     bonusMP: ValorMag;
+    bonusCP: number;
 
     constructor(){
         super();
@@ -17,5 +18,6 @@ export class Criatividade extends Atributo {
         this.realidade = new ValorMag();
         this.irrealidade = new ValorMag();
         this.bonusMP = new ValorMag();
+        this.bonusCP = 0;
     }
 }
