@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ser, ValorMag } from '../../shared';
-import { GeraInteiroService } from '../../shared/services/geradores/gera-inteiro.service';
+import { GeraInteiroService } from '../../shared/services/geradores/geral';
 
 @Component({
   selector: 'app-view-debug',

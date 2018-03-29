@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { GeraInteiroService } from './gera-inteiro.service';
-import { Gerador } from './gerador';
+import { Gerador } from '../gerador';
 import { GeraBooleanService } from './gera-boolean.service';
 
 @Injectable()

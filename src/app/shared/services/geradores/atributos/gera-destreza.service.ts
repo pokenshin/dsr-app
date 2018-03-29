@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Gerador } from './gerador';
-import { GeraInteiroService } from './gera-inteiro.service';
-import { GeraBooleanService } from './gera-boolean.service';
-import { GeraStringService } from './gera-string.service';
-import { GeraValorMagService } from './gera-valor-mag.service';
-import { Destreza } from '../../classes/ser/atributos/destreza';
-import { ValorMag } from '../..';
+import { Gerador } from '../gerador';
+import { GeraInteiroService } from '../geral/gera-inteiro.service';
+import { GeraBooleanService } from '../geral/gera-boolean.service';
+import { GeraStringService } from '../geral/gera-string.service';
+import { GeraValorMagService } from '../geral/gera-valor-mag.service';
+import { Destreza } from '../../../classes/ser/atributos/destreza';
+import { ValorMag } from '../../../classes/valormag';
 
 @Injectable()
 export class GeraDestrezaService implements Gerador {

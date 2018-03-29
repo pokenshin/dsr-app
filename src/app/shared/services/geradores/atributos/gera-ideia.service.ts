@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
-import { Gerador } from './gerador';
-import { GeraInteiroService } from './gera-inteiro.service';
-import { GeraBooleanService } from './gera-boolean.service';
-import { GeraStringService } from './gera-string.service';
-import { GeraValorMagService } from './gera-valor-mag.service';
-import { Existencia } from '../../classes/ser/atributos/existencia';
-import { ValorMag } from '../..';
+import { Gerador } from '../gerador';
+import { GeraInteiroService } from '../geral/gera-inteiro.service';
+import { GeraBooleanService } from '../geral/gera-boolean.service';
+import { GeraStringService } from '../geral/gera-string.service';
+import { GeraValorMagService } from '../geral/gera-valor-mag.service';
+import { ValorMag } from '../../../classes/valormag';
+import { Ideia } from '../../../classes/ser/atributos/ideia';
 
 @Injectable()
-export class GeraExistenciaService implements Gerador {
+export class GeraIdeiaService implements Gerador {
 
   private rng: GeraInteiroService;
   private rbg: GeraBooleanService;
   private rsg: GeraStringService;
   private rvmg: GeraValorMagService;
 
-  get(seed: number): Existencia {
-    var result = new Existencia();
+  get(seed: number): Ideia {
+    var result = new Ideia();
     this.rng = new GeraInteiroService();
     this.rsg = new GeraStringService();
     this.rvmg = new GeraValorMagService();
@@ -28,12 +28,13 @@ export class GeraExistenciaService implements Gerador {
     result.nivel = this.rng.getEntre(Math.random(), 1, 5);
     result.pontos = this.rng.getEntre(Math.random(), 1, 9999);
     result.porcentagem = this.rvmg.getEntre(Math.random(), min, max);
-    result.conhecimento = this.rvmg.getEntre(Math.random(), min, max);
-    result.consciencia = this.rvmg.getEntre(Math.random(), min, max);
-    result.experiencia = this.rvmg.getEntre(Math.random(), min, max);
-    result.memoria = this.rvmg.getEntre(Math.random(), min, max);
-    result.ciencia = this.rvmg.getEntre(Math.random(), min, max);
-    
+    result.bonusMP = this.rvmg.getEntre(Math.random(), min, max);
+    result.holismo = this.rvmg.getEntre(Math.random(), min, max);
+    result.ki = this.rng.getEntre(Math.random(), 1, 9999);
+    result.misterio = this.rvmg.getEntre(Math.random(), min, max);
+    result.nexo = this.rvmg.getEntre(Math.random(), min, max);
+    result.base = this.rng.getEntre(Math.random(), 1, 9999);
+        
     return result;
   }
 

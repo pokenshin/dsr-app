@@ -1,6 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GeraInteiroService } from './services/geradores/gera-inteiro.service';
+import { GeraInteiroService } from './services/geradores/geral';
 
 @NgModule({
   imports: [

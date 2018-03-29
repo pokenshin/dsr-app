@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Gerador } from './gerador';
 import { Modificador } from '../../classes/ser/modificadores/modificador';
-import { GeraInteiroService } from './gera-inteiro.service';
-import { GeraValorMagService } from './gera-valor-mag.service';
-import { Ser } from '../..';
+import { GeraInteiroService, GeraValorMagService } from './geral/';
+import { Ser } from '../../classes/ser/ser';
 
 @Injectable()
 export class GeraModificadorService implements Gerador {
@@ -30,11 +29,5 @@ export class GeraModificadorService implements Gerador {
     throw new Error("lol");
   }
 
-
-
-
-
-
   constructor() { }
-
 }

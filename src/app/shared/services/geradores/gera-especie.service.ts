@@ -1,18 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Gerador } from './gerador';
-import { GeraCriatividadeService } from './gera-criatividade.service';
-import { GeraDestrezaService } from './gera-destreza.service';
-import { GeraForcaService } from './gera-forca.service';
-import { GeraMateriaService } from './gera-materia.service';
-import { GeraIntelectoService } from './gera-intelecto.service';
-import { GeraIdeiaService } from './gera-ideia.service';
-import { GeraExistenciaService } from './gera-existencia.service';
+import { GeraCriatividadeService, GeraDestrezaService, GeraForcaService, GeraMateriaService, GeraIntelectoService, GeraIdeiaService, GeraExistenciaService } from './atributos';
 import { Especie } from '../../classes/ser/especie';
-import { GeraInteiroService } from './gera-inteiro.service';
-import { GeraValorMagService } from './gera-valor-mag.service';
+import { GeraInteiroService, GeraValorMagService, GeraStringService } from './geral';
 import { CalculaNumeroService } from '../calculadores/calcula-numero.service';
-import { ValorMag } from '../..';
-import { GeraStringService } from './gera-string.service';
+import { ValorMag } from '../../classes/valormag';
 
 @Injectable()
 export class GeraEspecieService implements Gerador {
