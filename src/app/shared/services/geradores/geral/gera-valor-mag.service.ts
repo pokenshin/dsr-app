@@ -10,7 +10,7 @@ export class GeraValorMagService implements Gerador, GeradorNumero {
   constructor() { }
 
   get(seed: number):ValorMag {
-    return this.getEntre(seed, new ValorMag(1,1), new ValorMag(99,20));
+    return this.getEntre(seed, new ValorMag(10,1), new ValorMag(99,20));
   }
   
   getLista(seed: number, quantidade: number): ValorMag[] {

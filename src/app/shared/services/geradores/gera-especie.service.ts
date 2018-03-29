@@ -5,6 +5,9 @@ import { Especie } from '../../classes/ser/especie';
 import { GeraInteiroService, GeraValorMagService, GeraStringService } from './geral';
 import { CalculaNumeroService } from '../calculadores/calcula-numero.service';
 import { ValorMag } from '../../classes/valormag';
+import { GeraMinMaxService } from './geral/gera-min-max.service';
+import { GeraAtributosService } from './atributos/gera-atributos.service';
+import { RangeValue } from '../../classes/ser/range-value';
 
 @Injectable()
 export class GeraEspecieService implements Gerador {
@@ -20,18 +23,18 @@ export class GeraEspecieService implements Gerador {
     //Geradores Identidade
     //var gerOrigem = new GeraOrigemService();
     //Geradores Atributos
-    var gerCriatividade = new GeraCriatividadeService();
-    var gerDestreza = new GeraDestrezaService();
-    var gerForca = new GeraForcaService();
-    var gerMateria = new GeraMateriaService();
-    var gerIntelecto = new GeraIntelectoService();
-    var gerIdeia = new GeraIdeiaService();
-    var gerExistencia = new GeraExistenciaService();
+    var gAtributos = new GeraAtributosService();
+    var gerMinMax = new GeraMinMaxService();
 
-    result.acao.min = rng.getEntre(Math.random(), 1, 10);
-    result.acao.max = result.acao.min + rng.getEntre(Math.random(), 1, 10);
-    //result.defeitosEspecie = gerModificador.getListaComOrigem();
+    result.acao = gerMinMax.getNumberPequeno(Math.random());
+    result.altura = gerMinMax.getValorMag(Math.random());
+    result.atributos = new RangeValue(gAtributos.get(Math.random()),gAtributos.get(Math.random()));
+    result.cansaco = gerMinMax.getNumberPequeno(Math.random());
+    //result.defeitosEspecie = 
+    result.densidade = rvmg.get(Math.random());
+    //result.deslocamentosMedios = 
 
+    
     
     
     
