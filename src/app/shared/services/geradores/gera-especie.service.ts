@@ -28,6 +28,8 @@ export class GeraEspecieService implements Gerador {
     var gerIdeia = new GeraIdeiaService();
     var gerExistencia = new GeraExistenciaService();
 
+    result.acao.min = rng.getEntre(Math.random(), 1, 10);
+    result.acao.max = result.acao.min + rng.getEntre(Math.random(), 1, 10);
     //result.defeitosEspecie = gerModificador.getListaComOrigem();
 
     

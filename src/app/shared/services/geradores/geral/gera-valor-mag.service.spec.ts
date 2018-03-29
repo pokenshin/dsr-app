@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { GeraValorMagService } from './gera-valor-mag.service';
-import { ValorMag } from '../..';
+import { ValorMag } from '../../../classes/valormag';
 import { GeraInteiroService } from './gera-inteiro.service';
 
 describe('GeraValorMagService', () => {
