@@ -1,5 +1,5 @@
 import { Atributo } from "./atributo";
-import { ValorMag } from "../valormag";
+import { ValorMag } from "../../valormag";
 
 export class Forca extends Atributo {
     potencia: ValorMag;

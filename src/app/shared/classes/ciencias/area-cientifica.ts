@@ -1,7 +1,10 @@
 import { Ciencia } from "./ciencia";
 
 export class AreaCientifica {
-    id: number;
-    nome: string;
-    ciencia: Ciencia;
+    constructor(
+        public id: number = 0,
+        public nome: string = '',
+        public ciencia: Ciencia = new Ciencia()
+    ){}
+    
 }

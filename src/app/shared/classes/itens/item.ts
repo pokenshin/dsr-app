@@ -1,4 +1,4 @@
-import { Modificador } from "../modificadores/modificador";
+import { Modificador } from "../ser/modificadores/modificador";
 import { ValorMag } from "../..";
 import { Material } from "./material";
 

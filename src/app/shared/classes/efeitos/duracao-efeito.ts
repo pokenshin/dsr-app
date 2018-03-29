@@ -1,12 +1,14 @@
 import { ValorMag } from "../..";
 
 export class DuracaoEfeito {
-    tipoDuracao: string;
-    valorDuracao: ValorMag;
-    unidadeDuracao: string;
-
+    constructor(
+        public tipoDuracao: string = '',
+        public valorDuracao: ValorMag = new ValorMag(),
+        public unidadeDuracao: string = ''
+    ){}
+   
     toString(){
-        if (this.valorDuracao && this.unidadeDuracao){
+        if (this.valorDuracao.toString() !=  '0m0' && this.unidadeDuracao != ''){
             return "Durante " + this.valorDuracao.toString() + " " + this.unidadeDuracao;
         }else{
             return this.tipoDuracao;

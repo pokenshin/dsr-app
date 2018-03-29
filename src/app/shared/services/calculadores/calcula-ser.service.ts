@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Ser } from '../..';
-import { Especie } from '../../classes/identidade/especie';
+import { Especie } from '../../classes/ser/especie';
 
 @Injectable()
 export class CalculaSerService {
 
   CalculaSer(ser: Ser): Ser {
     //Carisma e Destino = os mesmos da índole do ser.
-    ser.carisma = ser.indole.carisma;
-    ser.destino = ser.indole.destino;
+    //ser.carisma = ser.indole.carisma;
+    //ser.destino = ser.indole.destino;
     //Calcula o Especial
-    ser.especial = this.calculaEspecial(ser.especies);
+    //ser.especial = this.calculaEspecial(ser.especies);
     //Calcula Deslocamentos
     //Cria lista de Perícias
     //Cria lista de Habilidades
@@ -27,7 +27,7 @@ export class CalculaSerService {
     //Energias
     //Experiência
     //Ativar Modificadores
-
+    ser = new Ser();
     return ser;
   }
   

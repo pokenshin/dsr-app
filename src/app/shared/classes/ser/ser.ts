@@ -1,6 +1,4 @@
 import { ValorMag } from "../valormag";
-
-import { Evolucao } from "./evolucao";
 import { Energia } from "../energias/energia";
 import { Deslocamento } from "./deslocamento";
 import { Pericia } from "./pericia";
@@ -8,13 +6,16 @@ import { Habilidade } from "./habilidades/habilidade";
 import { Resposta } from "./resposta";
 import { Modificador } from "./modificadores/modificador";
 import { Elemento } from "../ciencias/elementais/elemento";
-import { Resistencia } from "./resistencia";
 import { Item } from "../itens/item";
 import { Equipamento } from "../itens/equipamento";
 import { Destino } from "./destino";
 import { Carisma } from "./carisma";
 import { Identidade } from "./identidade";
 import { Atributos } from "./atributos";
+import { Subatributos } from "./subatributos";
+import { Cerne } from "./cerne";
+import { Experiencia } from "./experiencia";
+import { Elo } from "./elo";
 
 export class Ser {
     constructor(
@@ -22,88 +23,45 @@ export class Ser {
         public identidade: Identidade = new Identidade(),
         //Atributos
         public atributos: Atributos = new Atributos(),
-        //Evolução dos Atributos
-        public evolucaoForca?: Evolucao,
-        public evolucaoMateria?: Evolucao,
-        public evolucaoDestreza?: Evolucao,
-        public evolucaoIntelecto?: Evolucao,
-        public evolucaoCriatividade?: Evolucao,
-        public evolucaoExistencia?: Evolucao,
-        public evolucaoIdeia?: Evolucao,
         //Energias
-        public energias?: Energia[],
+        public energias: Energia[] = new Array<Energia>(),
         //Destino - Especial - Carisma
-        public especial?: number,
+        public destino: Destino = new Destino(),
+        public carisma: Carisma = new Carisma(),
+        public especial: number = 0,
         //Deslocamentos
-        public deslocamentos?: Deslocamento[],
+        public deslocamentos: Deslocamento[] = new Array<Deslocamento>(),
         //Subatributos
-        public instinto?: ValorMag,
-        public raciocinio?: ValorMag,
-        public subconsciencia?: ValorMag,
-        public autocontrole?: ValorMag,
-        public anatomia?: ValorMag,
-        public animo?: ValorMag,
-        public movimento?: ValorMag,
-        public precisao?: ValorMag,
-        public bonusHP?: ValorMag,
-        public bonusMP?: ValorMag,
-        public bonusCP?: ValorMag,
-        public bonusSP?: ValorMag,
+        public subatributos: Subatributos = new Subatributos(),
         //Cerne
-        public iniciativa?: ValorMag,
-        public acao?: ValorMag,
-        public reacao?: ValorMag,
-        public turno?: ValorMag,
-        public destria?: ValorMag,
-        public altura?: ValorMag,
-        public largura?: ValorMag,
-        public comprimento?: ValorMag,
-        public carga?: ValorMag,
-        public massa?: ValorMag,
-        public tenacidade?: ValorMag,
-        public essencia?: ValorMag,
+        public cerne: Cerne = new Cerne(),
         //Pericias
-        public pericias?: Pericia[],
+        public pericias: Pericia[] = new Array<Pericia>(),
         //Fugacidade
-        public fugacidade?: Habilidade[],
+        public fugacidade: Habilidade[] = new Array<Habilidade>(),
         //Habilidades
-        public habilidades?: Habilidade[],
+        public habilidades: Habilidade[] = new Array<Habilidade>(),
         //Resposta
-        public resposta?: Resposta,
-        public forcaVontade?: ValorMag,
-        public ira?: ValorMag,
-        public poderMaximo?: ValorMag,
+        public resposta: Resposta = new Resposta(),
+        public forcaVontade: ValorMag = new ValorMag(),
+        public ira: ValorMag = new ValorMag(),
+        public poderMaximo: ValorMag = new ValorMag(),
         //Dons e Defeitos
-        public dons?: Modificador[],
-        public defeitos?: Modificador[],
-        //Resistências
-        public resistencias?: Resistencia[],
+        public dons: Modificador[] = new Array<Modificador>(),
+        public defeitos: Modificador[] = new Array<Modificador>(),
         //Estimulos
-        public estimulos?: string[],
+        public estimulos: string[] = new Array<string>(),
         //Elementais
-        public elementais?: Elemento[],
+        public elementais: Elemento[] = new Array<Elemento>(),
         //Experiência
-        public pontosGraduacao?: number,
-        public pontosEvolucao?: number,
-        public experienciaAtual?: number,
+        public experiencia: Experiencia = new Experiencia(),
         //Equipamento
-        public itensEquipados?: Equipamento[],
-        public posses?: Item[],
+        public itensEquipados: Equipamento[] = new Array<Equipamento>(),
+        public posses: Item[] = new Array<Item>(),
         //Elo
-        public cansacoAtual?: number,
-        public cansacoMax?: number,
-        public genese?: number,
-        public geracao?: number,
-        public fe?: number,
-        public karma?: number,
-        public destino?: Destino,
-        public carisma?: Carisma,
-        public alma?: string[],
-        public eloDivino?: string,
-        public trajetoria?: string,
-        public idumentaria?: string,
+        public elo: Elo = new Elo(),
         //Modificadores Ativos
-        public modificadoresAtivos?: Modificador[]
+        public modificadoresAtivos: Modificador[] = new Array<Modificador>()
     ){
         //do something
     }    

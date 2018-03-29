@@ -1,2 +1,2 @@
-export {Ser} from './classes/ser';
+export {Ser} from './classes/ser/ser';
 export {ValorMag} from './classes/valormag';

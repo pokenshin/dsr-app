@@ -4,7 +4,7 @@ import { GeraInteiroService } from './gera-inteiro.service';
 import { GeraBooleanService } from './gera-boolean.service';
 import { GeraStringService } from './gera-string.service';
 import { GeraValorMagService } from './gera-valor-mag.service';
-import { Destreza } from '../../classes/atributos/destreza';
+import { Destreza } from '../../classes/ser/atributos/destreza';
 import { ValorMag } from '../..';
 
 @Injectable()

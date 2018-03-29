@@ -1,5 +1,5 @@
 import { Atributo } from "./atributo";
-import { ValorMag } from "../..";
+import { ValorMag } from "../../valormag";
 
 export class Destreza extends Atributo {
     reflexo: ValorMag;

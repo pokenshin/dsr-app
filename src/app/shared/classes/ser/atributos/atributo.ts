@@ -1,5 +1,5 @@
 import { ValorMag } from "../../valormag";
-import { Evolucao } from "../evolucao";
+import { Evolucao } from "./evolucao";
 
 export abstract class Atributo {
     constructor(

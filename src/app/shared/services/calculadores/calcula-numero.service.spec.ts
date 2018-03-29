@@ -55,7 +55,6 @@ describe('CalculaNumeroService', () => {
   it('somaValorMag recebe 50m4 e 10m5 e retorna 15m5', ()=>{
     var result:ValorMag;
     result = this.service.somaValorMag(new ValorMag(50, 4), new ValorMag(10, 5));
-    console.log(result);
     expect(result.toString()).toBe("15m5");
   })
 });

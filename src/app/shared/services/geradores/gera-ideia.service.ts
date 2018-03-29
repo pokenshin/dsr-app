@@ -5,7 +5,7 @@ import { GeraBooleanService } from './gera-boolean.service';
 import { GeraStringService } from './gera-string.service';
 import { GeraValorMagService } from './gera-valor-mag.service';
 import { ValorMag } from '../..';
-import { Ideia } from '../../classes/atributos/ideia';
+import { Ideia } from '../../classes/ser/atributos/ideia';
 
 @Injectable()
 export class GeraIdeiaService implements Gerador {

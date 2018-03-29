@@ -1,11 +1,7 @@
 export class Carisma {
-    negativo: number;
-    neutro: number;
-    positivo: number;
-
-    constructor(){
-        this.negativo = 0;
-        this.neutro = 0;
-        this.positivo = 0;
-    }
+    constructor(
+        public negativo: number = 0,
+        public neutro: number = 0,
+        public positivo: number = 0
+    ){}
 }

@@ -1,24 +1,24 @@
 import { Modificador } from "./modificador";
-import { Origem } from "../lugares/origem";
-import { Especie } from "../identidade/especie";
-import { Classe } from "../ciencias/classe";
-import { Indole } from "../identidade/indole";
-import { Rei } from "../identidade/rei";
+import { Origem } from "../../lugares/origem";
+import { Especie } from "../especie";
+import { Classe } from "../classe";
+import { Indole } from "../indole";
+import { Rei } from "../rei";
 
 export class ModIdentidade extends Modificador {
-    nome:string;
-    origem: Origem;
-    corpo:number;
-    especies: Especie[];
-    classes: Classe[];
-    natureza:string;
-    indole: Indole;
-    magnitude: number;
-    reis: Rei[];
-    ki: number;
-    nivel: number;
-    
-    constructor(){
+    constructor(
+        public nome:string = '',
+        public origem:Origem = new Origem(),
+        public corpo:number = 0,
+        public especies: Especie[] = new Array<Especie>(),
+        public classes: Classe[] = new Array<Classe>(),
+        public natureza:string = '',
+        public indole: Indole = new Indole(),
+        public magnitude: number = 0,
+        public reis: Rei[] = new Array<Rei>(),
+        public ki: number = 0,
+        public nivel: number = 0
+    ){
         super();
     }
 }

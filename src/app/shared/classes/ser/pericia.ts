@@ -1,10 +1,12 @@
-import { Modificador } from "../modificadores/modificador";
-import { Ciencia } from "./ciencia";
+import { Modificador } from "./modificadores/modificador";
+import { Ciencia } from "../ciencias/ciencia";
 
 export class Pericia {
-    id: number;
-    nome: string;
-    ciencia: Ciencia;
-    caracteristicas: string;
-    modificadores: Modificador[];
+    constructor(
+        public id: number = 0,
+        public nome: string = '',
+        public ciencia: Ciencia = new Ciencia(),
+        public caracteristicas: string = '',
+        public modificadores: Modificador[] = new Array<Modificador>()
+    ){}
 }

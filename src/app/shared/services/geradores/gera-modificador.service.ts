@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Gerador } from './gerador';
-import { Modificador } from '../../classes/modificadores/modificador';
+import { Modificador } from '../../classes/ser/modificadores/modificador';
 import { GeraInteiroService } from './gera-inteiro.service';
 import { GeraValorMagService } from './gera-valor-mag.service';
 import { Ser } from '../..';
@@ -12,6 +12,7 @@ export class GeraModificadorService implements Gerador {
     var ser = new Ser();
     var keys = Object.keys(ser);
     console.log(keys);
+    console.log(ser);
     throw new Error("Method not implemented.");
   }
   getLista(seed: number, quantidade: number): Modificador[] {

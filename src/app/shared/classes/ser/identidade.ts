@@ -17,7 +17,5 @@ export class Identidade {
         public reis: Rei[] = new Array<Rei>(),
         public ki: number = 0 ,
         public nivel: number = 0,
-    ){
-        //do something
-    }
+    ){}
 }

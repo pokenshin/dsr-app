@@ -4,7 +4,7 @@ import { GeraBooleanService } from './gera-boolean.service';
 import { GeraStringService } from './gera-string.service';
 import { GeraValorMagService } from './gera-valor-mag.service';
 import { Gerador } from './gerador';
-import { Forca } from '../../classes/atributos/forca';
+import { Forca } from '../../classes/ser/atributos/forca';
 import { ValorMag } from '../..';
 
 @Injectable()

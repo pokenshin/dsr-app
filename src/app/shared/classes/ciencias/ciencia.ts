@@ -1,7 +1,10 @@
 import { Esfera } from "./esfera";
 
 export class Ciencia {
-    id: number;
-    nome: string;
-    esfera: Esfera;
+    constructor(
+        public id: number = 0,
+        public nome: string = '',
+        public esfera: Esfera = new Esfera()
+    ){}
+    
 }

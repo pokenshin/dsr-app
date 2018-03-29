@@ -1,14 +1,11 @@
 import { ValorMag } from "../..";
 
 export class Deslocamento {
-    valor: ValorMag;
-    tipo: string;
-    unidade: string = "km/h";
-
-    constructor(tipo?:string){
-        this.tipo = tipo || "";
-        this.valor = new ValorMag();
-    }
+    constructor(
+        public valor: ValorMag = new ValorMag(),
+        public tipo: string = '',
+        public unidade: string = "km/h"
+    ){}
 
     toString(){
         return this.valor.toString() + " " + this.unidade

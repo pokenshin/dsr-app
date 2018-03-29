@@ -1,4 +1,4 @@
-import { ValorMag } from "../..";
+import { ValorMag } from "../../valormag";
 import { Atributo } from "./atributo";
 
 export class Materia extends Atributo {
