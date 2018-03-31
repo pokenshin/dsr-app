@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { GeraTipoDuracaoService } from './gera-tipo-duracao.service';
+import { GeraDuracaoService } from './gera-duracao.service';
 
-describe('GeraTipoDuracaoService', () => {
+describe('GeraDuracaoService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [GeraTipoDuracaoService]
+      providers: [GeraDuracaoService]
     });
   });
 
-  it('should be created', inject([GeraTipoDuracaoService], (service: GeraTipoDuracaoService) => {
+  it('should be created', inject([GeraDuracaoService], (service: GeraDuracaoService) => {
     expect(service).toBeTruthy();
   }));
 });

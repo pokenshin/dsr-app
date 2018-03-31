@@ -3,6 +3,7 @@ import { Gerador } from './gerador';
 import { Modificador } from '../../classes/ser/modificadores/modificador';
 import { GeraInteiroService, GeraValorMagService } from './geral/';
 import { Ser } from '../../classes/ser/ser';
+import { ModIdentidade } from '../../classes/ser/modificadores/mod-identidade';
 
 @Injectable()
 export class GeraModificadorService implements Gerador {
@@ -10,12 +11,14 @@ export class GeraModificadorService implements Gerador {
   get(seed: number):Modificador {
     var ser = new Ser();
     var keys = Object.keys(ser);
-    console.log(keys);
-    console.log(ser);
-    throw new Error("Method not implemented.");
+    return new ModIdentidade();
   }
   getLista(seed: number, quantidade: number): Modificador[] {
-    throw new Error("Method not implemented.");
+    var resultado = new Array<Modificador>();
+    for (let i = 0; i < quantidade; i++){
+      resultado.push(this.get(seed));
+    }
+    return resultado; 
   }
 
   getComOrigem(seed:number, origem:string, id:number, tipo:string ):Modificador{

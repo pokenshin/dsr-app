@@ -6,6 +6,9 @@ import { EfeitoCura } from '../../classes/efeitos/efeito-cura';
 import { GeraDuracaoService } from './gera-duracao.service';
 import { GeraEnergiaService } from './gera-energia.service';
 import { GeraAlvoHabilidadeService } from './gera-alvo-habilidade.service';
+import { EfeitoDano } from '../../classes/efeitos/efeito-dano';
+import { EfeitoModificador } from '../../classes/efeitos/efeito-modificador';
+import { GeraModificadorService } from './gera-modificador.service';
 
 @Injectable()
 export class GeraEfeitoService implements Gerador {
@@ -17,17 +20,35 @@ export class GeraEfeitoService implements Gerador {
     var gTipoDuracao = new GeraDuracaoService();
     var gEnergia = new GeraEnergiaService();
     var gTipoAlvo = new GeraAlvoHabilidadeService();
+    var gModificador = new GeraModificadorService();
 
     switch (tipoEfeito){
       case 1:
-        var result = new EfeitoCura();
-        result.duracao = gTipoDuracao.get(Math.random());
-        result.energia = gEnergia.get(Math.random());
-        result.tipoAlvo = gTipoAlvo.get(Math.random());
+        var resultCura = new EfeitoCura();
+        resultCura.duracao = gTipoDuracao.get(Math.random());
+        resultCura.energia = gEnergia.get(Math.random());
+        resultCura.tipoAlvo = gTipoAlvo.get(Math.random());
+        resultCura.valor = rvmg.get(Math.random());
+        return resultCura;
 
+      case 2:
+        var resultDano = new EfeitoDano();
+        resultDano.duracao = gTipoDuracao.get(Math.random());
+        resultDano.energia = gEnergia.get(Math.random());
+        resultDano.tipoAlvo = gTipoAlvo.get(Math.random());
+        resultDano.valor = rvmg.get(Math.random());
+        return resultDano;
+
+      case 3:
+        var resultModificador = new EfeitoModificador();
+        resultModificador.duracao = gTipoDuracao.get(Math.random());
+        resultModificador.tipoAlvo = gTipoAlvo.get(Math.random());
+        resultModificador.modificador = gModificador.get(Math.random());
+        return resultModificador;
+
+      default:
+        return new EfeitoModificador();
     }
-
-    throw new Error("Method not implemented.");
   }
   getLista(seed: number, quantidade: number): Efeito[] {
     var resultado = new Array<Efeito>();

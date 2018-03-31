@@ -94,7 +94,8 @@ export class GeraEspecieService implements Gerador {
     for (let i = 0; i < quantidade; i++){
       resultado.push(this.get(seed));
     }
-    return resultado;  }
+    return resultado; 
+   }
   constructor() { }
 
 }
