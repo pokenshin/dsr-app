@@ -5,6 +5,7 @@ import { GeraAtributosService } from './atributos/gera-atributos.service';
 import { GeraModificadorService } from './gera-modificador.service';
 import { GeraInteiroService } from './geral';
 import { GeraIdentidadeService } from './gera-identidade.service';
+import { GeraEquipamentoService } from './gera-equipamento.service';
 
 @Injectable()
 export class GeraSerService implements Gerador {
@@ -15,12 +16,14 @@ export class GeraSerService implements Gerador {
     var gModificador = new GeraModificadorService();
     var gIdentidade = new GeraIdentidadeService();
     var rng = new GeraInteiroService();
+    var gEquipamento = new GeraEquipamentoService();
     
     result.atributos = gAtributos.get(Math.random());
     result.defeitos = gModificador.getLista(Math.random(), rng.getEntre(Math.random(), 1, 10));
     result.dons = gModificador.getLista(Math.random(), rng.getEntre(Math.random(), 1, 10));
     result.identidade = gIdentidade.get(Math.random());
-    
+    result.itensEquipados = gEquipamento.getLista(Math.random(), rng.getEntre(Math.random(), 1, 10));
+   
 
     return result;
 

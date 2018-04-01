@@ -1,6 +1,7 @@
 import { Modificador } from "../ser/modificadores/modificador";
 import { ValorMag } from "../..";
 import { Material } from "./material";
+import { Energia } from "../energias/energia";
 
 export abstract class Item {
     id: number;
@@ -12,7 +13,7 @@ export abstract class Item {
     modificadores: Modificador[];
     massa: ValorMag;
     essencia: number;
-    energia: number;
+    energia: Energia;
     valor: number;
     tipo: number;
     materialBase: Material;
