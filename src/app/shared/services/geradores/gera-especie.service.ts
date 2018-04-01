@@ -19,6 +19,7 @@ import { Resposta } from '../../classes/ser/resposta';
 import { GeraRespostaService } from './gera-resposta.service';
 import { GeraTaxonomiaService } from './gera-taxonomia.service';
 import { GeraModificadorService } from './gera-modificador.service';
+import { GeraElementaisService } from './gera-elementais.service';
 
 @Injectable()
 export class GeraEspecieService implements Gerador {
@@ -46,6 +47,7 @@ export class GeraEspecieService implements Gerador {
     var gResposta = new GeraRespostaService();
     var gTaxonomia = new GeraTaxonomiaService();
     var gModificador = new GeraModificadorService();
+    var gElementais = new GeraElementaisService();
 
     result.acao = gMinMax.getNumberPequeno(Math.random());
     result.altura = gMinMax.getValorMag(Math.random());
@@ -85,7 +87,8 @@ export class GeraEspecieService implements Gerador {
     result.trabalho = gMinMax.getNumberMedio(Math.random());
     result.turno = gMinMax.getNumberPequeno(Math.random());
     result.virtudesEspecie = gModificador.getLista(Math.random(), rng.getEntre(Math.random(), 1, 10));
-
+    result.elementais = gElementais.get(Math.random());
+    
     return result;
   }
   

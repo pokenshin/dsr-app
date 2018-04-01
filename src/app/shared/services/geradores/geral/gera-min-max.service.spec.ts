@@ -29,7 +29,6 @@ describe('GeraMinMaxService', () => {
     var resultado = this.serviceNumber.getNumberGrande(this.seed);
     expect(resultado).toBeDefined();
     expect(resultado.min).toBeLessThan(resultado.max);
-    console.log(resultado);
   });
 
   it('deve gerar um valorMag min menor que um valorMag max', () =>{
@@ -40,7 +39,6 @@ describe('GeraMinMaxService', () => {
       expect(resultado.min.valor).toBeLessThan(resultado.max.valor);
     }else{
       expect(resultado.min.magnitude).toBeLessThan(resultado.max.magnitude);
-    }   
-    console.log(resultado);
+    }
   })
 });

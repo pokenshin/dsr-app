@@ -6,7 +6,7 @@ import { GeraInteiroService } from './services/geradores/geral';
   imports: [
     CommonModule
   ],
-  declarations: []
+  declarations: [ElementaisComponent]
 })
 export class SharedModule { 
   static forRoot(): ModuleWithProviders {

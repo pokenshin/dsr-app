@@ -1,9 +1,9 @@
 import { Elemento } from "./elemento";
 import { ValorMag } from "../../..";
 
-export class ElementalEntropia implements Elemento {
-    id: number = 8;
-    nome: string = "Entropipa";
+export class ElementoOleo implements Elemento {
+    id: number = 20;
+    nome: string = "Óleo";
     valorPositivo: ValorMag = new ValorMag();
     valorNegativo: ValorMag = new ValorMag();
 }

@@ -18,6 +18,8 @@ import { Deslocamento } from "./deslocamento";
 import { Taxonomia } from "./taxonomia";
 import { RangeValue } from "./range-value";
 import { Atributos } from "./atributos";
+import { Elemento } from "../ciencias/elementais/elemento";
+import { Elementais } from "./elementais";
 
 export class Especie {
     constructor(
@@ -69,7 +71,9 @@ export class Especie {
         public natureza: Natureza = new Natureza(),
         public resposta: RangeValue<Resposta> = new RangeValue(new Resposta(), new Resposta()),
         public fugacidade: Habilidade[] = new Array<Habilidade>(),
-        public deslocamentosMedios: Deslocamento[] = new Array<Deslocamento>()       
+        public deslocamentosMedios: Deslocamento[] = new Array<Deslocamento>(),
+        //Elementais
+        public elementais: Elementais = new Elementais()
     ){}
     
 }

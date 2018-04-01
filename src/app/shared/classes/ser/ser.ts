@@ -26,8 +26,6 @@ export class Ser {
         //Energias
         public energias: Energia[] = new Array<Energia>(),
         //Destino - Especial - Carisma
-        public destino: Destino = new Destino(),
-        public carisma: Carisma = new Carisma(),
         public especial: number = 0,
         //Deslocamentos
         public deslocamentos: Deslocamento[] = new Array<Deslocamento>(),
