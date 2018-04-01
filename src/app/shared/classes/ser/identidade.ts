@@ -11,7 +11,7 @@ export class Identidade {
         public corpo: number = 0,
         public especies: Especie[] = new Array<Especie>(),
         public classes: Classe[] = new Array<Classe>(),
-        public natureza: string = '',
+        public natureza: Indole = new Indole,
         public indole: Indole = new Indole,
         public magnitude: number = 0,
         public reis: Rei[] = new Array<Rei>(),
