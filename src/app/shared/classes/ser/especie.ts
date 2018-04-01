@@ -73,7 +73,9 @@ export class Especie {
         public fugacidade: Habilidade[] = new Array<Habilidade>(),
         public deslocamentosMedios: Deslocamento[] = new Array<Deslocamento>(),
         //Elementais
-        public elementais: Elementais = new Elementais()
+        public elementais: Elementais = new Elementais(),
+        //Estímulos
+        public estimulos: string[] = new Array<string>()
     ){}
     
 }

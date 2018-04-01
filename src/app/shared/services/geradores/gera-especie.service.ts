@@ -88,7 +88,8 @@ export class GeraEspecieService implements Gerador {
     result.turno = gMinMax.getNumberPequeno(Math.random());
     result.virtudesEspecie = gModificador.getLista(Math.random(), rng.getEntre(Math.random(), 1, 10));
     result.elementais = gElementais.get(Math.random());
-    
+    result.estimulos = rsg.getLista(Math.random(), rng.getEntre(Math.random(), 1, 10));
+   
     return result;
   }
   
