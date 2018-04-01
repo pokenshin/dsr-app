@@ -10,7 +10,7 @@ export class GeraReiService implements Gerador {
   get(seed: number):Rei {
     var result = new Rei();
     var rng = new GeraInteiroService();
-    var cores = ['Vermelho', 'Amarelo', 'Verde', 'Preto', 'Branco', 'Azul', 'Rosa']
+    var cores = ['Dourado', 'Branco', 'Azul', 'Roxo', 'Verde', 'Vermelho', 'Laranja', "Amarelo", "Cintilante", ""]
     var gModificador = new GeraModificadorService();
     var rsg = new GeraStringService();
 

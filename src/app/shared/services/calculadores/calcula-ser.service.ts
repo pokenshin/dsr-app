@@ -5,7 +5,7 @@ import { Especie } from '../../classes/ser/especie';
 @Injectable()
 export class CalculaSerService {
 
-  CalculaSer(ser: Ser): Ser {
+  calculaSer(ser: Ser): Ser {
     //Carisma e Destino = os mesmos da índole do ser.
     //ser.carisma = ser.indole.carisma;
     //ser.destino = ser.indole.destino;
@@ -27,7 +27,6 @@ export class CalculaSerService {
     //Energias
     //Experiência
     //Ativar Modificadores
-    ser = new Ser();
     return ser;
   }
   
