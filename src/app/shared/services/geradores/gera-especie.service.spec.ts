@@ -21,7 +21,6 @@ describe('GeraEspecieService', () => {
 
   it ('deve gerar uma espécie completa', () =>{
     var resultado = this.service.get(seed);
-    console.log(resultado);
     expect(resultado).toBeDefined();
   })
 });

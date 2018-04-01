@@ -3,7 +3,7 @@ import { Efeito } from "../efeitos/efeito";
 
 export class Consumivel extends Item {
     constructor(
-        public efeitos: Efeito[] = new Array<Efeito>();
+        public efeitos: Efeito[] = new Array<Efeito>()
     ){
         super();
     }
