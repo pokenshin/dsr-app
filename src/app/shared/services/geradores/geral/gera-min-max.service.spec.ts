@@ -35,6 +35,7 @@ describe('GeraMinMaxService', () => {
     this.serviceValorMag = new GeraMinMaxService<ValorMag>();
     var resultado = this.serviceValorMag.getValorMag(this.seed);
     expect(resultado).toBeDefined();
+    console.log(resultado);
     if (resultado.min.magnitude == resultado.max.magnitude){
       expect(resultado.min.valor).toBeLessThan(resultado.max.valor);
     }else{

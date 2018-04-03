@@ -200,7 +200,7 @@ export class CalculaNumeroService {
           valorFinal = valor2;
     }
 
-    return new ValorMag(valorFinal, magnitudeFinal);
+    return new ValorMag(Math.floor(valorFinal), Math.floor(magnitudeFinal);
     }
 
 }
