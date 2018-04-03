@@ -11,7 +11,7 @@ export class GeraStringService implements Gerador {
 
   get(seed: number) {
     var min = this.rng.getEntre(Math.random(), 1, 10);
-    var max = this.rng.getEntre(Math.random(), 1, 10);
+    var max = min + this.rng.getEntre(Math.random(), 1, 10);
 
     return this.getTamanhoEspecifico(seed, min, max);
   }

@@ -19,15 +19,18 @@ describe('GeraStringService', () => {
   }));
 
   it('deve gerar uma string', () => {
-    this.service = new GeraStringService();
     var resultado = this.service.get(this.seed);
     expect(resultado).toBeDefined();
   })
 
   it('gerarEntre deve gerar uma string maior que 3 e menor que 12', () =>{
-    this.service = new GeraStringService();
     var resultado = this.service.getTamanhoEspecifico(this.seed, 3, 12);
     expect(resultado.length).toBeGreaterThan(2);
     expect(resultado.length).toBeLessThan(13);
+  })
+
+  it('gera uma lista de strings', ()=>{
+    var resultado = this.service.getLista(Math.random(), 20);
+    expect(resultado.length).toBeDefined;    
   })
 });
