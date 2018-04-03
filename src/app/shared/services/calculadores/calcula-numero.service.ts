@@ -100,25 +100,37 @@ export class CalculaNumeroService {
     return result;
   }
 
-  divideValorMag(valor: ValorMag, divisor: ValorMag):ValorMag{
-    if (valor.toString() == "0m0"){
-      return new ValorMag(0);
-    } else if (divisor.toString() == "0m0"){
-      return new ValorMag(0);
-    } else if (divisor.toString() == "1m1" || divisor.toString() == "10m0"){
-      return valor;
-    } else {
-      var magFinal = ((valor.magnitude - 2) - (divisor.magnitude - 2)) + 2;
-      var valorFinal = (valor.valor / divisor.valor);
-
-      while (valorFinal < 10)
-      {
-          valorFinal = valorFinal * 10;
-          magFinal = magFinal - 1;
+  divideValorMag(valor: ValorMag, divisor?: ValorMag, divisorNum?:number):ValorMag{
+    if (divisor != undefined){
+      if (valor.toString() == "0m0"){
+        return new ValorMag(0);
+      } else if (divisor.toString() == "0m0"){
+        return new ValorMag(0);
+      } else if (divisor.toString() == "1m1" || divisor.toString() == "10m0"){
+        return valor;
+      } else {
+        var magFinal = ((valor.magnitude - 2) - (divisor.magnitude - 2)) + 2;
+        var valorFinal = (valor.valor / divisor.valor);
+  
+        while (valorFinal < 10)
+        {
+            valorFinal = valorFinal * 10;
+            magFinal = magFinal - 1;
+        }
+  
+        return new ValorMag(Math.floor(valorFinal), magFinal);
+      } 
+    }else{
+      if (divisorNum == 0){
+        return new ValorMag(0,0);
+      } if (divisorNum == 1){
+        return valor;
+      } else{
+        return this.divideValorMag(valor, this.numberToValorMag(divisorNum));
       }
-
-      return new ValorMag(Math.floor(valorFinal), magFinal);
-    }    
+      
+    }
+   
   }
 
   calculaPorcentagem(porcentagem: number, valor: number):number{    
@@ -199,8 +211,7 @@ export class CalculaNumeroService {
       else
           valorFinal = valor2;
     }
-
-    return new ValorMag(Math.floor(valorFinal), Math.floor(magnitudeFinal);
-    }
+    return new ValorMag(Math.floor(valorFinal), Math.floor(magnitudeFinal));
+  }
 
 }
