@@ -3,6 +3,7 @@ import { Ser, ValorMag } from '../..';
 import { Especie } from '../../classes/ser/especie';
 import { Deslocamento } from '../../classes/ser/deslocamento';
 import { CalculaNumeroService } from '.';
+import { Pericia } from '../../classes/ser/pericia';
 
 @Injectable()
 export class CalculaSerService {
@@ -14,6 +15,7 @@ export class CalculaSerService {
     //Calcula Deslocamentos
     ser.deslocamentos = this.calculaDeslocamentos(ser);
     //Cria lista de Perícias
+    ser.pericias = this.criaListaPericias(ser);
     //Cria lista de Habilidades
     //Calcula cansaço
     //Calcula natureza
@@ -29,6 +31,24 @@ export class CalculaSerService {
     //Experiência
     //Ativar Modificadores
     return ser;
+  }
+
+  criaListaPericias(ser:Ser):Pericia[]{
+    console.log("(CalculaSerService.criaListaPericias) - Iniciando listagem de perícias de Ser");    
+    var resultado = new Array<Pericia>();
+
+    ser.identidade.classes.forEach(element => {
+      resultado = resultado.concat(element.pericias);
+      console.log("(CalculaSerService.criaListaPericias) - " + element.pericias.length + " perícias das classes inseridas. Total: " + resultado.length );    
+    });
+
+    ser.identidade.especies.forEach(element => {
+      resultado = resultado.concat(element.pericias);
+      console.log("(CalculaSerService.criaListaPericias) - " + element.pericias.length + " perícias das espécies inseridas. Total: " + resultado.length);    
+    });
+
+    console.log("(CalculaSerService.criaListaPericias) - Fim da listagem de perícias de Ser. Total: " + resultado.length);    
+    return resultado;
   }
   
   private calculaEspecial(especies: Especie[]): number{
