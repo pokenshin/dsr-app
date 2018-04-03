@@ -16,16 +16,11 @@ describe('GeraEspecieService', () => {
   });
 
   it('should be created', inject([GeraEspecieService], (service: GeraEspecieService) => {
-    console.log("Teste básico de especie iniciado.");
     expect(service).toBeTruthy();
-    console.log("Teste básico de especie finalizado.");
   }));
 
   it ('deve gerar uma espécie completa', () =>{
-    console.log("Teste avançado de especie iniciado.");
     var resultado = this.service.get(this.seed);
     expect(resultado).toBeDefined();
-    console.log("Teste avançado de especie finalizado.");
-    console.log(resultado);
   })
 });

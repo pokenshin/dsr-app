@@ -40,11 +40,8 @@ export class GeraMinMaxService<T> implements Gerador {
     this.rvmg = new GeraValorMagService();
     this.calculador = new CalculaNumeroService();
     var min = this.rvmg.getEntre(Math.random(), new ValorMag(10, 1), new ValorMag(99, 10));
-    var max = this.rvmg.getEntre(Math.random(), new ValorMag(10, 1), new ValorMag(99, 10));
-    console.log (min);
-    console.log (max);
+    var max = this.rvmg.getEntre(Math.random(), min, new ValorMag(99, 10));
     max = this.calculador.somaValorMag(min, max);
-    console.log(max);
     return new RangeValue(min, max);
   }
 

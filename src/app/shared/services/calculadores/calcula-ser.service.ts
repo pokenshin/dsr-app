@@ -53,19 +53,50 @@ export class CalculaSerService {
     desAr = this.calculaDeslocamentoAr(ser);
     result.push(desAr);
     //Mar
+    desMar = this.calculaDeslocamentoMar(ser);
+    result.push(desMar);
     //Espaço
+    desEspaco = this.calculaDesolocamentoEspaco(ser);
+    result.push(desEspaco);
+    
+    console.log("(CalculaSerService.calculaDeslocamentos) - Fim do calculo de Deslocamentos");
     return result;
+  }
+
+  calculaDesolocamentoEspaco(ser:Ser):Deslocamento{
+    console.log("(CalculaSerService.calculaDesolocamentoEspaco) - Iniciando cálculo de Deslocamento em Espaço.");
+    var resultado = new Deslocamento(new ValorMag(0,0), "Espaço");
+    var desEspEspecie = ser.identidade.especies[0].deslocamentosMedios.filter(d => d.tipo == "Espaço");
+    if (desEspEspecie.length > 0){ 
+      console.log("(CalculaSerService.calculaDesolocamentoEspaco) - Deslocamento em espaço da espécie encontrado: " + desEspEspecie[0].valor.toString());
+      var calc = new CalculaNumeroService();
+      var especieDexMin = ser.identidade.especies[0].atributos.min.destreza.pontos;
+      var especieForMin = ser.identidade.especies[0].atributos.min.forca.pontos;
+      var serDex = ser.atributos.destreza.pontos;
+      var serFor = ser.atributos.forca.pontos;
+      var fatorDex = 10 * serDex / especieDexMin;
+      var fatorFor = 10 * serFor / especieForMin;
+      //Média dos dois valores para multiplicar com o minimo da espécie
+      var fatorTotal = (fatorDex + fatorFor) / 2;
+      resultado.valor = calc.multiplicaValorMag(desEspEspecie[0].valor, undefined, fatorTotal);
+      resultado.valor = calc.divideValorMag(resultado.valor, undefined, 2);
+      console.log("(CalculaSerService.calculaDesolocamentoEspaco) - Deslocamento em espaço do ser calculado: " + resultado.toString());
+      return resultado;
+    }else{
+      console.log("(CalculaSerService.calculaDesolocamentoEspaco) - Deslocamento em espaço da espécie não encontrado. Retornando vazio.");
+      return resultado;
+    }
   }
 
   //(Minimo da Espécie * (FatorDex + FatorFor)) / 2
   //FatorDex e FatorFor = quantos % acima ou abaixo do minimo da especie o ser está
   calculaDeslocamentoAr(ser:Ser):Deslocamento{
-    console.log("(CalculaSerService.calculaDesolocamentoAr) - Iniciando cálculo de Deslocamento em Ar.");
+    console.log("(CalculaSerService.calculaDeslocamentoAr) - Iniciando cálculo de Deslocamento em Ar.");
       var resultado = new Deslocamento(new ValorMag(), "Ar");
       var desArEspecie = ser.identidade.especies[0].deslocamentosMedios.filter(d => d.tipo == "Ar");
-      if (desArEspecie != null)
+      if (desArEspecie.length > 0)
       {
-        console.log("(CalculaSerService.calculaDesolocamentoAr) - Deslocamento em ar da espécie encontrado: " + desArEspecie[0].valor.toString());
+        console.log("(CalculaSerService.calculaDeslocamentoAr) - Deslocamento em ar da espécie encontrado: " + desArEspecie[0].valor.toString());
         var calc = new CalculaNumeroService();
         var especieDexMin = ser.identidade.especies[0].atributos.min.destreza.pontos;
         var especieForMin = ser.identidade.especies[0].atributos.min.forca.pontos;
@@ -112,6 +143,42 @@ export class CalculaSerService {
       return result;
     }
   }
+
+  //(Minimo da Espécie * (FatorDex + FatorFor)) / 3
+  //FatorDex e FatorFor = quantos % acima ou abaixo do minimo da especie o ser está
+  calculaDeslocamentoMar(ser):Deslocamento{
+    console.log("(CalculaSerService.calculaDeslocamentoMar) - Iniciando cálculo de Deslocamento em Mar.");
+    var resultado = new Deslocamento(new ValorMag(), "Mar");
+    var desMarEspecie = ser.identidade.especies[0].deslocamentosMedios.filter(d => d.tipo == "Mar");
+    if (desMarEspecie.length > 0){
+      console.log("(CalculaSerService.calculaDeslocamentoMar) - Deslocamento em mar da espécie encontrado: " + desMarEspecie[0].valor.toString());
+      var calc = new CalculaNumeroService();
+      var especieDexMin = ser.identidade.especies[0].atributos.min.destreza.pontos;
+      var especieForMin = ser.identidade.especies[0].atributos.min.forca.pontos;
+      var serDex = ser.atributos.destreza.pontos;
+      var serFor = ser.atributos.forca.pontos;
+      //Retorna as porcentagens a mais (ou a menos) que os atributos atuais têm sobre a espécie
+      var fatorDex = 10 * serDex / especieDexMin;
+      var fatorFor = 10 * serFor / especieForMin;
+      //Média dos dois valores para multiplicar com o minimo da espécie
+      var fatorTotal = (fatorDex + fatorFor) / 2;
+
+      resultado.valor = calc.multiplicaValorMag(desMarEspecie[0].valor, undefined, fatorTotal);
+      resultado.valor = calc.divideValorMag(resultado.valor, undefined, 3);
+      console.log("(CalculaSerService.calculaDeslocamentoMar) - Deslocamento em mar do ser calculado: " + resultado.toString());
+
+      return resultado;
+    }else{
+      console.log("(CalculaSerService.calculaDeslocamentoMar) - Deslocamento em mar da espécie não encontrado. Retornando vazio.");
+
+      return resultado;
+    }
+    
+  }
+
+
+
+
   
   constructor() { }
 
