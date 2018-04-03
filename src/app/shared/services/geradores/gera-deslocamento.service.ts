@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Gerador } from './gerador';
 import { Deslocamento } from '../../classes/ser/deslocamento';
-import { GeraStringService, GeraValorMagService } from './geral';
+import { GeraStringService, GeraValorMagService, GeraInteiroService } from './geral';
 
 @Injectable()
 export class GeraDeslocamentoService implements Gerador {
 
   get(seed: number):Deslocamento {
-    var rsg = new GeraStringService();
+    var rng = new GeraInteiroService();
     var rvmg = new GeraValorMagService();    
     var result = new Deslocamento();
-    result.tipo = rsg.getTamanhoEspecifico(Math.random(), 3, 10);
+    var tipos = ["Solo", "Ar", "Mar", "Espaço"];
+    result.tipo = tipos[rng.getEntre(Math.random(), 0, tipos.length)];
     result.valor = rvmg.get(Math.random());
     return result;
   }

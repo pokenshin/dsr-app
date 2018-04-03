@@ -57,4 +57,17 @@ describe('CalculaNumeroService', () => {
     result = this.service.somaValorMag(new ValorMag(50, 4), new ValorMag(10, 5));
     expect(result.toString()).toBe("15m5");
   })
+
+  it('converte 200000 em 20m6', ()=>{
+    var result:ValorMag;
+    result = this.service.numberToValorMag(200000);
+    expect(result.valor).toBe(20);
+    expect(result.magnitude).toBe(6);
+  })
+
+  it ('multiplica 10m3 por 20 e tem como resultado 20m4', ()=>{
+    var result:ValorMag;
+    result = this.service.multiplicaValorMag(new ValorMag(10, 3), undefined, 20);
+    expect (result.toString()).toBe("20m4");
+  })
 });

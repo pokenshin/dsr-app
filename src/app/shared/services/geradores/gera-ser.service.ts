@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Gerador } from './gerador';
 import { Ser } from '../..';
+import { CalculaSerService } from '../calculadores/calcula-ser.service';
 import { GeraAtributosService } from './atributos/gera-atributos.service';
 import { GeraModificadorService } from './gera-modificador.service';
 import { GeraInteiroService } from './geral';
@@ -9,8 +10,8 @@ import { GeraEquipamentoService } from './gera-equipamento.service';
 import { GeraPericiaService } from './gera-pericia.service';
 import { GeraItemService } from './gera-item.service';
 import { GeraRespostaService } from './gera-resposta.service';
-import { CalculaSerService } from '../calculadores';
 import { GeraHabilidadeService } from './gera-habilidade.service';
+
 
 @Injectable()
 export class GeraSerService implements Gerador {
@@ -41,7 +42,6 @@ export class GeraSerService implements Gerador {
     result = calculadorSer.calculaSer(result);
 
     return result;
-
   }
   getLista(seed: number, quantidade: number): Ser[] {
     var resultado = new Array<Ser>();

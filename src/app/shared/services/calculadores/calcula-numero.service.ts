@@ -5,24 +5,99 @@ import { ValorMag } from '../..';
 export class CalculaNumeroService {
   constructor() { }
 
-  multiplicaValorMag(valorMag1: ValorMag, valorMag2: ValorMag):ValorMag{
-    if (valorMag1.toString() == "1m2" || valorMag1.toString() == "10m1"){
-      return valorMag2;
-    } else if (valorMag2.toString() == "1m2" || valorMag2.toString() == "10m1"){
-      return valorMag1;  
-    } else if (valorMag1.valor == 0 || valorMag2.valor == 0){
-      return new ValorMag(0, 1);
-    } else {
-      var magFinal = (valorMag1.magnitude + valorMag2.magnitude) - 2;
-      var valorFinal = (valorMag1.valor * valorMag2.valor);
-      while (valorFinal > 99)
-      {
-          valorFinal = valorFinal / 10;
-          magFinal = magFinal + 1;
+  multiplicaValorMag(valorMag1: ValorMag, valorMag2?: ValorMag, multiplicador?: number):ValorMag{
+    if (valorMag2 != undefined){
+      if (valorMag1.toString() == "1m2" || valorMag1.toString() == "10m1"){
+        return valorMag2;
+      } else if (valorMag2.toString() == "1m2" || valorMag2.toString() == "10m1"){
+        return valorMag1;  
+      } else if (valorMag1.valor == 0 || valorMag2.valor == 0){
+        return new ValorMag(0, 1);
+      } else {
+        var magFinal = (valorMag1.magnitude + valorMag2.magnitude) - 2;
+        var valorFinal = (valorMag1.valor * valorMag2.valor);
+        while (valorFinal > 99)
+        {
+            valorFinal = valorFinal / 10;
+            magFinal = magFinal + 1;
+        }
+    
+        return new ValorMag(Math.floor(valorFinal), Math.floor(magFinal));
       }
-  
-      return new ValorMag(Math.floor(valorFinal), Math.floor(magFinal));
+    }else if (multiplicador != undefined){
+      if (multiplicador == 1){
+        return valorMag1;
+      } else if (valorMag1 == new ValorMag() || multiplicador == 0)
+        return new ValorMag(0, 1);
+      else
+        return this.multiplicaValorMag(valorMag1, this.numberToValorMag(multiplicador));
     }
+  }
+
+  numberToValorMag(numero:number):ValorMag{
+      var magnitude = 0;
+      var valor = 0;
+      var result = new ValorMag();
+      var numeroString = numero.toString();
+
+      //Se for numero decimal
+      if (numero % 1 != 0){
+        //Se o numero decimal for menor que 10
+        if (numero < 10){
+          //Se o numero decimal for maior que 1
+          if (numero > 1){
+
+            magnitude = 1;
+            numeroString = numeroString[0] + numeroString[2];
+            var valorNumber = parseInt(numeroString);
+            result = new ValorMag(valorNumber, magnitude);
+
+            return result;
+          }else{
+            //Se o numero decimal for menor que 1
+            magnitude = 0;
+
+            if (numeroString.includes(","))
+                numero = parseInt(numeroString.split(',')[1]);
+            else
+                numero = parseInt(numeroString.split('.')[1]);
+
+            while (numeroString.startsWith('0', 0))
+            {
+                magnitude = magnitude - 1;
+                numeroString = numeroString.substr(1, numeroString.length);
+            }
+
+            if (numeroString.length > 3)
+                numeroString = numeroString.substr(2, numeroString.length - 2);
+
+            valor = parseInt(numeroString);
+
+            if (valor < 10){
+              valor = valor * 10;
+            }
+                
+            result = new ValorMag(valor, magnitude);
+
+            return result;
+          }
+        }else{
+          //Se o numero decimal for maior que 10, descarta quebrados
+           if (numeroString.includes(","))
+            numeroString = numeroString.split(',')[0];
+          else
+            numeroString = numeroString.split('.')[0];
+      }
+    }
+    //Se for numero inteiro ou decimal maior que 10
+    magnitude = numeroString.length;
+    if (magnitude > 1){
+      valor = parseInt(numeroString.substr(0, 2));
+    }else{
+      valor = parseInt(numeroString + "0");
+    }         
+    result = new ValorMag(valor, magnitude);
+    return result;
   }
 
   divideValorMag(valor: ValorMag, divisor: ValorMag):ValorMag{

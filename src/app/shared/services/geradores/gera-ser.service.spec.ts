@@ -20,7 +20,6 @@ describe('GeraSerService', () => {
 
   it ('deve gerar um ser completa', () =>{
     var resultado = this.service.get(seed);
-    console.log(resultado);
     expect(resultado).toBeDefined();
   })
 });
