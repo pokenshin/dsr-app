@@ -49,10 +49,26 @@ export class CalculaSerService {
     //Modificadores
     ser.modificadoresAtivos = this.calculaModificadoresAtivos(ser);
     //Magnitude
+    ser.identidade.magnitude = this.calculaMagnitude(ser);
     //Energias
     //Experiência
     //Ativar Modificadores
     return ser;
+  }
+
+  //Magnitude média dos atributos
+  //Pega magnitude do Rei se for maior que a média dos atributos
+  calculaMagnitude(ser:Ser):number{
+    console.log("(CalculaSerService.calculaMagnitude) - Iniciando calculo de Magnitude do Ser");
+    var magTotal:number = ser.atributos.forca.porcentagem.magnitude + ser.atributos.destreza.porcentagem.magnitude + ser.atributos.materia.porcentagem.magnitude + ser.atributos.intelecto.porcentagem.magnitude + ser.atributos.criatividade.porcentagem.magnitude + ser.atributos.ideia.porcentagem.magnitude + ser.atributos.existencia.porcentagem.magnitude;
+    console.log(magTotal);
+    magTotal /= 7;
+    console.log("(CalculaSerService.calculaMagnitude) - Média de magnitudes dos atributos do Ser:", magTotal);
+    var reiMagMax:number = Math.max(...ser.identidade.reis.map(r=>r.magnitude));
+    console.log("(CalculaSerService.calculaMagnitude) - Magnitude máxima dos reis do Ser:", reiMagMax);
+    var resultado = Math.floor(Math.max(magTotal, reiMagMax));
+    console.log("(CalculaSerService.calculaMagnitude) - Magnitude do ser calculada: ", resultado);
+    return resultado;
   }
 
   calculaModificadoresAtivos(ser:Ser):Modificador[]{
