@@ -12,7 +12,7 @@ import { Pericia } from "./pericia";
 import { Habilidade } from "./habilidades/habilidade";
 import { Modificador } from "./modificadores/modificador";
 import { ValorMag } from "../..";
-import { Natureza } from "./natureza";
+import { Comportamento } from "./comportamento";
 import { Resposta } from "./resposta";
 import { Deslocamento } from "./deslocamento";
 import { Taxonomia } from "./taxonomia";
@@ -61,14 +61,14 @@ export class Especie {
         public altura: RangeValue<ValorMag> = new RangeValue(new ValorMag(),new ValorMag()),
         public maturidade: RangeValue<ValorMag> = new RangeValue(new ValorMag(),new ValorMag()),
         //Dominância da raça sobre outras
-        porcentagemDominancia: number = 0,
+        public porcentagemDominancia: number = 0,
         //Subatributos
         public destria: RangeValue<number> = new RangeValue(0,0),
         public trabalho: RangeValue<number> = new RangeValue(0,0),
         public densidade: ValorMag = new ValorMag(),
         public largura: RangeValue<ValorMag> = new RangeValue(new ValorMag(), new ValorMag()),
         public especial: number = 0,
-        public natureza: Natureza = new Natureza(),
+        public comportamento: Comportamento = new Comportamento(),
         public resposta: RangeValue<Resposta> = new RangeValue(new Resposta(), new Resposta()),
         public fugacidade: Habilidade[] = new Array<Habilidade>(),
         public deslocamentosMedios: Deslocamento[] = new Array<Deslocamento>(),

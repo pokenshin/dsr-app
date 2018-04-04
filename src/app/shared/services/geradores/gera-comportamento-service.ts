@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Gerador } from './gerador';
-import { Natureza } from '../../classes/ser/natureza';
+import { Comportamento } from '../../classes/ser/comportamento';
 import { GeraInteiroService } from './geral';
 
 @Injectable()
-export class GeraNaturezaService implements Gerador {
+export class GeraComportamentoService implements Gerador {
 
-  get(seed: number):Natureza {
-    var result = new Natureza();
+  get(seed: number):Comportamento {
+    var result = new Comportamento();
     var rng = new GeraInteiroService();
     result.apresentacao = rng.getEntre(Math.random(), 1, 99);
     result.concepcao = rng.getEntre(Math.random(), 1, 99);
@@ -17,8 +17,8 @@ export class GeraNaturezaService implements Gerador {
     result.personalidade = rng.getEntre(Math.random(), 1, 99);
     return result;
   }
-  getLista(seed: number, quantidade: number): Natureza[] {
-    var resultado = new Array<Natureza>();
+  getLista(seed: number, quantidade: number): Comportamento[] {
+    var resultado = new Array<Comportamento>();
     for (let i = 0; i < quantidade; i++){
       resultado.push(this.get(seed));
     }

@@ -4,9 +4,13 @@ import { Especie } from '../../classes/ser/especie';
 import { Deslocamento } from '../../classes/ser/deslocamento';
 import { CalculaNumeroService } from '.';
 import { Pericia } from '../../classes/ser/pericia';
+import { Habilidade } from '../../classes/ser/habilidades/habilidade';
+import { Comportamento } from '../../classes/ser/comportamento';
 
 @Injectable()
 export class CalculaSerService {
+
+
 
   calculaSer(ser: Ser): Ser {
     console.log("(CalculaSerService.calculaSer) - Iniciando calculo de Ser");    
@@ -17,8 +21,11 @@ export class CalculaSerService {
     //Cria lista de Perícias
     ser.pericias = this.criaListaPericias(ser);
     //Cria lista de Habilidades
+    ser.habilidades = this.criaListaHabilidades(ser);
     //Calcula cansaço
-    //Calcula natureza
+    ser.elo.cansacoMax = this.calculaCansaco(ser);
+    //Calcula comportamento
+    ser.elo.comportamento = this.calculaComportamento(ser);
     //Calcula Fé e Karma
     //Calcula subatributos
     //Calcula Ira, FV e PS
@@ -33,6 +40,44 @@ export class CalculaSerService {
     return ser;
   }
 
+  calculaComportamento(ser: Ser): Comportamento {
+    console.log("(CalculaSerService.calculaComportamento) - Iniciando cálculo de comportamento de Ser");    
+    var resultado = new Comportamento(); 
+    resultado.apresentacao = Math.max(...ser.identidade.especies.map(a => a.comportamento.apresentacao));
+    resultado.concepcao = Math.max(...ser.identidade.especies.map(a => a.comportamento.concepcao));
+    resultado.honra = Math.max(...ser.identidade.especies.map(a => a.comportamento.honra));
+    resultado.moral = Math.max(...ser.identidade.especies.map(a => a.comportamento.moral));
+    resultado.percepcao = Math.max(...ser.identidade.especies.map(a => a.comportamento.percepcao));
+    resultado.personalidade = Math.max(...ser.identidade.especies.map(a => a.comportamento.personalidade));
+    console.log("(CalculaSerService.calculaComportamento) - Finalizando cálculo de comportamento de Ser: ", resultado);    
+    return resultado;
+  }
+
+  calculaCansaco(ser:Ser):number{
+    console.log("(CalculaSerService.calculaCansaco) - Iniciando cálculo de cansaço de Ser");    
+    var resultado = Math.max(...ser.identidade.especies.map(a => a.cansaco.max));
+    console.log("(CalculaSerService.calculaCansaco) - Finalizando cálculo de cansaço de Ser: " + resultado);    
+    return resultado;
+  }
+
+  criaListaHabilidades(ser:Ser):Habilidade[]{
+    console.log("(CalculaSerService.criaListaHabilidades) - Iniciando listagem de habilidades de Ser");    
+    var resultado = new Array<Habilidade>();
+
+    ser.identidade.especies.forEach(esp => {
+      esp.habilidades.forEach(hab =>{
+        console.log("(CalculaSerService.criaListaHabilidades) - " + esp.habilidades.length + " habilidades na espécie.");    
+        var ids = Array.from(resultado.map(a => a.id));
+        if (ids.indexOf(hab.id) > -1){
+          resultado.push(hab);
+        }
+      })
+      console.log("(CalculaSerService.criaListaHabilidades) - Fim da listagem de habilidades de Ser. Total: " + resultado.length);    
+    });
+
+    return resultado;
+  }
+  
   criaListaPericias(ser:Ser):Pericia[]{
     console.log("(CalculaSerService.criaListaPericias) - Iniciando listagem de perícias de Ser");    
     var resultado = new Array<Pericia>();

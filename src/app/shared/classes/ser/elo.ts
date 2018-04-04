@@ -1,3 +1,5 @@
+import { Comportamento } from "./comportamento";
+
 export class Elo {
     constructor(
         public cansacoAtual: number = 0,
@@ -10,5 +12,6 @@ export class Elo {
         public eloDivino: string = '',
         public trajetoria: string = '',
         public idumentaria: string = '',
+        public comportamento:Comportamento = new Comportamento()
     ){}
 }

@@ -1,4 +1,4 @@
-export class Natureza {
+export class Comportamento {
     constructor(
         public honra: number = 0,
         public moral: number = 0,

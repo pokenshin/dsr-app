@@ -12,7 +12,7 @@ import { GeraDeslocamentoService } from './gera-deslocamento.service';
 import { GeraEnergiaService } from './gera-energia.service';
 import { GeraEsferaService } from './gera-esfera.service';
 import { GeraHabilidadeService } from './gera-habilidade.service';
-import { GeraNaturezaService } from './gera-natureza.service';
+import { GeraComportamentoService } from './gera-comportamento-service';
 import { GeraOrigemService } from './gera-origem.service';
 import { GeraPericiaService } from './gera-pericia.service';
 import { Resposta } from '../../classes/ser/resposta';
@@ -41,7 +41,7 @@ export class GeraEspecieService implements Gerador {
     var gEnergia = new GeraEnergiaService();
     var gEsfera = new GeraEsferaService();
     var gHabilidade = new GeraHabilidadeService();
-    var gNatureza = new GeraNaturezaService();
+    var gComportamento = new GeraComportamentoService();
     var gOrigem = new GeraOrigemService();
     var gPericia = new GeraPericiaService();
     var gResposta = new GeraRespostaService();
@@ -98,8 +98,8 @@ export class GeraEspecieService implements Gerador {
     console.log('(GeraEspecieService.get) - MaxArmasEquipadas da espécie gerada: ' + result.maxArmasEquipadas); 
     result.maxItensEquipados = rng.getEntre(Math.random(), 1, 20);
     console.log('(GeraEspecieService.get) - MaxItensEquipados da espécie gerada: ' + result.maxItensEquipados); 
-    result.natureza = gNatureza.get(Math.random());
-    console.log('(GeraEspecieService.get) - Natureza da espécie gerada: ' + result.natureza); 
+    result.comportamento = gComportamento.get(Math.random());
+    console.log('(GeraEspecieService.get) - Comportamento da espécie gerada: ' + result.comportamento); 
     result.nivel = gMinMax.getNumberPequeno(Math.random());
     console.log('(GeraEspecieService.get) - Nivel da espécie gerada: ' + result.nivel); 
     result.numeroReis = gMinMax.getNumberPequeno(Math.random());
