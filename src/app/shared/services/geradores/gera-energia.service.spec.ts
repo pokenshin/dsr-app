@@ -10,6 +10,8 @@ describe('GeraEnergiaService', () => {
   });
 
   it('should be created', inject([GeraEnergiaService], (service: GeraEnergiaService) => {
+    //console.log(service.getLista(Math.random(), 10));
     expect(service).toBeTruthy();
+    expect(service.getLista(Math.random(), 10)).toBeDefined();
   }));
 });

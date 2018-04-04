@@ -12,6 +12,7 @@ import { Atributo } from '../../classes/ser/atributos/atributo';
 import { Cerne } from '../../classes/ser/cerne';
 import { Resposta } from '../../classes/ser/resposta';
 import { Modificador } from '../../classes/ser/modificadores/modificador';
+import { Energia } from '../../classes/energias/energia';
 
 @Injectable()
 export class CalculaSerService {
@@ -51,11 +52,75 @@ export class CalculaSerService {
     //Magnitude
     ser.identidade.magnitude = this.calculaMagnitude(ser);
     //Energias
+    ser.energias = this.calculaEnergias(ser);
     //Experiência
     //Ativar Modificadores
     return ser;
   }
 
+  calculaEnergias(ser:Ser):Energia[]{
+    console.log("(CalculaSerService.calculaMagnitude) - Iniciando calculo de Energias do Ser");
+    var resultado = new Array<Energia>();
+    var siglas = new Array<string>();
+    var calc = new CalculaNumeroService();
+
+    ser.identidade.especies.forEach(e => {
+      e.energias.forEach(ene =>{
+        siglas = resultado.map(r=>r.sigla);
+        if (!siglas.includes(ene.sigla)){
+          var novaEnergia = new Energia(ene.id, ene.sigla, ene.nome);
+          resultado.push(novaEnergia);
+        }
+      });
+    });
+    console.log("(CalculaSerService.calculaMagnitude) - Tipos de Energias detectadas:", resultado);
+
+    //Energias: "AP", "CP", "EP", "HP", "MP", "QP", "SP", "PE", "PA";
+    resultado.forEach(e=>{
+      //Soma todas as quantidades das energias dentro de cada uma das espécies do ser
+      //Ex: pega todos os APs de todas as espécies e soma
+      ser.identidade.especies.forEach(esp =>{
+        if(esp.energias.map(x => x.sigla = e.sigla).length > 0){
+          e.quantidade += esp.energias.filter(ener=>ener.sigla == e.sigla)[0].quantidade;
+        }
+      });
+      switch (e.sigla){
+        case 'CP':
+        e.quantidade += calc.valorMagToNumber(ser.subatributos.bonusCP);
+        break;
+
+        case 'EP':
+        break;
+
+        case 'HP':
+        e.quantidade += calc.valorMagToNumber(ser.subatributos.bonusHP);
+        break;
+
+        case 'MP':
+        e.quantidade += ser.identidade.ki * calc.valorMagToNumber(ser.subatributos.bonusMP);
+        break;
+
+        case 'SP':
+        e.quantidade += calc.valorMagToNumber(ser.subatributos.bonusSP);
+        break;
+
+        case 'XP':
+        e.quantidade *= ser.identidade.reis.length;
+        break;
+
+        case 'PE':
+        break;
+
+        case 'PA':
+        break;
+      }
+      e.quantidade *= ser.identidade.nivel;
+      console.log("(CalculaSerService.calculaMagnitude) - Energia: ", e);
+
+    });
+
+    return resultado;
+  }
   //Magnitude média dos atributos
   //Pega magnitude do Rei se for maior que a média dos atributos
   calculaMagnitude(ser:Ser):number{

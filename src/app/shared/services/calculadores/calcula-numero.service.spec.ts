@@ -70,4 +70,10 @@ describe('CalculaNumeroService', () => {
     result = this.service.multiplicaValorMag(new ValorMag(10, 3), undefined, 20);
     expect (result.toString()).toBe("20m4");
   })
+
+  it('converte 25m6 em 250000', ()=>{
+    var result:number;
+    result = this.service.valorMagToNumber(new ValorMag(25, 6));
+    expect(result).toBe(250000);
+  })
 });

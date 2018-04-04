@@ -5,6 +5,20 @@ import { ValorMag } from '../..';
 export class CalculaNumeroService {
   constructor() { }
 
+  valorMagToNumber(numero:ValorMag):number{
+    var result = 0;
+    var zeros = '';
+    var numeroLength = numero.valor.toString().length;
+
+    for (var i = 0; i < numero.magnitude-numeroLength; i++) { 
+      zeros = zeros + '0';
+    }
+
+    result = parseInt(numero.valor.toString() + zeros);
+  
+    return result;
+  }
+
   multiplicaValorMag(valorMag1: ValorMag, valorMag2?: ValorMag, multiplicador?: number):ValorMag{
     if (valorMag2 != undefined){
       if (valorMag1.toString() == "1m2" || valorMag1.toString() == "10m1"){
