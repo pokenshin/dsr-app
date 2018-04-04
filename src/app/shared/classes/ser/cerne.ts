@@ -6,7 +6,7 @@ export class Cerne {
         public acao: ValorMag = new ValorMag(),
         public reacao: ValorMag = new ValorMag(),
         public turno: ValorMag = new ValorMag(),
-        public destria: ValorMag = new ValorMag(),
+        public destria: number = 0,
         public altura: ValorMag = new ValorMag(),
         public largura: ValorMag = new ValorMag(),
         public comprimento: ValorMag = new ValorMag(),

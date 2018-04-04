@@ -41,9 +41,9 @@ export class Ser {
         public habilidades: Habilidade[] = new Array<Habilidade>(),
         //Resposta
         public resposta: Resposta = new Resposta(),
-        public forcaVontade: ValorMag = new ValorMag(),
-        public ira: ValorMag = new ValorMag(),
-        public poderMaximo: ValorMag = new ValorMag(),
+        public forcaVontade: number = 0,
+        public ira: number = 0,
+        public poderMaximo: number = 0,
         //Dons e Defeitos
         public dons: Modificador[] = new Array<Modificador>(),
         public defeitos: Modificador[] = new Array<Modificador>(),
