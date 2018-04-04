@@ -27,6 +27,8 @@ export class CalculaSerService {
     //Calcula comportamento
     ser.elo.comportamento = this.calculaComportamento(ser);
     //Calcula Fé e Karma
+    ser.elo.fe = this.calculaFe(ser);
+    ser.elo.karma = this.calculaKarma(ser);
     //Calcula subatributos
     //Calcula Ira, FV e PS
     //Resposta
@@ -38,6 +40,13 @@ export class CalculaSerService {
     //Experiência
     //Ativar Modificadores
     return ser;
+  }
+
+  calculaFe(ser:Ser):number{
+    console.log("(CalculaSerService.calculaFe) - Iniciando cálculo de fé de Ser");    
+    var resultado = Math.max(...ser.identidade.especies.map(a => a.fe.min));
+    console.log("(CalculaSerService.calculaFe) - Finalizando cálculo de fé de Ser:", resultado);
+    return resultado;
   }
 
   calculaComportamento(ser: Ser): Comportamento {
