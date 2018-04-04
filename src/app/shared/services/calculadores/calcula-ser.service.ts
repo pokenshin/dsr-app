@@ -42,6 +42,13 @@ export class CalculaSerService {
     return ser;
   }
 
+  calculaKarma(ser:Ser):number{
+    console.log("(CalculaSerService.calculaKarma) - Iniciando cálculo de karma de Ser");    
+    var resultado = Math.max(...ser.identidade.especies.map(a => a.karma.min));
+    console.log("(CalculaSerService.calculaKarma) - Finalizando cálculo de karma de Ser:", resultado);    
+    return resultado;
+  }
+
   calculaFe(ser:Ser):number{
     console.log("(CalculaSerService.calculaFe) - Iniciando cálculo de fé de Ser");    
     var resultado = Math.max(...ser.identidade.especies.map(a => a.fe.min));
