@@ -11,6 +11,7 @@ import { GeraValorMagService } from '../geradores/geral';
 import { Atributo } from '../../classes/ser/atributos/atributo';
 import { Cerne } from '../../classes/ser/cerne';
 import { Resposta } from '../../classes/ser/resposta';
+import { Modificador } from '../../classes/ser/modificadores/modificador';
 
 @Injectable()
 export class CalculaSerService {
@@ -45,8 +46,8 @@ export class CalculaSerService {
     ser.resposta = this.calculaResposta(ser);
     //Fugacidade
     ser.fugacidade = this.calculaFugacidade(ser);
-    //Deslocamento
     //Modificadores
+    ser.modificadoresAtivos = this.calculaModificadoresAtivos(ser);
     //Magnitude
     //Energias
     //Experiência
@@ -54,10 +55,33 @@ export class CalculaSerService {
     return ser;
   }
 
+  calculaModificadoresAtivos(ser:Ser):Modificador[]{
+    console.log("(CalculaSerService.calculaModificadoresAtivos) - Iniciando calculo de Modificadores Ativos do Ser");
+    var resultado = new Array<Modificador>();
+
+    ser.pericias.forEach(per =>{
+      resultado.concat(per.modificadores);
+    });
+    console.log("(CalculaSerService.calculaModificadoresAtivos) - Modificadores adicionados vindos de pericia. Tamanho total:", resultado.length);
+
+
+    ser.itensEquipados.forEach(equip =>{
+      resultado.concat(equip.modificadores);
+    })
+    console.log("(CalculaSerService.calculaModificadoresAtivos) - Modificadores adicionados vindos de equipamento. Tamanho total:", resultado.length);
+
+    ser.identidade.reis.forEach(rei =>{
+      resultado.concat(rei.modificadores);
+    })
+    console.log("(CalculaSerService.calculaModificadoresAtivos) - Modificadores adicionados vindos de reis. Tamanho total:", resultado.length);
+    
+    console.log("(CalculaSerService.calculaModificadoresAtivos) - Modificadores Ativos do Ser calculados:", resultado);
+    return resultado;
+  }
   calculaFugacidade(ser:Ser):Habilidade[]{
     console.log("(CalculaSerService.calculaFugacidade) - Iniciando calculo de Fugacidade do Ser");
     var resultado = new Array<Habilidade>();
-    resultado = ser.habilidades.filter(h => h.tipo.nome == "Deslocamento");
+    resultado = ser.habilidades.filter(h => h.tipo.nome == "Fugacidade");
     console.log("(CalculaSerService.calculaFugacidade) - Fugacidade do Ser calculada:", resultado);
     return resultado;
   }
