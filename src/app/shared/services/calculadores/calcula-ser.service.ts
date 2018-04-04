@@ -61,7 +61,6 @@ export class CalculaSerService {
   calculaMagnitude(ser:Ser):number{
     console.log("(CalculaSerService.calculaMagnitude) - Iniciando calculo de Magnitude do Ser");
     var magTotal:number = ser.atributos.forca.porcentagem.magnitude + ser.atributos.destreza.porcentagem.magnitude + ser.atributos.materia.porcentagem.magnitude + ser.atributos.intelecto.porcentagem.magnitude + ser.atributos.criatividade.porcentagem.magnitude + ser.atributos.ideia.porcentagem.magnitude + ser.atributos.existencia.porcentagem.magnitude;
-    console.log(magTotal);
     magTotal /= 7;
     console.log("(CalculaSerService.calculaMagnitude) - Média de magnitudes dos atributos do Ser:", magTotal);
     var reiMagMax:number = Math.max(...ser.identidade.reis.map(r=>r.magnitude));
