@@ -10,6 +10,7 @@ import { Subatributos } from '../../classes/ser/subatributos';
 import { GeraValorMagService } from '../geradores/geral';
 import { Atributo } from '../../classes/ser/atributos/atributo';
 import { Cerne } from '../../classes/ser/cerne';
+import { Resposta } from '../../classes/ser/resposta';
 
 @Injectable()
 export class CalculaSerService {
@@ -41,6 +42,7 @@ export class CalculaSerService {
     ser.forcaVontade = this.calculaForcaVontade(ser);
     ser.poderMaximo = this.calculaPoderMaximo(ser);
     //Resposta
+    ser.resposta = this.calculaResposta(ser);
     //Fugacidade
     //Deslocamento
     //Modificadores
@@ -49,6 +51,20 @@ export class CalculaSerService {
     //Experiência
     //Ativar Modificadores
     return ser;
+  }
+
+  calculaResposta(ser:Ser):Resposta{
+    console.log("(CalculaSerService.calculaResposta) - Iniciando calculo de Resposta do Ser");
+    var resultado = new Resposta();  
+    resultado.bravura = ser.identidade.especies[0].resposta.min.bravura;
+    resultado.coragem = ser.identidade.especies[0].resposta.min.coragem;
+    resultado.desespero = ser.identidade.especies[0].resposta.min.desespero;
+    resultado.heroismo = ser.identidade.especies[0].resposta.min.heroismo;
+    resultado.indiferenca = ser.identidade.especies[0].resposta.min.indiferenca;
+    resultado.medo = ser.identidade.especies[0].resposta.min.medo;
+    resultado.panico = ser.identidade.especies[0].resposta.min.panico;
+    console.log("(CalculaSerService.calculaResposta) - Resposta do Ser calculada:", resultado);
+    return resultado;
   }
 
   calculaPoderMaximo(ser:Ser):number{
