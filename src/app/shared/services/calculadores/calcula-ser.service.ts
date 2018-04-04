@@ -44,6 +44,7 @@ export class CalculaSerService {
     //Resposta
     ser.resposta = this.calculaResposta(ser);
     //Fugacidade
+    ser.fugacidade = this.calculaFugacidade(ser);
     //Deslocamento
     //Modificadores
     //Magnitude
@@ -51,6 +52,14 @@ export class CalculaSerService {
     //Experiência
     //Ativar Modificadores
     return ser;
+  }
+
+  calculaFugacidade(ser:Ser):Habilidade[]{
+    console.log("(CalculaSerService.calculaFugacidade) - Iniciando calculo de Fugacidade do Ser");
+    var resultado = new Array<Habilidade>();
+    resultado = ser.habilidades.filter(h => h.tipo.nome == "Deslocamento");
+    console.log("(CalculaSerService.calculaFugacidade) - Fugacidade do Ser calculada:", resultado);
+    return resultado;
   }
 
   calculaResposta(ser:Ser):Resposta{
