@@ -41,6 +41,8 @@ export class GeraSerService implements Gerador {
 
     result = calculadorSer.calculaSer(result);
 
+    console.log("(GeraSerService.get) - Ser Gerado:", result)
+
     return result;
   }
   getLista(seed: number, quantidade: number): Ser[] {

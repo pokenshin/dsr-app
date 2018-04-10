@@ -13,11 +13,10 @@ import { Cerne } from '../../classes/ser/cerne';
 import { Resposta } from '../../classes/ser/resposta';
 import { Modificador } from '../../classes/ser/modificadores/modificador';
 import { Energia } from '../../classes/energias/energia';
+import { Experiencia } from '../../classes/ser/experiencia';
 
 @Injectable()
 export class CalculaSerService {
-
-
 
   calculaSer(ser: Ser): Ser {
     console.log("(CalculaSerService.calculaSer) - Iniciando calculo de Ser");    
@@ -54,8 +53,24 @@ export class CalculaSerService {
     //Energias
     ser.energias = this.calculaEnergias(ser);
     //Experiência
+    ser.experiencia = this.calculaExperiencia(ser);
     //Ativar Modificadores
     return ser;
+  }
+
+  calculaExperiencia(ser:Ser):Experiencia{
+    console.log("(CalculaSerService.calculaExperiencia) - Iniciando calculo de Experiência do Ser");
+    //Pontos de Graduação (G) = 10^Magnitude do Personagem
+    //Pontos de Evolução (En) = Nivel * G
+    //Experiência Total (XPn) = (G*(nivel^2 - nivel)) / 2
+    var resultado = new Experiencia();
+
+    resultado.pontosGraduacao = Math.floor(Math.pow(10, ser.identidade.magnitude));
+    resultado.pontosEvolucao = Math.floor(ser.identidade.nivel * resultado.pontosGraduacao);
+    resultado.experienciaAtual = Math.floor((resultado.pontosGraduacao * (Math.pow(ser.identidade.nivel, 2) - ser.identidade.nivel / 2)));
+    
+    console.log("(CalculaSerService.calculaExperiencia) - Experiência do Ser calculada:", resultado)
+    return resultado;;
   }
 
   calculaEnergias(ser:Ser):Energia[]{
