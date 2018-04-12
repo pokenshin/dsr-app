@@ -1,0 +1,1 @@
+export {GeraPericiaService} from './gera-pericia.service';

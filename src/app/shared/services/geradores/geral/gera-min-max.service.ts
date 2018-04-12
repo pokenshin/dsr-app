@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Gerador } from '../gerador';
-import { RangeValue } from '../../../classes/ser/range-value';
-import { GeraInteiroService, GeraValorMagService } from '.';
-import { ValorMag } from '../../..';
+import { GeraInteiroService } from './gera-inteiro.service';
+import { GeraValorMagService } from './gera-valor-mag.service';
+import { Gerador } from 'shared/services/geradores';
+import { RangeValue, ValorMag } from '../../../core';
 import { CalculaNumeroService } from '../../calculadores';
 
 @Injectable()

@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Gerador } from '../gerador';
+import { Gerador } from 'shared/services/geradores';
 import { GeraForcaService, GeraMateriaService, GeraDestrezaService, GeraIntelectoService, GeraCriatividadeService, GeraIdeiaService, GeraExistenciaService } from '.';
-import { Atributos } from '../../../classes/ser/atributos';
+import { AtributosSer } from 'shared/core/ser/atributos';
 
 @Injectable()
 export class GeraAtributosService implements Gerador {
 
-  get(seed: number):Atributos {
-    var result = new Atributos();
+  get(seed: number):AtributosSer {
+    var result = new AtributosSer();
     var gForca = new GeraForcaService();
     var gMateria = new GeraMateriaService();
     var gDestreza = new GeraDestrezaService();

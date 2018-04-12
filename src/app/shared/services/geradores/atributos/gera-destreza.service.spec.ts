@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { GeraDestrezaService } from './gera-destreza.service';
+import { GeraDestrezaService } from './';
 
 describe('GeraDestrezaService', () => {
   let service: GeraDestrezaService;

@@ -1,7 +1,7 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { GeraForcaService } from './gera-forca.service';
-import { Forca } from '../../../classes/ser/atributos/forca';
+import { GeraForcaService } from './';
+import { Forca } from 'shared/core/ser/atributos';
 
 describe('GeraForcaService', () => {
   let service: GeraForcaService;

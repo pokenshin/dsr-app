@@ -1,1 +1,0 @@
-export {ViewFichaComponent} from './view-ficha/view-ficha.component';

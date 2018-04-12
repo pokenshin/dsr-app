@@ -1,0 +1,1 @@
+export {GeraModificadorService} from './gera-modificador.service';

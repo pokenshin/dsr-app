@@ -1,7 +1,7 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { GeraMinMaxService } from './gera-min-max.service';
-import { ValorMag } from '../../..';
+import { ValorMag } from 'shared/core';
 
 describe('GeraMinMaxService', () => {
   let serviceNumber: GeraMinMaxService<number>;

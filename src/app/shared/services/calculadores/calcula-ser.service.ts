@@ -1,19 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Ser, ValorMag } from '../..';
-import { Especie } from '../../classes/ser/especie';
-import { Deslocamento } from '../../classes/ser/deslocamento';
-import { CalculaNumeroService } from '.';
-import { Pericia } from '../../classes/ser/pericia';
-import { Habilidade } from '../../classes/ser/habilidades/habilidade';
-import { Comportamento } from '../../classes/ser/comportamento';
-import { Subatributos } from '../../classes/ser/subatributos';
-import { GeraValorMagService } from '../geradores/geral';
-import { Atributo } from '../../classes/ser/atributos/atributo';
-import { Cerne } from '../../classes/ser/cerne';
-import { Resposta } from '../../classes/ser/resposta';
-import { Modificador } from '../../classes/ser/modificadores/modificador';
-import { Energia } from '../../classes/energias/energia';
-import { Experiencia } from '../../classes/ser/experiencia';
+import { ValorMag } from 'shared/core';
+import { Ser, Pericia, Comportamento, Subatributos, Cerne, Resposta, Experiencia, Deslocamento } from 'shared/core/ser';
+import { Especie } from 'shared/core/ser/especie';
+import { CalculaNumeroService } from './calcula-numero.service';
+import { Habilidade } from 'shared/core/ser/habilidades';
+import { GeraValorMagService } from 'shared/services/geradores/geral';
+import { Atributo } from 'shared/core/ser/atributos';
+import { Modificador } from 'shared/core/ser/modificadores';
+import { Energia } from 'shared/core/energias';
 
 @Injectable()
 export class CalculaSerService {

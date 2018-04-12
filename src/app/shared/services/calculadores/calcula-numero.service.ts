@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ValorMag } from '../..';
+import { ValorMag } from 'shared/core';
 
 @Injectable()
 export class CalculaNumeroService {

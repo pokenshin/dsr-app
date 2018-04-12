@@ -1,0 +1,1 @@
+export {GeraEnergiaService} from './gera-energia.service';

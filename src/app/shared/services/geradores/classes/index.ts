@@ -1,0 +1,1 @@
+export {GeraClasseService} from './gera-classe.service';

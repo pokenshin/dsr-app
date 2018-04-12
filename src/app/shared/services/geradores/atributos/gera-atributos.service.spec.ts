@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { GeraAtributosService } from './gera-atributos.service';
+import { GeraAtributosService } from './';
 
 describe('GeraAtributosService', () => {
   beforeEach(() => {

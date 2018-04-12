@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Gerador } from '../gerador';
+import { Gerador } from 'shared/services/geradores';
 
 @Injectable()
 export class GeraBooleanService implements Gerador {

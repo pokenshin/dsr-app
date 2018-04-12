@@ -1,11 +1,8 @@
 import { Injectable } from '@angular/core';
-import { GeraInteiroService } from '../geral/gera-inteiro.service';
-import { GeraBooleanService } from '../geral/gera-boolean.service';
-import { GeraStringService } from '../geral/gera-string.service';
-import { GeraValorMagService } from '../geral/gera-valor-mag.service';
-import { Gerador } from '../gerador';
-import { Forca } from '../../../classes/ser/atributos/forca';
-import { ValorMag } from '../../../classes/valormag';
+import { GeraInteiroService, GeraBooleanService, GeraStringService, GeraValorMagService } from 'shared/services/geradores/geral';
+import { Gerador } from 'shared/services/geradores';
+import { Forca } from 'shared/core/ser/atributos';
+import { ValorMag } from 'shared/core';
 
 @Injectable()
 export class GeraForcaService implements Gerador {

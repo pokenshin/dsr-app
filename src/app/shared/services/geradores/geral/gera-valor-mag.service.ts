@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Gerador } from '../gerador';
+import { Gerador } from 'shared/services/geradores';
+import { ValorMag } from 'shared/core';
 import { GeradorNumero } from './gerador-numero';
-import { ValorMag } from '../../../classes/valormag';
-import { GeraInteiroService } from './gera-inteiro.service'
+import { GeraInteiroService } from './gera-inteiro.service';
 
 @Injectable()
 export class GeraValorMagService implements Gerador, GeradorNumero {

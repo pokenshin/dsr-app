@@ -1,0 +1,1 @@
+export {Gerador} from './gerador';
