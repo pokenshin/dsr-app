@@ -1,6 +1,6 @@
 import { Modificador } from "shared/core/ser/modificadores";
 import { ValorMag } from 'shared/core';
-import { Material } from "./";
+import { Material } from "./material";
 import { Energia } from "shared/core/energias";
 
 export abstract class Item {

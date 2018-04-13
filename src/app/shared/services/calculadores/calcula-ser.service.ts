@@ -3,7 +3,7 @@ import { ValorMag } from 'shared/core';
 import { Ser, Pericia, Comportamento, Subatributos, Cerne, Resposta, Experiencia, Deslocamento } from 'shared/core/ser';
 import { Especie } from 'shared/core/ser/especie';
 import { CalculaNumeroService } from './calcula-numero.service';
-import { Habilidade } from 'shared/core/ser/habilidades';
+import { Habilidade, Tecnica, Arcanidade } from 'shared/core/ser/acao';
 import { GeraValorMagService } from 'shared/services/geradores/geral';
 import { Atributo } from 'shared/core/ser/atributos';
 import { Modificador } from 'shared/core/ser/modificadores';
@@ -22,6 +22,8 @@ export class CalculaSerService {
     ser.pericias = this.criaListaPericias(ser);
     //Cria lista de Habilidades
     ser.habilidades = this.criaListaHabilidades(ser);
+    //Cria lista de Arcanidades
+    ser.arcanidades = this.criaListaArcanidades(ser);
     //Calcula cansaço
     ser.elo.cansacoMax = this.calculaCansaco(ser);
     //Calcula comportamento
@@ -50,6 +52,25 @@ export class CalculaSerService {
     ser.experiencia = this.calculaExperiencia(ser);
     //Ativar Modificadores
     return ser;
+  }
+
+  criaListaArcanidades(ser:Ser):Arcanidade[]{
+    console.log("(CalculaSerService.criaListaArcanidades) - Iniciando listagem de arcanidades de Ser");    
+    var resultado = new Array<Arcanidade>();
+
+    ser.identidade.especies.forEach(esp => {
+      esp.arcanidades.forEach(arc =>{
+        console.log("(CalculaSerService.criaListaArcanidades) - " + esp.arcanidades.length + " arcanidades na espécie.");    
+        var ids = Array.from(resultado.map(a => a.id));
+        if (ids.indexOf(arc.id) > -1){
+          resultado.push(arc);
+        }
+      })
+      console.log("(CalculaSerService.criaListaArcanidades) - Fim da listagem de arcanidades de Ser. Total: " + resultado.length);    
+    });
+
+    return resultado;
+
   }
 
   calculaExperiencia(ser:Ser):Experiencia{

@@ -3,7 +3,7 @@ import { Esfera } from "shared/core/ciencias";
 import { Energia } from "shared/core/energias";
 import { Forca, Materia, Destreza, Intelecto, Criatividade, Existencia, Ideia } from "shared/core/ser/atributos";
 import { Pericia, Comportamento, Resposta, Deslocamento, ElementaisSer } from "shared/core/ser";
-import { Habilidade } from "shared/core/ser/habilidades";
+import { Habilidade, Arcanidade, Tecnica } from "shared/core/ser/acao";
 import { Modificador } from "shared/core/ser/modificadores";
 import { ValorMag, RangeValue } from 'shared/core';
 import { Taxonomia } from "./";
@@ -28,6 +28,7 @@ export class Especie {
         public atributos: RangeValue<AtributosSer> = new RangeValue(new AtributosSer(), new AtributosSer()),
         public pericias: Pericia[] = new Array<Pericia>(),
         public habilidades: Habilidade[] = new Array<Habilidade>(),
+        public arcanidades: Arcanidade[] = new Array<Arcanidade>(),
         // Poder / Virtudes / Defeitos
         public origemPoder: string = '',
         public virtudesEspecie: Modificador[] = new Array<Modificador>(),

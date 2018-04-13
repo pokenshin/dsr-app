@@ -1,4 +1,5 @@
-import { Item, Material } from "./";
+import { Item } from "./item";
+import { Material } from './material';
 
 export abstract class Equipamento extends Item {
     constructor(

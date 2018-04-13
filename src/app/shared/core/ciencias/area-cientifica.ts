@@ -1,4 +1,4 @@
-import { Ciencia } from "./";
+import { Ciencia } from "./ciencia";
 
 export class AreaCientifica {
     constructor(

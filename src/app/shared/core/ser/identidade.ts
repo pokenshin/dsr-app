@@ -1,6 +1,8 @@
 import { Origem } from "../lugares";
 import { Especie } from "./especie";
-import { Classe, Indole, Rei } from "./";
+import { Classe } from "./classe";
+import { Indole } from './indole';
+import { Rei } from './rei';
 
 export class Identidade {
     constructor(

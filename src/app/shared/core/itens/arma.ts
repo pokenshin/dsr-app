@@ -1,4 +1,4 @@
-import { Equipamento } from "./";
+import { Equipamento } from "./equipamento";
 
 export class Arma extends Equipamento {
     constructor(

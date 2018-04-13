@@ -1,4 +1,10 @@
-import { Forca, Materia, Destreza, Intelecto, Criatividade, Existencia, Ideia } from "./";
+import { Forca } from './forca';
+import { Materia } from './materia';
+import { Destreza } from './destreza';
+import { Intelecto } from './intelecto';
+import { Criatividade } from './criatividade';
+import { Existencia } from './existencia';
+import { Ideia } from "./ideia";
 
 export class AtributosSer {
     constructor(

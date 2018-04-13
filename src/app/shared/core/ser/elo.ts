@@ -1,4 +1,4 @@
-import { Comportamento } from "./";
+import { Comportamento } from "./comportamento";
 
 export class Elo {
     constructor(

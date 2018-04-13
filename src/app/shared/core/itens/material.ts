@@ -1,4 +1,4 @@
-import { Item } from "./";
+import { Item } from "./item";
 import { ValorMag } from 'shared/core';
 
 export class Material extends Item {

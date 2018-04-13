@@ -1,4 +1,4 @@
-import { Plano } from "./";
+import { Plano } from "./plano";
 
 export class Origem {
     constructor(

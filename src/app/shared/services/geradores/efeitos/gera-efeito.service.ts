@@ -4,7 +4,7 @@ import { Efeito, EfeitoCura, EfeitoDano, EfeitoModificador } from 'shared/core/e
 import { GeraInteiroService, GeraValorMagService } from 'shared/services/geradores/geral';
 import { GeraDuracaoService } from 'shared/services/geradores/efeitos';
 import { GeraEnergiaService } from 'shared/services/geradores/energias';
-import { GeraAlvoHabilidadeService } from 'shared/services/geradores/habilidades';
+import { GeraAlvoAcaoService } from 'shared/services/geradores/acoes';
 import { GeraModificadorService } from 'shared/services/geradores/modificadores';
 
 @Injectable()
@@ -16,7 +16,7 @@ export class GeraEfeitoService implements Gerador {
     var tipoEfeito = rng.getEntre(Math.random(), 1, 3);
     var gTipoDuracao = new GeraDuracaoService();
     var gEnergia = new GeraEnergiaService();
-    var gTipoAlvo = new GeraAlvoHabilidadeService();
+    var gTipoAlvo = new GeraAlvoAcaoService();
     var gModificador = new GeraModificadorService();
 
     switch (tipoEfeito){

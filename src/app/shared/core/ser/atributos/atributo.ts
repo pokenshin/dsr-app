@@ -1,5 +1,5 @@
 import { ValorMag } from 'shared/core';
-import { Evolucao } from "./";
+import { Evolucao } from "./evolucao";
 
 export abstract class Atributo {
     constructor(

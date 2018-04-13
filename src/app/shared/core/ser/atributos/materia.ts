@@ -1,5 +1,5 @@
 import { ValorMag } from 'shared/core';
-import { Atributo } from "./";
+import { Atributo } from "./atributo";
 
 export class Materia extends Atributo {
     colapso: ValorMag;

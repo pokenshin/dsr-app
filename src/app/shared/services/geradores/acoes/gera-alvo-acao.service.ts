@@ -2,24 +2,16 @@ import { Injectable } from '@angular/core';
 import { Gerador } from 'shared/services/geradores';
 import { AlvoHabilidade } from 'shared/core/efeitos/alvos/alvo-habilidade';
 import { GeraInteiroService, GeraValorMagService, GeraStringService } from 'shared/services/geradores/geral';
-import { AlvoCirculo } from 'shared/core/efeitos/alvos/alvo-circulo';
-import { AlvoEgo } from 'shared/core/efeitos/alvos/alvo-ego';
-import { AlvoElipse } from 'shared/core/efeitos/alvos/alvo-elipse';
-import { AlvoLinha } from 'shared/core/efeitos/alvos/alvo-linha';
-import { AlvoLosango } from 'shared/core/efeitos/alvos/alvo-losango';
-import { AlvoPonto } from 'shared/core/efeitos/alvos/alvo-ponto';
-import { AlvoTriangulo } from 'shared/core/efeitos/alvos/alvo-triangulo';
-import { AlvoVetor } from 'shared/core/efeitos/alvos/alvo-vetor';
+import { AlvoCirculo, AlvoEgo, AlvoElipse, AlvoLinha, AlvoLosango, AlvoPonto, AlvoTriangulo, AlvoVetor } from 'shared/core/efeitos/alvos/';
 
 @Injectable()
-export class GeraAlvoHabilidadeService implements Gerador {
+export class GeraAlvoAcaoService implements Gerador {
 
   get(seed: number):AlvoHabilidade {
     var rng = new GeraInteiroService();
     var rvmg = new GeraValorMagService();
     var rsg = new GeraStringService();
     var tipoAlvo = rng.getEntre(Math.random(), 1, 8);
-    var gTipoAlvo = new GeraAlvoHabilidadeService();
 
     switch (tipoAlvo){
       case 1:

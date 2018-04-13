@@ -1,4 +1,4 @@
-import { Item } from "./";
+import { Item } from "./item";
 import { Efeito } from "shared/core/efeitos";
 
 export class Consumivel extends Item {

@@ -1,4 +1,4 @@
-import { Realidade } from "./";
+import { Realidade } from "./realidade";
 
 export class Plano {
     constructor(

@@ -1,11 +1,20 @@
 import { ValorMag } from 'shared/core';
 import { Energia } from "shared/core/energias";
-import { Deslocamento, Pericia, Resposta, Destino, Carisma, Identidade, Subatributos, Cerne, Experiencia, Elo } from "./";
-import { Habilidade } from "./habilidades";
+import { Deslocamento } from './deslocamento'; 
+import { Pericia } from './pericia';
+import { Resposta } from './resposta';
+import { Destino } from './destino';
+import { Carisma } from './carisma';
+import { Identidade } from './identidade';
+import { Subatributos } from './subatributos';
+import { Cerne } from './cerne';
+import { Experiencia } from './experiencia';
+import { Elo } from "./elo";
 import { Modificador } from "./modificadores";
 import { Elemento } from 'shared/core/ciencias/elementais';
 import { Item, Equipamento } from "shared/core/itens";
 import { AtributosSer } from "./atributos";
+import { Arcanidade, Tecnica, Habilidade } from 'shared/core/ser/acao';
 
 export class Ser {
     constructor(
@@ -27,8 +36,10 @@ export class Ser {
         public pericias: Pericia[] = new Array<Pericia>(),
         //Fugacidade
         public fugacidade: Habilidade[] = new Array<Habilidade>(),
-        //Habilidades
+        //Habilidades, Técnicas, Arcanidades
         public habilidades: Habilidade[] = new Array<Habilidade>(),
+        public arcanidades: Arcanidade[] = new Array<Arcanidade>(),
+        public tecnicas: Tecnica[] = new Array<Tecnica>(),
         //Resposta
         public resposta: Resposta = new Resposta(),
         public forcaVontade: number = 0,

@@ -1,4 +1,4 @@
-import { Atributo } from "./";
+import { Atributo } from "./atributo";
 import { ValorMag } from 'shared/core';
 
 export class Forca extends Atributo {

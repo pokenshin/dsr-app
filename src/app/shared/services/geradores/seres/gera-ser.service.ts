@@ -8,8 +8,8 @@ import { GeraInteiroService } from 'shared/services/geradores/geral';
 import { GeraIdentidadeService, GeraRespostaService } from './';
 import { GeraEquipamentoService, GeraItemService } from 'shared/services/geradores/itens';
 import { GeraPericiaService } from 'shared/services/geradores/pericias';
-import { GeraHabilidadeService } from 'shared/services/geradores/habilidades';
-
+import { GeraHabilidadeService, GeraTecnicaService } from 'shared/services/geradores/acoes';
+import {GeraArcanidadeService} from 'shared/services/geradores/acoes/gera-arcanidade.service';
 
 @Injectable()
 export class GeraSerService implements Gerador {
@@ -25,6 +25,8 @@ export class GeraSerService implements Gerador {
     var gItem = new GeraItemService();
     var gResposta = new GeraRespostaService();
     var gHabilidade = new GeraHabilidadeService();
+    var gTecnica = new GeraTecnicaService();
+    var gArcanidade = new GeraArcanidadeService();
     var calculadorSer = new CalculaSerService();
     
     result.atributos = gAtributos.get(Math.random());
@@ -34,6 +36,8 @@ export class GeraSerService implements Gerador {
     result.itensEquipados = gEquipamento.getLista(Math.random(), rng.getEntre(Math.random(), 1, 10));
     result.pericias = gPericia.getLista(Math.random(), rng.getEntre(Math.random(), 1, 10));
     result.habilidades = gHabilidade.getLista(Math.random(), rng.getEntre(Math.random(), 1, 20));
+    result.tecnicas = gTecnica.getLista(Math.random(), rng.getEntre(Math.random(), 1, 10));
+    result.arcanidades = gArcanidade.getLista(Math.random(), rng.getEntre(Math.random(), 1, 10));
     result.posses = gItem.getLista(Math.random(), rng.getEntre(Math.random(), 1, 20));
     result.resposta = gResposta.get(Math.random());
 
@@ -49,6 +53,6 @@ export class GeraSerService implements Gerador {
       resultado.push(this.get(seed));
     }
     return resultado;  }
-  constructor() { }
-
+  constructor() { 
+  }
 }

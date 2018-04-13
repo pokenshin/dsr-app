@@ -7,7 +7,7 @@ import { CalculaNumeroService } from 'shared/services/calculadores/';
 import { ValorMag, RangeValue } from 'shared/core';
 import { GeraEnergiaService } from 'shared/services/geradores/energias';
 import { GeraEsferaService } from 'shared/services/geradores/ciencias';
-import { GeraHabilidadeService } from 'shared/services/geradores/habilidades';
+import { GeraHabilidadeService, GeraTecnicaService } from 'shared/services/geradores/acoes';
 import { GeraDeslocamentoService, GeraComportamentoService, GeraRespostaService } from 'shared/services/geradores/seres';
 import { GeraOrigemService } from 'shared/services/geradores/lugares';
 import { GeraPericiaService } from 'shared/services/geradores/pericias';
@@ -15,6 +15,7 @@ import { Resposta } from 'shared/core/ser';
 import { GeraTaxonomiaService } from 'shared/services/geradores/especies';
 import { GeraModificadorService } from 'shared/services/geradores/modificadores';
 import { GeraElementaisService } from 'shared/services/geradores/elementais';
+import { GeraArcanidadeService } from 'shared/services/geradores/acoes/gera-arcanidade.service';
 
 @Injectable()
 export class GeraEspecieService implements Gerador {
@@ -43,6 +44,9 @@ export class GeraEspecieService implements Gerador {
     var gTaxonomia = new GeraTaxonomiaService();
     var gModificador = new GeraModificadorService();
     var gElementais = new GeraElementaisService();
+    var gTecnica = new GeraTecnicaService();
+    var gArcanidade = new GeraArcanidadeService();
+
 
     result.acao = gMinMax.getNumberPequeno(Math.random());
     console.log('(GeraEspecieService.get) - Ação da espécie gerada: ' + result.acao );
@@ -74,7 +78,9 @@ export class GeraEspecieService implements Gerador {
     result.fugacidade = gHabilidade.getLista(Math.random(), rng.getEntre(Math.random(), 1, 5));
     console.log('(GeraEspecieService.get) - fugacidade da espécie gerada: ' + result.fugacidade); 
     result.habilidades = gHabilidade.getLista(Math.random(), rng.getEntre(Math.random(), 1, 10));
-    console.log('(GeraEspecieService.get) - Habilidades da espécie gerada: ' + result.habilidades); 
+    console.log('(GeraEspecieService.get) - Habilidades da espécie gerada: ' + result.habilidades);
+    result.arcanidades =  gArcanidade.getLista(Math.random(), rng.getEntre(Math.random(), 0, 10));
+    console.log('(GeraEspecieService.get) - Arcanidades da espécie gerada: ' + result.arcanidades);
     result.id = rng.getEntre(Math.random(), 1, 99999);
     console.log('(GeraEspecieService.get) - ID da espécie gerada: ' + result.id); 
     result.ira = gMinMax.getNumberMedio(Math.random());

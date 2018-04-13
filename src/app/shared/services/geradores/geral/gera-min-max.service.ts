@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { GeraInteiroService } from './gera-inteiro.service';
 import { GeraValorMagService } from './gera-valor-mag.service';
 import { Gerador } from 'shared/services/geradores';
-import { RangeValue, ValorMag } from '../../../core';
-import { CalculaNumeroService } from '../../calculadores';
+import { RangeValue, ValorMag } from 'shared/core';
+import { CalculaNumeroService } from 'shared/services/calculadores/calcula-numero.service';
 
 @Injectable()
 export class GeraMinMaxService<T> implements Gerador {

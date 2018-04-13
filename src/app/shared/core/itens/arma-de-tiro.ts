@@ -1,4 +1,5 @@
-import { Arma, Municao } from "./";
+import { Arma } from "./arma";
+import { Municao } from './municao';
 import { ValorMag, RangeValue } from 'shared/core';
 
 export class ArmaDeTiro extends Arma {

@@ -1,4 +1,4 @@
-import { Esfera } from "./";
+import { Esfera } from "./esfera";
 
 export class Ciencia {
     constructor(

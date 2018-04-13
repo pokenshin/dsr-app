@@ -1,4 +1,4 @@
-import { Equipamento } from "./";
+import { Equipamento } from "./equipamento";
 import { ValorMag } from 'shared/core';
 
 export class Vestivel extends Equipamento {
