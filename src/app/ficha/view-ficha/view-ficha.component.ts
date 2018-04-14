@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Ser } from 'shared/core/ser';
+import { Ser, Identidade } from 'shared/core/ser';
 import { GeraSerService } from 'shared/services/geradores/seres';
 
 @Component({
@@ -9,12 +9,14 @@ import { GeraSerService } from 'shared/services/geradores/seres';
 })
 export class ViewFichaComponent implements OnInit {
   ser:Ser;
+  identidade:Identidade;
 
   constructor() { }
 
   ngOnInit() {
     var gSer = new GeraSerService();
     this.ser = gSer.get(Math.random());
+    this.identidade = this.ser.identidade;
   }
 
 }

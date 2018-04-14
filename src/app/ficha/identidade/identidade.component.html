@@ -2,83 +2,77 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <mat-form-field class="input-full-width">
-                    <input matInput placeholder="Nome">
-                </mat-form-field>
+                <span class="identidade_label">nome:</span>
+                <span class="identidade_value">{{identidade.nome}}</span>
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-3">
-                <mat-form-field class="input-full-width">
-                    <input matInput placeholder="Plano">
-                </mat-form-field>
+                <span class="identidade_label">plano:</span>
+                <span class="identidade_value">{{identidade.origem.plano.nome}}</span>
             </div>
             <div class="col-sm-3">
-                <mat-form-field class="input-full-width">
-                    <input matInput placeholder="Realidade">
-                </mat-form-field>
+                <span class="identidade_label">realidade:</span>
+                <span class="identidade_value">{{identidade.origem.plano.realidade.nome}}</span>
             </div>
             <div class="col-sm-4">
-                <mat-form-field class="input-full-width">
-                    <input matInput placeholder="Origem">
-                </mat-form-field>
+                <span class="identidade_label">origem:</span>
+                <span class="identidade_value">{{identidade.origem.nome}}</span>
             </div>
             <div class="col-sm-2">
-                <mat-form-field class="input-full-width">
-                    <input matInput placeholder="Tempo">
-                </mat-form-field>
+                <span class="identidade_label">tempo:</span>
+                <span class="identidade_value">{{identidade.tempo}}</span>
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-4">
-                <mat-form-field class="input-full-width">
-                    <input matInput placeholder="Espécie">
-                </mat-form-field>
+                <span class="identidade_label">espécie:</span>
+                <ul>
+                    <li *ngFor="let especie of identidade.especies">
+                        <span class="identidade_value">{{especie.taxonomia.nomePopular}}</span>
+                    </li>
+                </ul>
             </div>
             <div class="col-sm-4">
-                <mat-form-field class="input-full-width">
-                    <input matInput placeholder="Classe">
-                </mat-form-field>
+                <span class="identidade_label">classe:</span>
+                <ul>
+                    <li *ngFor="let classe of identidade.classes">
+                        <span class="identidade_value">{{classe.nome}}</span>
+                    </li>
+                </ul>
             </div>
             <div class="col-sm-2">
-                <mat-form-field class="input-full-width">
-                    <input matInput placeholder="Natureza">
-                </mat-form-field>
+                <span class="identidade_label">natureza:</span>
+                <span class="identidade_value">{{identidade.natureza.nome}}</span>
             </div>
             <div class="col-sm-2">
-                <mat-form-field class="input-full-width">
-                    <input matInput placeholder="Índole">
-                </mat-form-field>
+                <span class="identidade_label">índole:</span>
+                <span class="identidade_value">{{identidade.indole.nome}}</span>
             </div>
         </div>
 
         <div class="row">
             <div class="col-sm-4">
-                <mat-form-field class="input-full-width">
-                    <input matInput placeholder="Corpo">
-                </mat-form-field>
+                <span class="identidade_label">corpo:</span>
+                <span class="identidade_value">{{identidade.corpo}}</span>
             </div>
             <div class="col-sm-2">
-                <mat-form-field class="input-full-width">
-                    <input matInput placeholder="Magnitude">
-                </mat-form-field>
+                <span class="identidade_label">magnitude:</span>
+                <span class="identidade_value">{{identidade.magnitude}}</span>
             </div>
             <div class="col-sm-2">
-                <mat-form-field class="input-full-width">
-                    <input matInput placeholder="Rei">
-                </mat-form-field>
+                <span class="identidade_label">rei:</span>
+                <span class="identidade_value">{{identidade.rei.length}}</span>
             </div>
             <div class="col-sm-2">
-                <mat-form-field class="input-full-width">
-                    <input matInput placeholder="Ki">
-                </mat-form-field>
+                <span class="identidade_label">ki:</span>
+                <span class="identidade_value">{{identidade.ki}}</span>
             </div>
             <div class="col-sm-2">
-                <mat-form-field class="input-full-width">
-                    <input matInput placeholder="Nível">
-                </mat-form-field>
+                <span class="identidade_label">nível:</span>
+                <span class="identidade_value">{{identidade.nivel}}</span>
             </div>
         </div>
 

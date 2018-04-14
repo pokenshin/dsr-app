@@ -32,6 +32,7 @@ export class GeraIdentidadeService implements Gerador {
     result.nome = rsg.getTamanhoEspecifico(Math.random(), 3, 10);
     result.origem = gOrigem.get(Math.random());
     result.reis = this.geraReis();
+    result.tempo = rng.getEntre(Math.random(), 0, 1000);
 
     return result;
   }
