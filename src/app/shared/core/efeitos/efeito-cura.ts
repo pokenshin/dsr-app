@@ -1,7 +1,7 @@
-import { Efeito } from "./";
+import { Efeito } from "./efeito";
 import { ValorMag } from 'shared/core';
 import { Energia } from "shared/core/energias/energia";
-import { DuracaoEfeito } from "./";
+import { DuracaoEfeito } from "./duracao-efeito";
 import { AlvoHabilidade, AlvoPonto } from "./alvos";
 
 export class EfeitoCura implements Efeito {

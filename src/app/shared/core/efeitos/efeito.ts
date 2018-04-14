@@ -1,4 +1,4 @@
-import { DuracaoEfeito } from "./";
+import { DuracaoEfeito } from "./duracao-efeito";
 import { AlvoHabilidade } from "./alvos";
 
 export interface Efeito {

@@ -1,4 +1,5 @@
-import { Efeito, DuracaoEfeito } from "./";
+import { Efeito } from "./efeito";
+import { DuracaoEfeito } from "./duracao-efeito";
 import { Modificador, ModIdentidade } from "shared/core/ser/modificadores";
 import { AlvoHabilidade, AlvoPonto } from "./alvos";
 

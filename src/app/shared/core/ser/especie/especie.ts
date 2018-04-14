@@ -6,7 +6,7 @@ import { Pericia, Comportamento, Resposta, Deslocamento, ElementaisSer } from "s
 import { Habilidade, Arcanidade, Tecnica } from "shared/core/ser/acao";
 import { Modificador } from "shared/core/ser/modificadores";
 import { ValorMag, RangeValue } from 'shared/core';
-import { Taxonomia } from "./";
+import { Taxonomia } from "./taxonomia";
 import { AtributosSer } from "shared/core/ser/atributos";
 import { Elemento } from 'shared/core/ciencias/elementais';
 

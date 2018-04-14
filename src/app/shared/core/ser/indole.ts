@@ -1,4 +1,5 @@
-import { Carisma, Destino } from "./";
+import { Carisma } from "./carisma";
+import { Destino } from "./destino";
 
 export class Indole {
     constructor(

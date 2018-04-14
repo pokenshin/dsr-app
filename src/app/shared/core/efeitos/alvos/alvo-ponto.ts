@@ -1,4 +1,4 @@
-import { AlvoHabilidade } from "./";
+import { AlvoHabilidade } from "./alvo-habilidade";
 import { Ser } from "shared/core/ser";
 
 export class AlvoPonto implements AlvoHabilidade {

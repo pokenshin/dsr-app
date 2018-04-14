@@ -1,4 +1,4 @@
-import { AlvoHabilidade } from "./";
+import { AlvoHabilidade } from "./alvo-habilidade";
 
 export class AlvoEgo implements AlvoHabilidade {
     constructor(

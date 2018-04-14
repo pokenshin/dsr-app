@@ -3,7 +3,7 @@ import { Gerador } from 'shared/services/geradores';
 import { ArmaBranca } from 'shared/core/itens/arma-branca';
 import { GeraValorMagService, GeraInteiroService, GeraStringService, GeraBooleanService } from 'shared/services/geradores/geral';
 import { GeraEnergiaService } from 'shared/services/geradores/energias';
-import { GeraMaterialService } from './';
+import { GeraMaterialService } from './gera-material.service';
 import { GeraModificadorService } from 'shared/services/geradores/modificadores';
 
 @Injectable()

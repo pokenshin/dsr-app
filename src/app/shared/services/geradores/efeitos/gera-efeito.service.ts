@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Gerador } from 'shared/services/geradores';
-import { Efeito, EfeitoCura, EfeitoDano, EfeitoModificador } from 'shared/core/efeitos';
+import { EfeitoCura, EfeitoDano, EfeitoModificador } from 'shared/core/efeitos';
+import { Efeito } from 'shared/core/efeitos/efeito';
 import { GeraInteiroService, GeraValorMagService } from 'shared/services/geradores/geral';
-import { GeraDuracaoService } from 'shared/services/geradores/efeitos';
+import { GeraDuracaoService } from 'shared/services/geradores/efeitos/gera-duracao.service';
 import { GeraEnergiaService } from 'shared/services/geradores/energias';
-import { GeraAlvoAcaoService } from 'shared/services/geradores/acoes';
+import { GeraAlvoAcaoService } from 'shared/services/geradores/acoes/gera-alvo-acao.service';
 import { GeraModificadorService } from 'shared/services/geradores/modificadores';
 
 @Injectable()

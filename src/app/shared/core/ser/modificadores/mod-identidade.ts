@@ -1,4 +1,4 @@
-import { Modificador } from "./";
+import { Modificador } from "./modificador";
 import { Origem } from "shared/core/lugares";
 import { Especie } from "shared/core/ser/especie";
 import { Classe, Indole, Rei } from "shared/core/ser/";

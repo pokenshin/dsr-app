@@ -1,4 +1,4 @@
-import { AlvoHabilidade } from "./";
+import { AlvoHabilidade } from "./alvo-habilidade";
 import { ValorMag } from 'shared/core';
 import { Ser } from 'shared/core/ser';
 

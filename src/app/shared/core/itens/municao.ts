@@ -1,4 +1,5 @@
-import { Material, Equipamento } from "./";
+import { Material } from "./material";
+import { Equipamento } from "./equipamento";
 import { ValorMag } from 'shared/core';
 
 export class Municao extends Equipamento {

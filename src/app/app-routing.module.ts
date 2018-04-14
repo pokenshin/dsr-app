@@ -4,8 +4,8 @@ import { ViewFichaComponent } from './ficha/view-ficha/view-ficha.component';
 import { ViewDebugComponent } from './debug/view-debug/view-debug.component';
 
 const appRoutes: Routes = [
-    { path: 'ficha', component: ViewFichaComponent, data: { title: 'Ficha!'} },
-    { path: 'debug', component: ViewDebugComponent, data: { title: 'Debug Page!'} },
+    //{ path: 'ficha', loadChildren: 'ficha/ficha.module#FichaModule'},
+    { path: 'ficha', component: ViewFichaComponent},
     { path: '', redirectTo: '/ficha', pathMatch: 'full'}
   ];
 

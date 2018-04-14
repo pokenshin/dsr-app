@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { CalculaNumeroService } from './';
+import { CalculaNumeroService } from './calcula-numero.service';
 import { ValorMag } from 'shared/core';
 
 describe('CalculaNumeroService', () => {

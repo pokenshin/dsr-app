@@ -1,5 +1,5 @@
 import { Atributo } from "./atributos";
-import { Pericia } from "./";
+import { Pericia } from "./pericia";
 import { Ciencia } from "shared/core/ciencias";
 
 export class Classe {

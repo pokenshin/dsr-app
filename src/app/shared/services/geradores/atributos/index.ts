@@ -5,4 +5,3 @@ export {GeraForcaService} from './gera-forca.service';
 export {GeraIdeiaService} from './gera-ideia.service';
 export {GeraIntelectoService} from './gera-intelecto.service';
 export {GeraMateriaService} from './gera-materia.service';
-export {GeraAtributosService} from './gera-atributos.service';

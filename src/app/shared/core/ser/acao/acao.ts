@@ -2,7 +2,7 @@ import { TipoAcao } from "./tipo-acao";
 import { Energia } from "shared/core/energias";
 import { Pericia } from "shared/core/ser";
 import { AreaCientifica } from "shared/core/ciencias";
-import { Efeito } from "shared/core/efeitos";
+import { Efeito } from "shared/core/efeitos/efeito";
 
 export abstract class Acao{
     constructor(

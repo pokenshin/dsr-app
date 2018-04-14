@@ -4,7 +4,8 @@ import { Identidade } from 'shared/core/ser/identidade';
 import { GeraClasseService } from 'shared/services/geradores/classes';
 import { GeraInteiroService, GeraStringService } from 'shared/services/geradores/geral';
 import { GeraEspecieService } from 'shared/services/geradores/especies/gera-especie.service';
-import { GeraIndoleService, GeraReiService } from './';
+import { GeraIndoleService } from './gera-indole.service';
+import { GeraReiService } from './gera-rei.service';
 import { GeraOrigemService } from 'shared/services/geradores/lugares';
 import { Rei } from 'shared/core/ser/rei';
 

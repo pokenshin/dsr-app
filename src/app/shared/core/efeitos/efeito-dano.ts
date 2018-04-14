@@ -1,4 +1,5 @@
-import { Efeito, DuracaoEfeito } from "./";
+import { Efeito } from "./efeito";
+import { DuracaoEfeito } from "./duracao-efeito";
 import { AlvoPonto, AlvoHabilidade } from "./alvos";
 import { Energia } from "shared/core/energias";
 import { ValorMag } from 'shared/core';

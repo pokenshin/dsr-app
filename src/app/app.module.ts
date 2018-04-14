@@ -5,9 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { FichaModule } from './ficha/ficha.module';
 import { DebugModule } from './debug/debug.module';
-import { ViewFichaComponent } from './ficha/view-ficha/view-ficha.component';
-import { ViewDebugComponent } from './debug/view-debug/view-debug.component';
-import { GeraInteiroService } from './shared/services/geradores/geral';
 import { SharedModule } from './shared/shared.module';
 
 
@@ -19,6 +16,7 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserModule,
     SharedModule.forRoot(),
+    AppRoutingModule,
     FichaModule,
     DebugModule
   ],

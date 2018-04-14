@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Gerador } from 'shared/services/geradores';
 import { AreaCientifica } from 'shared/core/ciencias';
-import { GeraCienciaService } from './';
+import { GeraCienciaService } from './gera-ciencia.service';
 import { GeraInteiroService, GeraStringService } from 'shared/services/geradores/geral';
 
 @Injectable()
