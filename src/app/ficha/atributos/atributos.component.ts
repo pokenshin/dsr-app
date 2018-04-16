@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { AtributosSer } from 'shared/core/ser/atributos';
 
 @Component({
   selector: 'app-ficha-atributos',
@@ -7,6 +8,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
   styleUrls: ['./atributos.component.css']
 })
 export class AtributosComponent implements OnInit {
+  @Input() atributos:AtributosSer;
 
   constructor() { }
 

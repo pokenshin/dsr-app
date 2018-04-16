@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Ser, Identidade } from 'shared/core/ser';
 import { GeraSerService } from 'shared/services/geradores/seres';
+import { AtributosSer } from 'shared/core/ser/atributos';
 
 @Component({
   selector: 'app-view-ficha',
@@ -10,6 +11,7 @@ import { GeraSerService } from 'shared/services/geradores/seres';
 export class ViewFichaComponent implements OnInit {
   ser:Ser;
   identidade:Identidade;
+  atributos:AtributosSer;
 
   constructor() { }
 
@@ -17,6 +19,7 @@ export class ViewFichaComponent implements OnInit {
     var gSer = new GeraSerService();
     this.ser = gSer.get(Math.random());
     this.identidade = this.ser.identidade;
+    this.atributos = this.ser.atributos;
   }
 
 }

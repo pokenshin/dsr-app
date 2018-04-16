@@ -1,76 +1,71 @@
-<form>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8">
-                <span class="identidade_label">nome:</span>
-                <span class="identidade_value">{{identidade.nome}}</span>
-            </div>
-            <div class="col-sm-2">
-                <span class="identidade_label">natureza:</span>
-                <span class="identidade_value">{{identidade.natureza.nome}}</span>
-            </div>
-            <div class="col-sm-2">
-                <span class="identidade_label">índole:</span>
-                <span class="identidade_value">{{identidade.indole.nome}}</span>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-3">
-                <span class="identidade_label">plano:</span>
-                <span class="identidade_value">{{identidade.origem.plano.nome}}</span>
-            </div>
-            <div class="col-sm-3">
-                <span class="identidade_label">realidade:</span>
-                <span class="identidade_value">{{identidade.origem.plano.realidade.nome}}</span>
-            </div>
-            <div class="col-sm-4">
-                <span class="identidade_label">origem:</span>
-                <span class="identidade_value">{{identidade.origem.nome}}</span>
-            </div>
-            <div class="col-sm-2">
-                <span class="identidade_label">tempo:</span>
-                <span class="identidade_value">{{identidade.tempo}}</span>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6">
-                <span class="identidade_label">espécie:</span>
-                <mat-chip-list>
-                    <mat-chip *ngFor="let especie of identidade.especies">{{especie.taxonomia.nomePopular}}</mat-chip>
-                </mat-chip-list>
-            </div>
-            <div class="col-sm-6">
-                <span class="identidade_label">classe:</span>
-                <mat-chip-list>
-                    <mat-chip *ngFor="let classe of identidade.classes">{{classe.nome}}</mat-chip>
-                </mat-chip-list>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-4">
-                <span class="identidade_label">corpo:</span>
-                <span class="identidade_value">{{identidade.corpo}}</span>
-            </div>
-            <div class="col-sm-2">
-                <span class="identidade_label">magnitude:</span>
-                <span class="identidade_value">{{identidade.magnitude}}</span>
-            </div>
-            <div class="col-sm-2">
-                <span class="identidade_label">rei:</span>
-                <span class="identidade_value">{{identidade.reis.length}}</span>
-            </div>
-            <div class="col-sm-2">
-                <span class="identidade_label">ki:</span>
-                <span class="identidade_value">{{identidade.ki}}</span>
-            </div>
-            <div class="col-sm-2">
-                <span class="identidade_label">nível:</span>
-                <span class="identidade_value">{{identidade.nivel}}</span>
-            </div>
-        </div>
-
+<div class="row">
+    <div class="col-sm-8">
+        <span class="identidade_label">nome:</span>
+        <span class="identidade_value">{{identidade.nome}}</span>
     </div>
-</form>
+    <div class="col-sm-2">
+        <span class="identidade_label">natureza:</span>
+        <span class="identidade_value">{{identidade.natureza.nome}}</span>
+    </div>
+    <div class="col-sm-2">
+        <span class="identidade_label">índole:</span>
+        <span class="identidade_value">{{identidade.indole.nome}}</span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3">
+        <span class="identidade_label">plano:</span>
+        <span class="identidade_value">{{identidade.origem.plano.nome}}</span>
+    </div>
+    <div class="col-sm-3">
+        <span class="identidade_label">realidade:</span>
+        <span class="identidade_value">{{identidade.origem.plano.realidade.nome}}</span>
+    </div>
+    <div class="col-sm-4">
+        <span class="identidade_label">origem:</span>
+        <span class="identidade_value">{{identidade.origem.nome}}</span>
+    </div>
+    <div class="col-sm-2">
+        <span class="identidade_label">tempo:</span>
+        <span class="identidade_value">{{identidade.tempo}}</span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <span class="identidade_label">espécie:</span>
+        <mat-chip-list>
+            <mat-chip *ngFor="let especie of identidade.especies">{{especie.taxonomia.nomePopular}}</mat-chip>
+        </mat-chip-list>
+    </div>
+    <div class="col-sm-6">
+        <span class="identidade_label">classe:</span>
+        <mat-chip-list>
+            <mat-chip *ngFor="let classe of identidade.classes">{{classe.nome}}</mat-chip>
+        </mat-chip-list>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <span class="identidade_label">corpo:</span>
+        <span class="identidade_value">{{identidade.corpo}}</span>
+    </div>
+    <div class="col-sm-2">
+        <span class="identidade_label">magnitude:</span>
+        <span class="identidade_value">{{identidade.magnitude}}</span>
+    </div>
+    <div class="col-sm-2">
+        <span class="identidade_label">rei:</span>
+        <span class="identidade_value">{{identidade.reis.length}}</span>
+    </div>
+    <div class="col-sm-2">
+        <span class="identidade_label">ki:</span>
+        <span class="identidade_value">{{identidade.ki}}</span>
+    </div>
+    <div class="col-sm-2">
+        <span class="identidade_label">nível:</span>
+        <span class="identidade_value">{{identidade.nivel}}</span>
+    </div>
+</div>
