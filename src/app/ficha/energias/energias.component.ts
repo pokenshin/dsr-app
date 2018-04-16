@@ -10,7 +10,7 @@ import {MatTableDataSource} from '@angular/material';
 })
 export class EnergiasComponent implements OnInit {
   @Input() energias:Energia[];
-  columnsToDisplay = ['sigla', 'quantidade'];
+  columnsToDisplay = ['sigla', 'quantidade', 'pct'];
   dataSource = new MatTableDataSource(this.energias);
 
   constructor() { }

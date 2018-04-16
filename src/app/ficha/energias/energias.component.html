@@ -1,14 +1,32 @@
-<div>
-    <mat-table [dataSource]="energias">
-        <ng-container matColumnDef="sigla">
-            <mat-header-cell *matHeaderCellDef> Energia </mat-header-cell>
-            <mat-cell *matCellDef="let energia"> {{energia.sigla}} </mat-cell>
-        </ng-container>
-        <ng-container matColumnDef="quantidade">
-            <mat-header-cell *matHeaderCellDef> Quantidade </mat-header-cell>
-            <mat-cell *matCellDef="let energia"> {{energia.quantidade}} </mat-cell>
-        </ng-container>
-        <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
-        <mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></mat-row>
-    </mat-table>
-</div>
+<mat-grid-list cols="1" rowHeight="fit">
+    <mat-grid-tile *ngFor="let energia of energias" colspan="1">
+        <div>
+            <div class="tile-energia-container">
+                <div class="tile-energia-sigla">{{ energia.sigla }}</div>
+                <div class="tile-energia-valor">{{ energia.quantidade }}</div>
+                <div class="tile-energia-pct">{{ (energia.quantidade / energia.max) * 100 }}%</div>
+            </div>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+
+
+
+
+
+<!-- <mat-table [dataSource]="energias">
+    <ng-container matColumnDef="sigla">
+        <mat-header-cell *matHeaderCellDef> Energia </mat-header-cell>
+        <mat-cell *matCellDef="let energia"> {{energia.sigla}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="quantidade">
+        <mat-header-cell *matHeaderCellDef> Quantidade </mat-header-cell>
+        <mat-cell *matCellDef="let energia"> {{energia.quantidade}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="pct">
+        <mat-header-cell *matHeaderCellDef> % </mat-header-cell>
+        <mat-cell *matCellDef="let energia"> {{ (energia.quantidade / energia.max) * 100 }}% </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+    <mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></mat-row>
+</mat-table> -->

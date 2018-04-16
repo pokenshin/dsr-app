@@ -25,7 +25,7 @@ export class GeraDestrezaService implements Gerador {
     result.esquiva = this.rvmg.getEntre(Math.random(), min, max);
     result.iniciativa = this.rvmg.getEntre(Math.random(), min, max);
     result.nivel = this.rng.getEntre(Math.random(), 1, 5);
-    result.pontos = this.rng.getEntre(Math.random(), 1, 9999);
+    result.pontos = this.rng.getEntre(Math.random(), 1, 100);
     result.porcentagem = this.rvmg.getEntre(Math.random(), min, max);
     result.reflexo = this.rvmg.getEntre(Math.random(), min, max);
     return result;

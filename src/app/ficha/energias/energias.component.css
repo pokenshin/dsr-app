@@ -4,28 +4,36 @@
     top: 0px;
     left: 0px;
     width: 100%;
-    background-color: fuchsia;
-}
-
-.energias-container {
-    width: 100%;
     height: 100%;
-    background-color: pink;
 }
 
-.energia-barra {
-    height: 30px;
-    z-index: 0;
+.tile-energia-nome {
+    height: 20%;
+    border-bottom: 1px solid black;
+    padding: 0 0 0 0;
+    text-align: center;
+    font-size: 15px;
+    line-height: 25px;
 }
 
-.label-energia-valor {
-    color: white;
-    top: 25px;
-    z-index: 1;
+.tile-energia-valor {
+    height: 60%;
+    text-align: center;
+    font-size: 15px;
+    line-height: 25px;
 }
 
-.label-energia-nome {
-    position: relative;
+.tile-energia-pct {
+    height: 100%;
+    text-align: center;
+    width: 25%;
+    float: right;
+    border-top: solid 1px black;
+    border-left: solid 1px black;
+    font-size: 15px;
+    line-height: 25px;
 }
 
-.card-energias {}
+mat-grid-list {
+    height: 200px;
+}

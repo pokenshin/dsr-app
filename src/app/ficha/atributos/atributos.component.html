@@ -1,15 +1,29 @@
-<mat-accordion>
+<mat-accordion multi="true">
     <!-- Força -->
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
+    <mat-expansion-panel expanded="false" hideToggle="true">
+        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
             <mat-panel-title>
-                Força
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <div class="panel-atributo-stats-container">
+                                <div class="panel-atributo-stats-classe">{{atributos.forca.classe}}{{atributos.forca.nivel}}</div>
+                                <div class="panel-atributo-stats-pontos">{{atributos.forca.pontos}}</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 panel-atributo-title">Força</div>
+                        <div class="col-sm-6"></div>
+                        <div class="col-sm-1">
+                            <div class="panel-atributo-stats-container">
+                                <div class="panel-atributo-stats-valor">{{atributos.forca.porcentagem.valor}}</div>
+                                <div class="panel-atributo-stats-mag">{{atributos.forca.porcentagem.magnitude}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </mat-panel-title>
-            <mat-panel-description>
-                {{atributos.forca.classe}}{{atributos.forca.nivel}} | {{atributos.forca.porcentagem.valor}}% | Mg: {{atributos.forca.porcentagem.magnitude}}
-            </mat-panel-description>
         </mat-expansion-panel-header>
-        <mat-grid-list cols="5" rowHeight="1:1" class="grid-atributos">
+        <mat-grid-list cols="5" rowHeight="fit" gutterSize="30px" class="grid-atributos">
             <mat-grid-tile colspan="1">
                 <div>
                     <div class="tile-atributo-container">
@@ -58,16 +72,30 @@
         </mat-grid-list>
     </mat-expansion-panel>
     <!-- Matéria -->
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
+    <mat-expansion-panel expanded="false" hideToggle="true">
+        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
             <mat-panel-title>
-                Matéria
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <div class="panel-atributo-stats-container">
+                                <div class="panel-atributo-stats-classe">{{atributos.materia.classe}}{{atributos.materia.nivel}}</div>
+                                <div class="panel-atributo-stats-pontos">{{atributos.materia.pontos}}</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 panel-atributo-title">Matéria</div>
+                        <div class="col-sm-6"></div>
+                        <div class="col-sm-1">
+                            <div class="panel-atributo-stats-container">
+                                <div class="panel-atributo-stats-valor">{{atributos.materia.porcentagem.valor}}</div>
+                                <div class="panel-atributo-stats-mag">{{atributos.materia.porcentagem.magnitude}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </mat-panel-title>
-            <mat-panel-description>
-                {{atributos.materia.classe}}{{atributos.materia.nivel}} | {{atributos.materia.porcentagem.valor}}% | Mg: {{atributos.materia.porcentagem.magnitude}}
-            </mat-panel-description>
         </mat-expansion-panel-header>
-        <mat-grid-list cols="5" rowHeight="1:1" class="grid-atributos">
+        <mat-grid-list cols="5" rowHeight="fit" gutterSize="30px" class="grid-atributos">
             <mat-grid-tile colspan="1">
                 <div>
                     <div class="tile-atributo-container">
@@ -116,16 +144,30 @@
         </mat-grid-list>
     </mat-expansion-panel>
     <!-- Destreza -->
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
+    <mat-expansion-panel expanded="false" hideToggle="true">
+        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
             <mat-panel-title>
-                Destreza
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <div class="panel-atributo-stats-container">
+                                <div class="panel-atributo-stats-classe">{{atributos.destreza.classe}}{{atributos.destreza.nivel}}</div>
+                                <div class="panel-atributo-stats-pontos">{{atributos.destreza.pontos}}</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 panel-atributo-title">Destreza</div>
+                        <div class="col-sm-6"></div>
+                        <div class="col-sm-1">
+                            <div class="panel-atributo-stats-container">
+                                <div class="panel-atributo-stats-valor">{{atributos.destreza.porcentagem.valor}}</div>
+                                <div class="panel-atributo-stats-mag">{{atributos.destreza.porcentagem.magnitude}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </mat-panel-title>
-            <mat-panel-description>
-                {{atributos.destreza.classe}}{{atributos.destreza.nivel}} | {{atributos.destreza.porcentagem.valor}}% | Mg: {{atributos.destreza.porcentagem.magnitude}}
-            </mat-panel-description>
         </mat-expansion-panel-header>
-        <mat-grid-list cols="5" rowHeight="1:1" class="grid-atributos">
+        <mat-grid-list cols="5" rowHeight="fit" gutterSize="30px" class="grid-atributos">
             <mat-grid-tile colspan="1">
                 <div>
                     <div class="tile-atributo-container">
@@ -174,16 +216,30 @@
         </mat-grid-list>
     </mat-expansion-panel>
     <!-- Intelecto -->
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
+    <mat-expansion-panel expanded="false" hideToggle="true">
+        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
             <mat-panel-title>
-                Intelecto
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <div class="panel-atributo-stats-container">
+                                <div class="panel-atributo-stats-classe">{{atributos.intelecto.classe}}{{atributos.intelecto.nivel}}</div>
+                                <div class="panel-atributo-stats-pontos">{{atributos.intelecto.pontos}}</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 panel-atributo-title">Intelecto</div>
+                        <div class="col-sm-6"></div>
+                        <div class="col-sm-1">
+                            <div class="panel-atributo-stats-container">
+                                <div class="panel-atributo-stats-valor">{{atributos.intelecto.porcentagem.valor}}</div>
+                                <div class="panel-atributo-stats-mag">{{atributos.intelecto.porcentagem.magnitude}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </mat-panel-title>
-            <mat-panel-description>
-                {{atributos.intelecto.classe}}{{atributos.intelecto.nivel}} | {{atributos.intelecto.porcentagem.valor}}% | Mg: {{atributos.intelecto.porcentagem.magnitude}}
-            </mat-panel-description>
         </mat-expansion-panel-header>
-        <mat-grid-list cols="5" rowHeight="1:1" class="grid-atributos">
+        <mat-grid-list cols="5" rowHeight="fit" gutterSize="30px" class="grid-atributos">
             <mat-grid-tile colspan="1">
                 <div>
                     <div class="tile-atributo-container">
@@ -232,16 +288,30 @@
         </mat-grid-list>
     </mat-expansion-panel>
     <!-- Criatividade -->
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
+    <mat-expansion-panel expanded="false" hideToggle="true">
+        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
             <mat-panel-title>
-                Criatividade
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <div class="panel-atributo-stats-container">
+                                <div class="panel-atributo-stats-classe">{{atributos.criatividade.classe}}{{atributos.criatividade.nivel}}</div>
+                                <div class="panel-atributo-stats-pontos">{{atributos.criatividade.pontos}}</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 panel-atributo-title">Criatividade</div>
+                        <div class="col-sm-6"></div>
+                        <div class="col-sm-1">
+                            <div class="panel-atributo-stats-container">
+                                <div class="panel-atributo-stats-valor">{{atributos.criatividade.porcentagem.valor}}</div>
+                                <div class="panel-atributo-stats-mag">{{atributos.criatividade.porcentagem.magnitude}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </mat-panel-title>
-            <mat-panel-description>
-                {{atributos.criatividade.classe}}{{atributos.criatividade.nivel}} | {{atributos.criatividade.porcentagem.valor}}% | Mg: {{atributos.criatividade.porcentagem.magnitude}}
-            </mat-panel-description>
         </mat-expansion-panel-header>
-        <mat-grid-list cols="5" rowHeight="1:1" class="grid-atributos">
+        <mat-grid-list cols="5" rowHeight="fit" gutterSize="30px" class="grid-atributos">
             <mat-grid-tile colspan="1">
                 <div>
                     <div class="tile-atributo-container">
@@ -290,16 +360,30 @@
         </mat-grid-list>
     </mat-expansion-panel>
     <!-- Existência -->
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
+    <mat-expansion-panel expanded="false" hideToggle="true">
+        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
             <mat-panel-title>
-                Existência
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <div class="panel-atributo-stats-container">
+                                <div class="panel-atributo-stats-classe">{{atributos.existencia.classe}}{{atributos.existencia.nivel}}</div>
+                                <div class="panel-atributo-stats-pontos">{{atributos.existencia.pontos}}</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 panel-atributo-title">Existência</div>
+                        <div class="col-sm-6"></div>
+                        <div class="col-sm-1">
+                            <div class="panel-atributo-stats-container">
+                                <div class="panel-atributo-stats-valor">{{atributos.existencia.porcentagem.valor}}</div>
+                                <div class="panel-atributo-stats-mag">{{atributos.existencia.porcentagem.magnitude}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </mat-panel-title>
-            <mat-panel-description>
-                {{atributos.existencia.classe}}{{atributos.existencia.nivel}} | {{atributos.existencia.porcentagem.valor}}% | Mg: {{atributos.existencia.porcentagem.magnitude}}
-            </mat-panel-description>
         </mat-expansion-panel-header>
-        <mat-grid-list cols="5" rowHeight="1:1" class="grid-atributos">
+        <mat-grid-list cols="5" rowHeight="fit" gutterSize="30px" class="grid-atributos">
             <mat-grid-tile colspan="1">
                 <div>
                     <div class="tile-atributo-container">
@@ -348,22 +432,35 @@
         </mat-grid-list>
     </mat-expansion-panel>
     <!-- Idéia -->
-    <mat-expansion-panel>
-        <mat-expansion-panel-header>
+    <mat-expansion-panel expanded="false" hideToggle="true">
+        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
             <mat-panel-title>
-                Idéia
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <div class="panel-atributo-stats-container">
+                                <div class="panel-atributo-stats-classe">{{atributos.ideia.classe}}{{atributos.ideia.nivel}}</div>
+                                <div class="panel-atributo-stats-pontos">{{atributos.ideia.pontos}}</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 panel-atributo-title">Idéia</div>
+                        <div class="col-sm-6"></div>
+                        <div class="col-sm-1">
+                            <div class="panel-atributo-stats-container">
+                                <div class="panel-atributo-stats-valor">{{atributos.ideia.porcentagem.valor}}</div>
+                                <div class="panel-atributo-stats-mag">{{atributos.ideia.porcentagem.magnitude}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </mat-panel-title>
-            <mat-panel-description>
-                {{atributos.ideia.classe}}{{atributos.ideia.nivel}} | {{atributos.ideia.porcentagem.valor}}% | Mg: {{atributos.ideia.porcentagem.magnitude}}
-            </mat-panel-description>
         </mat-expansion-panel-header>
-        <mat-grid-list cols="5" rowHeight="1:1" class="grid-atributos">
+        <mat-grid-list cols="5" rowHeight="fit" gutterSize="30px" class="grid-atributos">
             <mat-grid-tile colspan="1">
                 <div>
                     <div class="tile-atributo-container">
                         <div class="tile-atributo-nome">Ki</div>
                         <div class="tile-atributo-valor">{{atributos.ideia.ki}}</div>
-                        <div class="tile-atributo-mag"></div>
                     </div>
                 </div>
             </mat-grid-tile>
@@ -372,7 +469,6 @@
                     <div class="tile-atributo-container">
                         <div class="tile-atributo-nome">Base</div>
                         <div class="tile-atributo-valor">{{atributos.ideia.base}}</div>
-                        <div class="tile-atributo-mag"></div>
                     </div>
                 </div>
             </mat-grid-tile>

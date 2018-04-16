@@ -10,14 +10,14 @@ export class GeraEnergiaService implements Gerador {
     var result = new Energia();
     var tipos = new Array<Energia>();
     tipos = [ 
-      new Energia(1, 'CP', 'Cognitiva', 0),
-      new Energia(2, 'EP', 'Espiritual', 0),
-      new Energia(3, 'HP', 'Vida', 0),
-      new Energia(4, 'MP', 'Mana', 0),
-      new Energia(5, 'SP', 'Spirit', 0),
-      new Energia(6, 'XP', 'Axé', 0),
-      new Energia(7, 'PE', 'Percepção', 0),
-      new Energia(8, 'PA', 'PA', 0)
+      new Energia(1, 'CP', 'Cognitiva', 0, 0),
+      new Energia(2, 'EP', 'Espiritual', 0, 0),
+      new Energia(3, 'HP', 'Vida', 0, 0),
+      new Energia(4, 'MP', 'Mana', 0, 0),
+      new Energia(5, 'SP', 'Spirit', 0, 0),
+      new Energia(6, 'XP', 'Axé', 0, 0),
+      new Energia(7, 'PE', 'Percepção', 0, 0),
+      new Energia(8, 'PA', 'PA', 0, 0)
     ];
     var rng = new GeraInteiroService();
     result = tipos[rng.getEntre(Math.random(), 0, tipos.length - 1)];

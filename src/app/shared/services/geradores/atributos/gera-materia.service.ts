@@ -25,7 +25,7 @@ export class GeraMateriaService implements Gerador {
     result.colapso = this.rvmg.getEntre(Math.random(), min, max);
     result.impulso = this.rvmg.getEntre(Math.random(), min, max);
     result.nivel = this.rng.getEntre(Math.random(), 1, 5);
-    result.pontos = this.rng.getEntre(Math.random(), 1, 9999);
+    result.pontos = this.rng.getEntre(Math.random(), 1, 100);
     result.porcentagem = this.rvmg.getEntre(Math.random(), min, max);
     result.regeneracao = this.rvmg.getEntre(Math.random(), min, max);
     result.resistencia = this.rvmg.getEntre(Math.random(), min, max);

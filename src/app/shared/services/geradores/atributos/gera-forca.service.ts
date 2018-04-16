@@ -23,7 +23,7 @@ export class GeraForcaService implements Gerador {
     result.dureza = this.rvmg.getEntre(Math.random(), min, max);
     result.golpe = this.rvmg.getEntre(Math.random(), min, max);
     result.nivel = this.rng.getEntre(Math.random(), 1, 5);
-    result.pontos = this.rng.getEntre(Math.random(), 1, 9999);
+    result.pontos = this.rng.getEntre(Math.random(), 1, 100);
     result.porcentagem = this.rvmg.getEntre(Math.random(), min, max);
     result.potencia = this.rvmg.getEntre(Math.random(), min, max);
     result.sustentacao = this.rvmg.getEntre(Math.random(), min, max);

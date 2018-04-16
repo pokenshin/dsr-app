@@ -1,5 +1,15 @@
 <div class="container">
-    <app-ficha-identidade [identidade]="identidade"></app-ficha-identidade>
-    <app-ficha-atributos [atributos]="atributos"></app-ficha-atributos>
-    <app-ficha-energias [energias]="energias"></app-ficha-energias>
+    <div class="row">
+        <div class="col-sm-12">
+            <app-ficha-identidade [identidade]="identidade"></app-ficha-identidade>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <app-ficha-atributos [atributos]="atributos"></app-ficha-atributos>
+        </div>
+        <div class="col-sm-4">
+            <app-ficha-energias [energias]="energias"></app-ficha-energias>
+        </div>
+    </div>
 </div>

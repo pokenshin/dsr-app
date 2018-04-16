@@ -145,6 +145,7 @@ export class CalculaSerService {
         break;
       }
       e.quantidade *= ser.identidade.nivel;
+      e.max = e.quantidade;
       console.log("(CalculaSerService.calculaMagnitude) - Energia: ", e);
 
     });

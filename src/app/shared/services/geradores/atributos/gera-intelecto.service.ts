@@ -22,7 +22,7 @@ export class GeraIntelectoService implements Gerador {
     result.bonusCP = this.rng.getEntre(Math.random(), 1, 9999);
     result.classe = this.rsg.getTamanhoEspecifico(Math.random(), 1,1);
     result.nivel = this.rng.getEntre(Math.random(), 1, 5);
-    result.pontos = this.rng.getEntre(Math.random(), 1, 9999);
+    result.pontos = this.rng.getEntre(Math.random(), 1, 100);
     result.porcentagem = this.rvmg.getEntre(Math.random(), min, max);
     result.aprendizagem = this.rvmg.getEntre(Math.random(), min, max);
     result.concentracao = this.rvmg.getEntre(Math.random(), min, max);
