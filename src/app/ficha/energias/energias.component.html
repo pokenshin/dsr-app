@@ -1,4 +1,14 @@
 <div>
-    <mat-table>
+    <mat-table [dataSource]="energias">
+        <ng-container matColumnDef="sigla">
+            <mat-header-cell *matHeaderCellDef> Energia </mat-header-cell>
+            <mat-cell *matCellDef="let energia"> {{energia.sigla}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="quantidade">
+            <mat-header-cell *matHeaderCellDef> Quantidade </mat-header-cell>
+            <mat-cell *matCellDef="let energia"> {{energia.quantidade}} </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+        <mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></mat-row>
     </mat-table>
 </div>
