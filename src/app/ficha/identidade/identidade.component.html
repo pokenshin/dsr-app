@@ -1,9 +1,17 @@
 <form>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-8">
                 <span class="identidade_label">nome:</span>
                 <span class="identidade_value">{{identidade.nome}}</span>
+            </div>
+            <div class="col-sm-2">
+                <span class="identidade_label">natureza:</span>
+                <span class="identidade_value">{{identidade.natureza.nome}}</span>
+            </div>
+            <div class="col-sm-2">
+                <span class="identidade_label">índole:</span>
+                <span class="identidade_value">{{identidade.indole.nome}}</span>
             </div>
         </div>
 
@@ -27,29 +35,17 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <span class="identidade_label">espécie:</span>
-                <ul>
-                    <li *ngFor="let especie of identidade.especies">
-                        <span class="identidade_value">{{especie.taxonomia.nomePopular}}</span>
-                    </li>
-                </ul>
+                <mat-chip-list>
+                    <mat-chip *ngFor="let especie of identidade.especies">{{especie.taxonomia.nomePopular}}</mat-chip>
+                </mat-chip-list>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <span class="identidade_label">classe:</span>
-                <ul>
-                    <li *ngFor="let classe of identidade.classes">
-                        <span class="identidade_value">{{classe.nome}}</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-sm-2">
-                <span class="identidade_label">natureza:</span>
-                <span class="identidade_value">{{identidade.natureza.nome}}</span>
-            </div>
-            <div class="col-sm-2">
-                <span class="identidade_label">índole:</span>
-                <span class="identidade_value">{{identidade.indole.nome}}</span>
+                <mat-chip-list>
+                    <mat-chip *ngFor="let classe of identidade.classes">{{classe.nome}}</mat-chip>
+                </mat-chip-list>
             </div>
         </div>
 
@@ -64,7 +60,7 @@
             </div>
             <div class="col-sm-2">
                 <span class="identidade_label">rei:</span>
-                <span class="identidade_value">{{identidade.rei.length}}</span>
+                <span class="identidade_value">{{identidade.reis.length}}</span>
             </div>
             <div class="col-sm-2">
                 <span class="identidade_label">ki:</span>
