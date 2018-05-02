@@ -3,495 +3,428 @@
     <mat-expansion-panel expanded="false" hideToggle="true">
         <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
             <mat-panel-title>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-2">
-                            <div class="panel-atributo-stats-container">
-                                <div class="panel-atributo-stats-classe">{{atributos.forca.classe}}{{atributos.forca.nivel}}</div>
-                                <div class="panel-atributo-stats-pontos">{{atributos.forca.pontos}} pts</div>
-                            </div>
+                <div class="row-fluid d-flex full-width">
+                    <div class="col-2 p-0">
+                        <div class="panel-atributo-stats-container border-right-1">
+                            <div class="panel-atributo-stats-classe">{{atributos.forca.classe}}{{atributos.forca.nivel}}</div>
+                            <div class="panel-atributo-stats-pontos">{{atributos.forca.pontos}} pts</div>
                         </div>
-                        <div class="col-8 panel-atributo-title">Força</div>
-                        <div class="col-2">
-                            <div class="panel-atributo-stats-container">
-                                <div class="panel-atributo-stats-valor">{{atributos.forca.porcentagem.valor}}</div>
-                                <div class="panel-atributo-stats-mag">{{atributos.forca.porcentagem.magnitude}}</div>
+                    </div>
+                    <div class="col-8 panel-atributo-title">Força</div>
+                    <div class="col-2 p-0">
+                        <div class="panel-atributo-stats-container border-left-1 float-right">
+                            <div class="row-fluid d-flex full-width justify-content-center">
+                                <div class="col-9 p-0 panel-atributo-stats-valor">{{atributos.forca.porcentagem.valor}}</div>
+                                <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{atributos.forca.porcentagem.magnitude}}</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <mat-grid-list cols="5" rowHeight="fit" gutterSize="10px" class="grid-atributos">
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Potência</div>
-                        <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                    </div>
+        <div class="row-fluid row-height d-flex">
+            <div class="col row-height d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Golpe</div>
-                        <div class="tile-atributo-valor">{{atributos.forca.golpe.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.forca.golpe.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col row-height d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Dureza</div>
-                        <div class="tile-atributo-valor">{{atributos.forca.dureza.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.forca.dureza.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Vigor</div>
-                        <div class="tile-atributo-valor">{{atributos.forca.vigor.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.forca.vigor.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Sustentação</div>
-                        <div class="tile-atributo-valor">{{atributos.forca.sustentacao.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.forca.sustentacao.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+            </div>
+        </div>
     </mat-expansion-panel>
     <!-- Matéria -->
     <mat-expansion-panel expanded="false" hideToggle="true">
         <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
             <mat-panel-title>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-2">
-                            <div class="panel-atributo-stats-container">
-                                <div class="panel-atributo-stats-classe">{{atributos.materia.classe}}{{atributos.materia.nivel}}</div>
-                                <div class="panel-atributo-stats-pontos">{{atributos.materia.pontos}} pts</div>
-                            </div>
+                <div class="row-fluid d-flex full-width">
+                    <div class="col-2 p-0">
+                        <div class="panel-atributo-stats-container border-right-1">
+                            <div class="panel-atributo-stats-classe">{{atributos.materia.classe}}{{atributos.materia.nivel}}</div>
+                            <div class="panel-atributo-stats-pontos">{{atributos.materia.pontos}} pts</div>
                         </div>
-                        <div class="col-8 panel-atributo-title">Matéria</div>
-                        <div class="col-2">
-                            <div class="panel-atributo-stats-container">
-                                <div class="panel-atributo-stats-valor">{{atributos.materia.porcentagem.valor}}</div>
-                                <div class="panel-atributo-stats-mag">{{atributos.materia.porcentagem.magnitude}}</div>
+                    </div>
+                    <div class="col-8 panel-atributo-title">Matéria</div>
+                    <div class="col-2 p-0">
+                        <div class="panel-atributo-stats-container border-left-1 float-right">
+                            <div class="row-fluid d-flex full-width justify-content-center">
+                                <div class="col-9 p-0 panel-atributo-stats-valor">{{atributos.materia.porcentagem.valor}}</div>
+                                <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{atributos.materia.porcentagem.magnitude}}</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <mat-grid-list cols="5" rowHeight="fit" gutterSize="10px" class="grid-atributos">
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Colapso</div>
-                        <div class="tile-atributo-valor">{{atributos.materia.colapso.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.materia.colapso.magnitude}}</div>
-                    </div>
+        <div class="row-fluid row-height d-flex">
+            <div class="col row-height d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Impulso</div>
-                        <div class="tile-atributo-valor">{{atributos.materia.impulso.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.materia.impulso.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col row-height d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Resistência</div>
-                        <div class="tile-atributo-valor">{{atributos.materia.resistencia.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.materia.resistencia.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Vitalidade</div>
-                        <div class="tile-atributo-valor">{{atributos.materia.vitalidade.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.materia.vitalidade.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Regeneração</div>
-                        <div class="tile-atributo-valor">{{atributos.materia.regeneracao.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.materia.regeneracao.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+            </div>
+        </div>
+
     </mat-expansion-panel>
     <!-- Destreza -->
     <mat-expansion-panel expanded="false" hideToggle="true">
         <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
             <mat-panel-title>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-2">
-                            <div class="panel-atributo-stats-container">
-                                <div class="panel-atributo-stats-classe">{{atributos.destreza.classe}}{{atributos.destreza.nivel}}</div>
-                                <div class="panel-atributo-stats-pontos">{{atributos.destreza.pontos}} pts</div>
-                            </div>
+                <div class="row-fluid d-flex full-width">
+                    <div class="col-2 p-0">
+                        <div class="panel-atributo-stats-container border-right-1">
+                            <div class="panel-atributo-stats-classe">{{atributos.destreza.classe}}{{atributos.destreza.nivel}}</div>
+                            <div class="panel-atributo-stats-pontos">{{atributos.destreza.pontos}} pts</div>
                         </div>
-                        <div class="col-8 panel-atributo-title">Destreza</div>
-                        <div class="col-2">
-                            <div class="panel-atributo-stats-container">
-                                <div class="panel-atributo-stats-valor">{{atributos.destreza.porcentagem.valor}}</div>
-                                <div class="panel-atributo-stats-mag">{{atributos.destreza.porcentagem.magnitude}}</div>
+                    </div>
+                    <div class="col-8 panel-atributo-title">Destreza</div>
+                    <div class="col-2 p-0">
+                        <div class="panel-atributo-stats-container border-left-1 float-right">
+                            <div class="row-fluid d-flex full-width justify-content-center">
+                                <div class="col-9 p-0 panel-atributo-stats-valor">{{atributos.destreza.porcentagem.valor}}</div>
+                                <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{atributos.destreza.porcentagem.magnitude}}</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <mat-grid-list cols="5" rowHeight="fit" gutterSize="10px" class="grid-atributos">
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Reflexo</div>
-                        <div class="tile-atributo-valor">{{atributos.destreza.reflexo.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.destreza.reflexo.magnitude}}</div>
-                    </div>
+        <div class="row-fluid row-height d-flex">
+            <div class="col row-height d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Esquiva</div>
-                        <div class="tile-atributo-valor">{{atributos.destreza.esquiva.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.destreza.esquiva.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col row-height d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Ataque</div>
-                        <div class="tile-atributo-valor">{{atributos.destreza.reflexo.magnitude}}</div>
-                        <div class="tile-atributo-mag">{{atributos.destreza.reflexo.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Coordenação</div>
-                        <div class="tile-atributo-valor">{{atributos.destreza.coordenacao.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.destreza.coordenacao.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Iniciativa</div>
-                        <div class="tile-atributo-valor">{{atributos.destreza.iniciativa.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.destreza.iniciativa.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+            </div>
+        </div>
     </mat-expansion-panel>
     <!-- Intelecto -->
     <mat-expansion-panel expanded="false" hideToggle="true">
         <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
             <mat-panel-title>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-2">
-                            <div class="panel-atributo-stats-container">
-                                <div class="panel-atributo-stats-classe">{{atributos.intelecto.classe}}{{atributos.intelecto.nivel}}</div>
-                                <div class="panel-atributo-stats-pontos">{{atributos.intelecto.pontos}} pts</div>
-                            </div>
+                <div class="row-fluid d-flex full-width">
+                    <div class="col-2 p-0">
+                        <div class="panel-atributo-stats-container border-right-1">
+                            <div class="panel-atributo-stats-classe">{{atributos.intelecto.classe}}{{atributos.intelecto.nivel}}</div>
+                            <div class="panel-atributo-stats-pontos">{{atributos.intelecto.pontos}} pts</div>
                         </div>
-                        <div class="col-8 panel-atributo-title">Intelecto</div>
-                        <div class="col-2">
-                            <div class="panel-atributo-stats-container">
-                                <div class="panel-atributo-stats-valor">{{atributos.intelecto.porcentagem.valor}}</div>
-                                <div class="panel-atributo-stats-mag">{{atributos.intelecto.porcentagem.magnitude}}</div>
+                    </div>
+                    <div class="col-8 panel-atributo-title">Intelecto</div>
+                    <div class="col-2 p-0">
+                        <div class="panel-atributo-stats-container border-left-1 float-right">
+                            <div class="row-fluid d-flex full-width justify-content-center">
+                                <div class="col-9 p-0 panel-atributo-stats-valor">{{atributos.intelecto.porcentagem.valor}}</div>
+                                <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{atributos.intelecto.porcentagem.magnitude}}</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <mat-grid-list cols="5" rowHeight="fit" gutterSize="10px" class="grid-atributos">
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Concentração</div>
-                        <div class="tile-atributo-valor">{{atributos.intelecto.concentracao.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.intelecto.concentracao.magnitude}}</div>
-                    </div>
+        <div class="row-fluid row-height d-flex">
+            <div class="col row-height d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Visualização</div>
-                        <div class="tile-atributo-valor">{{atributos.intelecto.visualizacao.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.intelecto.visualizacao.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col row-height d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Aprendizagem</div>
-                        <div class="tile-atributo-valor">{{atributos.intelecto.aprendizagem.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.intelecto.aprendizagem.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Senso</div>
-                        <div class="tile-atributo-valor">{{atributos.intelecto.senso.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.intelecto.senso.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Eidos</div>
-                        <div class="tile-atributo-valor">{{atributos.intelecto.eidos.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.intelecto.eidos.valor}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+            </div>
+        </div>
     </mat-expansion-panel>
     <!-- Criatividade -->
     <mat-expansion-panel expanded="false" hideToggle="true">
         <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
             <mat-panel-title>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-2">
-                            <div class="panel-atributo-stats-container">
-                                <div class="panel-atributo-stats-classe">{{atributos.criatividade.classe}}{{atributos.criatividade.nivel}}</div>
-                                <div class="panel-atributo-stats-pontos">{{atributos.criatividade.pontos}} pts</div>
-                            </div>
+                <div class="row-fluid d-flex full-width">
+                    <div class="col-2 p-0">
+                        <div class="panel-atributo-stats-container border-right-1">
+                            <div class="panel-atributo-stats-classe">{{atributos.criatividade.classe}}{{atributos.criatividade.nivel}}</div>
+                            <div class="panel-atributo-stats-pontos">{{atributos.criatividade.pontos}} pts</div>
                         </div>
-                        <div class="col-8 panel-atributo-title">Criatividade</div>
-                        <div class="col-2">
-                            <div class="panel-atributo-stats-container">
-                                <div class="panel-atributo-stats-valor">{{atributos.criatividade.porcentagem.valor}}</div>
-                                <div class="panel-atributo-stats-mag">{{atributos.criatividade.porcentagem.magnitude}}</div>
+                    </div>
+                    <div class="col-8 panel-atributo-title">Criatividade</div>
+                    <div class="col-2 p-0">
+                        <div class="panel-atributo-stats-container border-left-1 float-right">
+                            <div class="row-fluid d-flex full-width justify-content-center">
+                                <div class="col-9 p-0 panel-atributo-stats-valor">{{atributos.criatividade.porcentagem.valor}}</div>
+                                <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{atributos.criatividade.porcentagem.magnitude}}</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <mat-grid-list cols="5" rowHeight="fit" gutterSize="10px" class="grid-atributos">
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Singularidade</div>
-                        <div class="tile-atributo-valor">{{atributos.criatividade.singularidade.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.criatividade.singularidade.magnitude}}</div>
-                    </div>
+        <div class="row-fluid row-height d-flex">
+            <div class="col row-height d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Invenção</div>
-                        <div class="tile-atributo-valor">{{atributos.criatividade.invencao.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.criatividade.invencao.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col row-height d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Tutor</div>
-                        <div class="tile-atributo-valor">{{atributos.criatividade.tutor.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.criatividade.tutor.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Realidade</div>
-                        <div class="tile-atributo-valor">{{atributos.criatividade.realidade.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.criatividade.realidade.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Irrealidade</div>
-                        <div class="tile-atributo-valor">{{atributos.criatividade.irrealidade.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.criatividade.irrealidade.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+            </div>
+        </div>
     </mat-expansion-panel>
     <!-- Existência -->
     <mat-expansion-panel expanded="false" hideToggle="true">
         <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
             <mat-panel-title>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-2">
-                            <div class="panel-atributo-stats-container">
-                                <div class="panel-atributo-stats-classe">{{atributos.existencia.classe}}{{atributos.existencia.nivel}}</div>
-                                <div class="panel-atributo-stats-pontos">{{atributos.existencia.pontos}} pts</div>
-                            </div>
+                <div class="row-fluid d-flex full-width">
+                    <div class="col-2 p-0">
+                        <div class="panel-atributo-stats-container border-right-1">
+                            <div class="panel-atributo-stats-classe">{{atributos.existencia.classe}}{{atributos.existencia.nivel}}</div>
+                            <div class="panel-atributo-stats-pontos">{{atributos.existencia.pontos}} pts</div>
                         </div>
-                        <div class="col-8 panel-atributo-title">Existência</div>
-                        <div class="col-2">
-                            <div class="panel-atributo-stats-container">
-                                <div class="panel-atributo-stats-valor">{{atributos.existencia.porcentagem.valor}}</div>
-                                <div class="panel-atributo-stats-mag">{{atributos.existencia.porcentagem.magnitude}}</div>
+                    </div>
+                    <div class="col-8 panel-atributo-title">Existência</div>
+                    <div class="col-2 p-0">
+                        <div class="panel-atributo-stats-container border-left-1 float-right">
+                            <div class="row-fluid d-flex full-width justify-content-center">
+                                <div class="col-9 p-0 panel-atributo-stats-valor">{{atributos.existencia.porcentagem.valor}}</div>
+                                <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{atributos.existencia.porcentagem.magnitude}}</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <mat-grid-list cols="5" rowHeight="fit" gutterSize="10px" class="grid-atributos">
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Conhecimento</div>
-                        <div class="tile-atributo-valor">{{atributos.existencia.conhecimento.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.existencia.conhecimento.magnitude}}</div>
-                    </div>
+        <div class="row-fluid row-height d-flex">
+            <div class="col row-height d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Experiência</div>
-                        <div class="tile-atributo-valor">{{atributos.existencia.experiencia.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.existencia.experiencia.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col row-height d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Ciência</div>
-                        <div class="tile-atributo-valor">{{atributos.existencia.ciencia.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.existencia.ciencia.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Consciência</div>
-                        <div class="tile-atributo-valor">{{atributos.existencia.consciencia.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.existencia.consciencia.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Memória</div>
-                        <div class="tile-atributo-valor">{{atributos.existencia.memoria.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.existencia.memoria.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+            </div>
+        </div>
     </mat-expansion-panel>
     <!-- Idéia -->
     <mat-expansion-panel expanded="false" hideToggle="true">
         <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
             <mat-panel-title>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-2">
-                            <div class="panel-atributo-stats-container">
-                                <div class="panel-atributo-stats-classe">{{atributos.ideia.classe}}{{atributos.ideia.nivel}}</div>
-                                <div class="panel-atributo-stats-pontos">{{atributos.ideia.pontos}} pts</div>
-                            </div>
+                <div class="row-fluid d-flex full-width">
+                    <div class="col-2 p-0">
+                        <div class="panel-atributo-stats-container border-right-1">
+                            <div class="panel-atributo-stats-classe">{{atributos.ideia.classe}}{{atributos.ideia.nivel}}</div>
+                            <div class="panel-atributo-stats-pontos justify-content-center">{{atributos.ideia.pontos}} pts</div>
                         </div>
-                        <div class="col-8 panel-atributo-title">Idéia</div>
-                        <div class="col-2">
-                            <div class="panel-atributo-stats-container">
-                                <div class="panel-atributo-stats-valor">{{atributos.ideia.porcentagem.valor}}</div>
-                                <div class="panel-atributo-stats-mag">{{atributos.ideia.porcentagem.magnitude}}</div>
+                    </div>
+                    <div class="col-8 panel-atributo-title">Idéia</div>
+                    <div class="col-2 p-0">
+                        <div class="panel-atributo-stats-container border-left-1 float-right">
+                            <div class="row-fluid d-flex full-width justify-content-center">
+                                <div class="col-9 p-0 panel-atributo-stats-valor">{{atributos.ideia.porcentagem.valor}}</div>
+                                <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{atributos.ideia.porcentagem.magnitude}}</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </mat-panel-title>
         </mat-expansion-panel-header>
-        <mat-grid-list cols="5" rowHeight="fit" gutterSize="10px" class="grid-atributos">
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Ki</div>
-                        <div class="tile-atributo-valor">{{atributos.ideia.ki}}</div>
-                    </div>
+        <div class="row-fluid row-height d-flex">
+            <div class="col row-height d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Base</div>
-                        <div class="tile-atributo-valor">{{atributos.ideia.base}}</div>
-                    </div>
+            </div>
+            <div class="col row-height d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Mistério</div>
-                        <div class="tile-atributo-valor">{{atributos.ideia.misterio.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.ideia.misterio.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Holismo</div>
-                        <div class="tile-atributo-valor">{{atributos.ideia.holismo.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.ideia.holismo.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-            <mat-grid-tile colspan="1">
-                <div>
-                    <div class="tile-atributo-container">
-                        <div class="tile-atributo-nome">Nexo</div>
-                        <div class="tile-atributo-valor">{{atributos.ideia.nexo.valor}}</div>
-                        <div class="tile-atributo-mag">{{atributos.ideia.nexo.magnitude}}</div>
-                    </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <div class="tile-atributo-container">
+                    <div class="tile-atributo-nome">Potência</div>
+                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
+                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
                 </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+            </div>
+        </div>
     </mat-expansion-panel>
 </mat-accordion>
