@@ -1,430 +1,95 @@
-<mat-accordion multi="true">
-    <!-- Força -->
-    <mat-expansion-panel expanded="false" hideToggle="true">
-        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
-            <mat-panel-title>
-                <div class="row-fluid d-flex full-width">
-                    <div class="col-2 p-0">
-                        <div class="panel-atributo-stats-container border-right-1">
-                            <div class="panel-atributo-stats-classe">{{atributos.forca.classe}}{{atributos.forca.nivel}}</div>
-                            <div class="panel-atributo-stats-pontos">{{atributos.forca.pontos}} pts</div>
-                        </div>
+<mat-expansion-panel expanded="false" hideToggle="true">
+    <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
+        <mat-panel-title>
+            <div class="row-fluid d-flex full-width">
+                <div class="col-2 p-0">
+                    <div class="panel-atributo-stats-container border-right-1">
+                        <div class="panel-atributo-stats-classe">{{classe}}{{nivel}}</div>
+                        <div class="panel-atributo-stats-pontos">{{pontos}} pts</div>
                     </div>
-                    <div class="col-8 panel-atributo-title">Força</div>
-                    <div class="col-2 p-0">
-                        <div class="panel-atributo-stats-container border-left-1 float-right">
-                            <div class="row-fluid d-flex full-width justify-content-center">
-                                <div class="col-9 p-0 panel-atributo-stats-valor">{{atributos.forca.porcentagem.valor}}</div>
-                                <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{atributos.forca.porcentagem.magnitude}}</div>
-                            </div>
+                </div>
+                <div class="col-8 panel-atributo-title">{{nome}}</div>
+                <div class="col-2 p-0">
+                    <div class="panel-atributo-stats-container border-left-1 float-right">
+                        <div class="row-fluid d-flex full-width justify-content-center">
+                            <div class="col-9 p-0 panel-atributo-stats-valor">{{porcentagem.valor}}</div>
+                            <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{porcentagem.magnitude}}</div>
                         </div>
                     </div>
                 </div>
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="row-fluid row-height d-flex">
-            <div class="col row-height d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
             </div>
-            <div class="col row-height d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="row-fluid row-height d-flex">
+        <div class="col p-0 row-height d-flex justify-content-center">
+            <div class="tile-atributo-container">
+                <div class="row-fluid d-flex full-width justify-content-center tile-atributo-nome">
+                    <div class="p-0">{{atrib1_nome}}</div>
                 </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
+                <div class="row-fluid d-flex full-width justify-content-center tile-atributo-valor">
+                    <div class="p-0">{{atrib1.valor}}</div>
                 </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
+                <div class="row-fluid d-flex full-width tile-atributo-mag">
+                    <div class="col-9"></div>
+                    <div class="col-3 p-0 text-center mx-auto border-left-1 border-top-1">{{atrib1.magnitude}}</div>
                 </div>
             </div>
         </div>
-    </mat-expansion-panel>
-    <!-- Matéria -->
-    <mat-expansion-panel expanded="false" hideToggle="true">
-        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
-            <mat-panel-title>
-                <div class="row-fluid d-flex full-width">
-                    <div class="col-2 p-0">
-                        <div class="panel-atributo-stats-container border-right-1">
-                            <div class="panel-atributo-stats-classe">{{atributos.materia.classe}}{{atributos.materia.nivel}}</div>
-                            <div class="panel-atributo-stats-pontos">{{atributos.materia.pontos}} pts</div>
-                        </div>
-                    </div>
-                    <div class="col-8 panel-atributo-title">Matéria</div>
-                    <div class="col-2 p-0">
-                        <div class="panel-atributo-stats-container border-left-1 float-right">
-                            <div class="row-fluid d-flex full-width justify-content-center">
-                                <div class="col-9 p-0 panel-atributo-stats-valor">{{atributos.materia.porcentagem.valor}}</div>
-                                <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{atributos.materia.porcentagem.magnitude}}</div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="col p-0 row-height d-flex justify-content-center">
+            <div class="tile-atributo-container">
+                <div class="row-fluid d-flex full-width justify-content-center tile-atributo-nome">
+                    <div class="p-0">{{atrib2_nome}}</div>
                 </div>
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="row-fluid row-height d-flex">
-            <div class="col row-height d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
+                <div class="row-fluid d-flex full-width justify-content-center tile-atributo-valor">
+                    <div class="p-0">{{atrib2.valor}}</div>
                 </div>
-            </div>
-            <div class="col row-height d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
+                <div class="row-fluid d-flex full-width tile-atributo-mag">
+                    <div class="col-9"></div>
+                    <div class="col-3 p-0 text-center mx-auto border-left-1 border-top-1">{{atrib2.magnitude}}</div>
                 </div>
             </div>
         </div>
-
-    </mat-expansion-panel>
-    <!-- Destreza -->
-    <mat-expansion-panel expanded="false" hideToggle="true">
-        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
-            <mat-panel-title>
-                <div class="row-fluid d-flex full-width">
-                    <div class="col-2 p-0">
-                        <div class="panel-atributo-stats-container border-right-1">
-                            <div class="panel-atributo-stats-classe">{{atributos.destreza.classe}}{{atributos.destreza.nivel}}</div>
-                            <div class="panel-atributo-stats-pontos">{{atributos.destreza.pontos}} pts</div>
-                        </div>
-                    </div>
-                    <div class="col-8 panel-atributo-title">Destreza</div>
-                    <div class="col-2 p-0">
-                        <div class="panel-atributo-stats-container border-left-1 float-right">
-                            <div class="row-fluid d-flex full-width justify-content-center">
-                                <div class="col-9 p-0 panel-atributo-stats-valor">{{atributos.destreza.porcentagem.valor}}</div>
-                                <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{atributos.destreza.porcentagem.magnitude}}</div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="col p-0 row-height d-flex justify-content-center">
+            <div class="tile-atributo-container">
+                <div class="row-fluid d-flex full-width justify-content-center tile-atributo-nome">
+                    <div class="p-0">{{atrib3_nome}}</div>
                 </div>
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="row-fluid row-height d-flex">
-            <div class="col row-height d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
+                <div class="row-fluid d-flex full-width justify-content-center tile-atributo-valor">
+                    <div class="p-0">{{atrib3.valor}}</div>
                 </div>
-            </div>
-            <div class="col row-height d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
+                <div class="row-fluid d-flex full-width tile-atributo-mag">
+                    <div class="col-9"></div>
+                    <div class="col-3 p-0 text-center mx-auto border-left-1 border-top-1">{{atrib3.magnitude}}</div>
                 </div>
             </div>
         </div>
-    </mat-expansion-panel>
-    <!-- Intelecto -->
-    <mat-expansion-panel expanded="false" hideToggle="true">
-        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
-            <mat-panel-title>
-                <div class="row-fluid d-flex full-width">
-                    <div class="col-2 p-0">
-                        <div class="panel-atributo-stats-container border-right-1">
-                            <div class="panel-atributo-stats-classe">{{atributos.intelecto.classe}}{{atributos.intelecto.nivel}}</div>
-                            <div class="panel-atributo-stats-pontos">{{atributos.intelecto.pontos}} pts</div>
-                        </div>
-                    </div>
-                    <div class="col-8 panel-atributo-title">Intelecto</div>
-                    <div class="col-2 p-0">
-                        <div class="panel-atributo-stats-container border-left-1 float-right">
-                            <div class="row-fluid d-flex full-width justify-content-center">
-                                <div class="col-9 p-0 panel-atributo-stats-valor">{{atributos.intelecto.porcentagem.valor}}</div>
-                                <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{atributos.intelecto.porcentagem.magnitude}}</div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="col p-0 row-height d-flex justify-content-center">
+            <div class="tile-atributo-container">
+                <div class="row-fluid d-flex full-width justify-content-center tile-atributo-nome">
+                    <div class="p-0">{{atrib4_nome}}</div>
                 </div>
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="row-fluid row-height d-flex">
-            <div class="col row-height d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
+                <div class="row-fluid d-flex full-width justify-content-center tile-atributo-valor">
+                    <div class="p-0">{{atrib4.valor}}</div>
                 </div>
-            </div>
-            <div class="col row-height d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
+                <div class="row-fluid d-flex full-width tile-atributo-mag">
+                    <div class="col-9"></div>
+                    <div class="col-3 p-0 text-center mx-auto border-left-1 border-top-1">{{atrib4.magnitude}}</div>
                 </div>
             </div>
         </div>
-    </mat-expansion-panel>
-    <!-- Criatividade -->
-    <mat-expansion-panel expanded="false" hideToggle="true">
-        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
-            <mat-panel-title>
-                <div class="row-fluid d-flex full-width">
-                    <div class="col-2 p-0">
-                        <div class="panel-atributo-stats-container border-right-1">
-                            <div class="panel-atributo-stats-classe">{{atributos.criatividade.classe}}{{atributos.criatividade.nivel}}</div>
-                            <div class="panel-atributo-stats-pontos">{{atributos.criatividade.pontos}} pts</div>
-                        </div>
-                    </div>
-                    <div class="col-8 panel-atributo-title">Criatividade</div>
-                    <div class="col-2 p-0">
-                        <div class="panel-atributo-stats-container border-left-1 float-right">
-                            <div class="row-fluid d-flex full-width justify-content-center">
-                                <div class="col-9 p-0 panel-atributo-stats-valor">{{atributos.criatividade.porcentagem.valor}}</div>
-                                <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{atributos.criatividade.porcentagem.magnitude}}</div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="col p-0 row-height d-flex justify-content-center">
+            <div class="tile-atributo-container">
+                <div class="row-fluid d-flex full-width justify-content-center tile-atributo-nome">
+                    <div class="p-0">{{atrib5_nome}}</div>
                 </div>
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="row-fluid row-height d-flex">
-            <div class="col row-height d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
+                <div class="row-fluid d-flex full-width justify-content-center tile-atributo-valor">
+                    <div class="p-0">{{atrib5.valor}}</div>
                 </div>
-            </div>
-            <div class="col row-height d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
+                <div class="row-fluid d-flex full-width tile-atributo-mag">
+                    <div class="col-9"></div>
+                    <div class="col-3 p-0 text-center mx-auto border-left-1 border-top-1">{{atrib5.magnitude}}</div>
                 </div>
             </div>
         </div>
-    </mat-expansion-panel>
-    <!-- Existência -->
-    <mat-expansion-panel expanded="false" hideToggle="true">
-        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
-            <mat-panel-title>
-                <div class="row-fluid d-flex full-width">
-                    <div class="col-2 p-0">
-                        <div class="panel-atributo-stats-container border-right-1">
-                            <div class="panel-atributo-stats-classe">{{atributos.existencia.classe}}{{atributos.existencia.nivel}}</div>
-                            <div class="panel-atributo-stats-pontos">{{atributos.existencia.pontos}} pts</div>
-                        </div>
-                    </div>
-                    <div class="col-8 panel-atributo-title">Existência</div>
-                    <div class="col-2 p-0">
-                        <div class="panel-atributo-stats-container border-left-1 float-right">
-                            <div class="row-fluid d-flex full-width justify-content-center">
-                                <div class="col-9 p-0 panel-atributo-stats-valor">{{atributos.existencia.porcentagem.valor}}</div>
-                                <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{atributos.existencia.porcentagem.magnitude}}</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="row-fluid row-height d-flex">
-            <div class="col row-height d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col row-height d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-        </div>
-    </mat-expansion-panel>
-    <!-- Idéia -->
-    <mat-expansion-panel expanded="false" hideToggle="true">
-        <mat-expansion-panel-header collapsedHeight="50px" expandedHeight="50px">
-            <mat-panel-title>
-                <div class="row-fluid d-flex full-width">
-                    <div class="col-2 p-0">
-                        <div class="panel-atributo-stats-container border-right-1">
-                            <div class="panel-atributo-stats-classe">{{atributos.ideia.classe}}{{atributos.ideia.nivel}}</div>
-                            <div class="panel-atributo-stats-pontos justify-content-center">{{atributos.ideia.pontos}} pts</div>
-                        </div>
-                    </div>
-                    <div class="col-8 panel-atributo-title">Idéia</div>
-                    <div class="col-2 p-0">
-                        <div class="panel-atributo-stats-container border-left-1 float-right">
-                            <div class="row-fluid d-flex full-width justify-content-center">
-                                <div class="col-9 p-0 panel-atributo-stats-valor">{{atributos.ideia.porcentagem.valor}}</div>
-                                <div class="col-3 p-0 panel-atributo-stats-mag align-self-end text-center">{{atributos.ideia.porcentagem.magnitude}}</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="row-fluid row-height d-flex">
-            <div class="col row-height d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col row-height d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-            <div class="col d-flex justify-content-center">
-                <div class="tile-atributo-container">
-                    <div class="tile-atributo-nome">Potência</div>
-                    <div class="tile-atributo-valor">{{atributos.forca.potencia.valor}}</div>
-                    <div class="tile-atributo-mag">{{atributos.forca.potencia.magnitude}}</div>
-                </div>
-            </div>
-        </div>
-    </mat-expansion-panel>
-</mat-accordion>
+    </div>
+</mat-expansion-panel>

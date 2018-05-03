@@ -6,7 +6,34 @@
     </div>
     <div class="row top-buffer">
         <div class="col-sm-8">
-            <app-ficha-atributos [atributos]="atributos"></app-ficha-atributos>
+            <mat-accordion multi="true">
+                <app-ficha-atributos [nome]="'Força'" [classe]="ser.atributos.forca.classe" [nivel]="ser.atributos.forca.nivel" [pontos]="ser.atributos.forca.pontos" [porcentagem]="ser.atributos.forca.porcentagem" [atrib1_nome]="'Potência'" [atrib1]="ser.atributos.forca.potencia"
+                    [atrib2_nome]="'Golpe'" [atrib2]="ser.atributos.forca.golpe" [atrib3_nome]="'Dureza'" [atrib3]="atributos.forca.dureza" [atrib4_nome]="'Vigor'" [atrib4]="ser.atributos.forca.vigor" [atrib5_nome]="'Sustentação'" [atrib5]="ser.atributos.forca.sustentacao">
+                </app-ficha-atributos>
+                <app-ficha-atributos [nome]="'Matéria'" [classe]="ser.atributos.materia.classe" [nivel]="ser.atributos.materia.nivel" [pontos]="ser.atributos.materia.pontos" [porcentagem]="ser.atributos.materia.porcentagem" [atrib1_nome]="'Colapso'" [atrib1]="ser.atributos.materia.colapso"
+                    [atrib2_nome]="'Impulso'" [atrib2]="ser.atributos.materia.impulso" [atrib3_nome]="'Resistência'" [atrib3]="atributos.materia.resistencia" [atrib4_nome]="'Vitalidade'" [atrib4]="ser.atributos.materia.vitalidade" [atrib5_nome]="'Regeneração'"
+                    [atrib5]="ser.atributos.materia.regeneracao">
+                </app-ficha-atributos>
+                <app-ficha-atributos [nome]="'Destreza'" [classe]="ser.atributos.destreza.classe" [nivel]="ser.atributos.destreza.nivel" [pontos]="ser.atributos.destreza.pontos" [porcentagem]="ser.atributos.destreza.porcentagem" [atrib1_nome]="'Reflexo'" [atrib1]="ser.atributos.destreza.reflexo"
+                    [atrib2_nome]="'Esquiva'" [atrib2]="ser.atributos.destreza.esquiva" [atrib3_nome]="'Ataque'" [atrib3]="atributos.destreza.ataque" [atrib4_nome]="'Coordenação'" [atrib4]="ser.atributos.destreza.coordenacao" [atrib5_nome]="'Iniciativa'"
+                    [atrib5]="ser.atributos.destreza.iniciativa">
+                </app-ficha-atributos>
+                <app-ficha-atributos [nome]="'Intelecto'" [classe]="ser.atributos.intelecto.classe" [nivel]="ser.atributos.intelecto.nivel" [pontos]="ser.atributos.intelecto.pontos" [porcentagem]="ser.atributos.intelecto.porcentagem" [atrib1_nome]="'Concentração'" [atrib1]="ser.atributos.intelecto.concentracao"
+                    [atrib2_nome]="'Visualização'" [atrib2]="ser.atributos.intelecto.visualizacao" [atrib3_nome]="'Aprendizagem'" [atrib3]="atributos.intelecto.aprendizagem" [atrib4_nome]="'Senso'" [atrib4]="ser.atributos.intelecto.senso" [atrib5_nome]="'Eidos'"
+                    [atrib5]="ser.atributos.intelecto.eidos">
+                </app-ficha-atributos>
+                <app-ficha-atributos [nome]="'Criatividade'" [classe]="ser.atributos.criatividade.classe" [nivel]="ser.atributos.criatividade.nivel" [pontos]="ser.atributos.criatividade.pontos" [porcentagem]="ser.atributos.criatividade.porcentagem" [atrib1_nome]="'Singularidade'"
+                    [atrib1]="ser.atributos.criatividade.singularidade" [atrib2_nome]="'Invenção'" [atrib2]="ser.atributos.criatividade.invencao" [atrib3_nome]="'Tutor'" [atrib3]="atributos.criatividade.tutor" [atrib4_nome]="'Realidade'" [atrib4]="ser.atributos.criatividade.realidade"
+                    [atrib5_nome]="'Irrealidade'" [atrib5]="ser.atributos.criatividade.irrealidade">
+                </app-ficha-atributos>
+                <app-ficha-atributos [nome]="'Existência'" [classe]="ser.atributos.existencia.classe" [nivel]="ser.atributos.existencia.nivel" [pontos]="ser.atributos.existencia.pontos" [porcentagem]="ser.atributos.existencia.porcentagem" [atrib1_nome]="'Conhecimento'"
+                    [atrib1]="ser.atributos.existencia.conhecimento" [atrib2_nome]="'Experiência'" [atrib2]="ser.atributos.existencia.experiencia" [atrib3_nome]="'Ciência'" [atrib3]="atributos.existencia.ciencia" [atrib4_nome]="'Consciência'" [atrib4]="ser.atributos.existencia.consciencia"
+                    [atrib5_nome]="'Memória'" [atrib5]="ser.atributos.existencia.memoria">
+                </app-ficha-atributos>
+                <app-ficha-atributos [nome]="'Idéia'" [classe]="ser.atributos.ideia.classe" [nivel]="ser.atributos.ideia.nivel" [pontos]="ser.atributos.ideia.pontos" [porcentagem]="ser.atributos.ideia.porcentagem" [atrib1_nome]="'Ki'" [atrib1]="ser.atributos.ideia.ki"
+                    [atrib2_nome]="'Base'" [atrib2]="ser.atributos.ideia.base" [atrib3_nome]="'Mistério'" [atrib3]="atributos.ideia.misterio" [atrib4_nome]="'Holismo'" [atrib4]="ser.atributos.ideia.holismo" [atrib5_nome]="'Nexo'" [atrib5]="ser.atributos.ideia.nexo">
+                </app-ficha-atributos>
+            </mat-accordion>
         </div>
         <div class="col-sm-4">
             <app-ficha-energias [energias]="energias"></app-ficha-energias>

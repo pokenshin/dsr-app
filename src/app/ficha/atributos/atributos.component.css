@@ -6,6 +6,10 @@
     border-right: 1px solid black;
 }
 
+.border-top-1 {
+    border-top: 1px solid black;
+}
+
 .full-width {
     width: 100%;
 }
@@ -86,13 +90,8 @@ mat-panel-title {
 .tile-atributo-nome {
     font-weight: bolder;
     font-variant-caps: all-petite-caps;
-    height: 20%;
     padding: 0;
     margin: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,15 +102,6 @@ mat-panel-title {
     text-align: center;
 }
 
-.tile-atributo-mag {
-    height: 20%;
-    text-align: center;
-    width: 25%;
-    float: right;
-    border-top: solid 1px black;
-    border-left: solid 1px black;
-}
-
 @media(min-width:375px) {
     .tile-atributo-nome {
         height: 35%;
@@ -119,13 +109,11 @@ mat-panel-title {
         line-height: 20px;
     }
     .tile-atributo-valor {
-        margin-top: 3px;
         font-size: 35px;
         line-height: 35px;
     }
     .tile-atributo-mag {
         font-size: 10px;
-        line-height: 10px;
     }
     .tile-atributo-container {
         height: 80px !important;
@@ -151,16 +139,17 @@ mat-panel-title {
 
 @media(min-width:1200px) {
     .tile-atributo-nome {
-        height: 35%;
-        font-size: 12px;
+        height: 15px;
+        font-size: 10px;
     }
     .tile-atributo-valor {
-        margin-top: 3px;
-        font-size: 35px;
-        line-height: 35px;
+        height: 49px;
+        font-size: 40px;
+        line-height: 55px;
     }
     .tile-atributo-mag {
         font-size: 10px;
+        height: 14px;
         line-height: 14px;
     }
     .tile-atributo-container {
