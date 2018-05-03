@@ -103,37 +103,48 @@ mat-panel-title {
 }
 
 @media(min-width:375px) {
-    .tile-atributo-nome {
-        height: 35%;
-        font-size: 8px;
-        line-height: 20px;
-    }
-    .tile-atributo-valor {
+    .panel-atributo-stats-classe {
         font-size: 35px;
         line-height: 35px;
     }
-    .tile-atributo-mag {
+    .panel-atributo-stats-mag {
         font-size: 10px;
     }
-    .tile-atributo-container {
-        height: 80px !important;
-        width: 80px !important;
+    .panel-atributo-stats-pontos {
+        font-size: 10px;
     }
-    mat-grid-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    .panel-atributo-stats-valor {
+        font-size: 40px;
+        line-height: 50px;
     }
     .panel-atributo-stats-container {
         height: 50px;
-        width: 70px;
+        width: 80px;
     }
     .panel-atributo-title {
-        font-size: 35px;
-        line-height: 50px;
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .tile-atributo-container {
+        height: 55px !important;
+        width: 55px !important;
+    }
+    .tile-atributo-nome {
+        height: 15px;
+        font-size: 7px;
+    }
+    .tile-atributo-valor {
+        height: 29px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .tile-atributo-mag {
+        font-size: 8px;
+        height: 10px;
+        line-height: 10px;
     }
     .row-height {
-        height: 80px;
+        height: 60px;
     }
 }
 
