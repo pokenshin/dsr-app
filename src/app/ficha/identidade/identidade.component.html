@@ -1,109 +1,69 @@
-<div class="row border-top border-left border-right border-dark">
+<div class="row border-top border-left border-right border-dark no-gutters">
     <div class="col-4">
-        <div class="row">
-            <div class="col-md-3 identidade_label petite-caps">Nome:</div>
-            <div class="col-md-9 identidade_value">{{identidade.nome}}</div>
-        </div>
+        <span class="identidade_label petite-caps">Nome:</span>
+        <span class="identidade_value">{{identidade.nome}}</span>
     </div>
     <div class="col-4">
-        <div class="row">
-            <div class="col-md-6 identidade_label petite-caps">Natureza:</div>
-            <div class="col-md-6 identidade_value">
-                <span class="badge badge-pill badge-dark">{{identidade.natureza.nome}}</span>
-            </div>
-        </div>
+        <span class="identidade_label petite-caps">Natureza:</span>
+        <span class="identidade_value">
+            <span class="badge badge-pill badge-dark">{{identidade.natureza.nome}}</span>
+        </span>
     </div>
     <div class="col-4">
-        <div class="row">
-            <div class="col-md-6 identidade_label petite-caps">Índole:</div>
-            <div class="col-md-6 identidade_value">
-                <span class="badge badge-pill badge-dark">{{identidade.indole.nome}}</span>
-            </div>
-        </div>
+        <span class="identidade_label petite-caps">Índole:</span>
+        <span class="identidade_value">
+            <span class="badge badge-pill badge-dark">{{identidade.indole.nome}}</span>
+        </span>
     </div>
 </div>
 
-<div class="row border-left border-right border-top border-dark">
-    <div class="col-3">
-        <div class="row">
-            <div class="col-md-6 identidade_label petite-caps">Plano:</div>
-            <div class="col-md-6 identidade_value">
-                <span class="badge badge-pill badge-dark">{{identidade.origem.plano.nome}}</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-3">
-        <div class="row">
-            <div class="col-md-6 identidade_label petite-caps">Realidade:</div>
-            <div class="col-md-6 identidade_value">
-                <span class="badge badge-pill badge-dark">{{identidade.origem.plano.realidade.nome}}</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-4">
-        <div class="row">
-            <div class="col-md-6 identidade_label petite-caps">Origem:</div>
-            <div class="col-md-6 identidade_value">
-                <span class="badge badge-pill badge-dark">{{identidade.origem.nome}}</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-2">
-        <div class="row">
-            <div class="col-md-6 identidade_label petite-caps">Tempo:</div>
-            <div class="col-md-6 identidade_value">{{identidade.tempo}}</div>
-        </div>
-    </div>
-</div>
-
-<div class="row border-left border-right border-top border-dark">
+<div class="row border-left border-right border-top border-dark no-gutters">
     <div class="col-6">
-        <div class="row">
-            <div class="col-md-6 identidade_label petite-caps">Espécie:</div>
-            <div class="col-md-6 identidade_value">
-                <span class="badge badge-pill badge-dark" *ngFor="let especie of identidade.especies">{{especie.taxonomia.nomePopular}}</span>
-            </div>
-        </div>
+        <span class="identidade_label petite-caps">Espécie:</span>
+        <span class="identidade_value">
+            <span class="badge badge-pill badge-dark" *ngFor="let especie of identidade.especies">{{especie.taxonomia.nomePopular}}</span>
+        </span>
     </div>
-    <div class="col-6">
-        <div class="row">
-            <div class="col-md-6 identidade_label petite-caps">Classe:</div>
-            <div class="col-md-6 identidade_value">
-                <span class="badge badge-pill badge-dark" *ngFor="let classe of identidade.classes">{{classe.nome}}</span>
-            </div>
-        </div>
+    <div class="col-4">
+        <span class="identidade_label petite-caps">Origem:</span>
+        <span class="identidade_value">
+            <span class="badge badge-pill badge-dark">{{identidade.origem.nome}}</span>
+        </span>
+    </div>
+    <div class="col-2">
+        <span class="identidade_label petite-caps">Tempo:</span>
+        <span class="identidade_value">{{identidade.tempo}}</span>
     </div>
 </div>
 
-<div class="row border-1">
-    <div class="col-2">
-        <div class="row">
-            <div class="col-md-6 identidade_label petite-caps">Corpo:</div>
-            <div class="col-md-6 identidade_value">{{identidade.corpo}}</div>
-        </div>
+<div class="row border-left border-right border-top border-dark no-gutters">
+    <div class="col-6">
+        <span class="identidade_label petite-caps">Classe:</span>
+        <span class="identidade_value">
+            <span class="badge badge-pill badge-dark" *ngFor="let classe of identidade.classes">{{classe.nome}}</span>
+        </span>
     </div>
-    <div class="col-2">
-        <div class="row">
-            <div class="col-md-6 identidade_label petite-caps">Magnitude:</div>
-            <div class="col-md-6 identidade_value">{{identidade.corpo}}</div>
-        </div>
+    <div class="col-4">
+        <span class="identidade_label petite-caps">Nível:</span>
+        <span class="identidade_value">{{identidade.nivel}}</span>
     </div>
-    <div class="col-2">
-        <div class="row">
-            <div class="col-md-6 identidade_label petite-caps">Rei:</div>
-            <div class="col-md-6 identidade_value">{{identidade.reis.length}}</div>
-        </div>
+</div>
+
+<div class="row border border-dark no-gutters mb-1">
+    <div class="col-3">
+        <span class="identidade_label petite-caps">Corpo:</span>
+        <span class="identidade_value">{{identidade.corpo}}</span>
     </div>
     <div class="col-3">
-        <div class="row">
-            <div class="col-md-6 identidade_label petite-caps">Ki:</div>
-            <div class="col-md-6 identidade_value">{{identidade.ki}}</div>
-        </div>
+        <span class="identidade_label petite-caps">Magnitude:</span>
+        <span class="identidade_value">{{identidade.corpo}}</span>
     </div>
     <div class="col-3">
-        <div class="row">
-            <div class="col-md-6 identidade_label petite-caps">Nível:</div>
-            <div class="col-md-6 identidade_value">{{identidade.nivel}}</div>
-        </div>
+        <span class="identidade_label petite-caps">Rei:</span>
+        <span class="identidade_value">{{identidade.reis.length}}</span>
+    </div>
+    <div class="col-3">
+        <span class="identidade_label petite-caps">Ki:</span>
+        <span class="identidade_value">{{identidade.ki}}</span>
     </div>
 </div>
