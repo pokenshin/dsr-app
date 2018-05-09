@@ -1,10 +1,8 @@
 <div class="container">
-    <div class="row top-buffer">
-        <div class="col-sm-12">
-            <app-ficha-identidade [identidade]="identidade"></app-ficha-identidade>
-        </div>
+    <div class="container mb-1">
+        <app-ficha-identidade [identidade]="identidade"></app-ficha-identidade>
     </div>
-    <div class="row top-buffer">
+    <div class="row">
         <div class="col-sm-8">
             <mat-accordion multi="true">
                 <app-ficha-atributos [nome]="'Força'" [classe]="ser.atributos.forca.classe" [nivel]="ser.atributos.forca.nivel" [pontos]="ser.atributos.forca.pontos" [porcentagem]="ser.atributos.forca.porcentagem" [atrib1_nome]="'Potência'" [atrib1]="ser.atributos.forca.potencia"

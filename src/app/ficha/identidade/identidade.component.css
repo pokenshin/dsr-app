@@ -1,25 +1,38 @@
-.identidade_value {
-    margin-left: 5px;
-}
-
-.identidade_label {
+.petite-caps {
     font-weight: bolder;
-    font-variant-caps: all-petite-caps;
-    float: left;
-    min-height: 100%;
-    display: inline-flex;
-    align-items: center;
+    font-variant-caps: petite-caps;
 }
 
-.container {
+.border-1 {
     border: 1px solid black;
 }
 
-.row {
-    border: 1px solid black;
+.badge {
+    margin-right: 2px;
 }
 
-mat-chip-list {
-    float: left;
-    margin: 3px 0 3px 5px;
+@media(min-width:375px) {
+    .identidade_label {
+        font-size: 10px;
+    }
+    .identidade_value {
+        font-size: 10px;
+    }
+    .mat-basic-chip {
+        font-size: 8px;
+        margin: 1px 1px;
+    }
+}
+
+@media(min-width:1200px) {
+    .identidade_label {
+        font-size: 20px;
+    }
+    .identidade_value {
+        font-size: 20px;
+    }
+    .mat-basic-chip {
+        font-size: 12px;
+        margin: 3px 3px;
+    }
 }
